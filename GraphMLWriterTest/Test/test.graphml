@@ -1,0 +1,4339 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<graphml xmlns = "http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+	<key attr.name="ID" attr.type="int" for="node" id="d8"/>
+	<key attr.name="Abbreviation" attr.type="string" for="node" id="d9"/>
+	<key attr.name="ExternalNumber" attr.type="string" for="node" id="d13"/>
+	<key attr.name="Description" attr.type="string" for="node" id="d10"/>
+	<key attr.name="NetworkPointTypeDescription" attr.type="string" for="node" id="d11"/>
+	<key attr.name="TypeId" attr.type="string" for="node" id="d12"/>
+	<key attr.name="LocationAbbreviation" attr.type="string" for="node" id="d14"/>
+	<key attr.name="LocationId" attr.type="string" for="node" id="d15"/>
+	<key attr.name="NumberOfNetworkpoints" attr.type="int" for="node" id="d16"/>
+	<key attr.name="ID" attr.type="int" for="edge" id="d0"/>
+	<key attr.name="Type" attr.type="string" for="edge" id="d1"/>
+	<key attr.name="Length" attr.type="int" for="edge" id="d2"/>
+	<key attr.name="IsNullLink" attr.type="int" for="edge" id="d3"/>
+	<key attr.name="GateFront" attr.type="int" for="edge" id="d4"/>
+	<key attr.name="GateRear" attr.type="int" for="edge" id="d5"/>
+	<key attr.name="Description" attr.type="string" for="edge" id="d6"/>
+	<key attr.name="Index" attr.type="string" for="edge" id="d7"/>
+	<graph edgedefault="directed" id="G">
+		<node id="l7">
+			<data key="d8">11627</data>
+			<data key="d9">
+				<![CDATA[TCHSLRNT]]>
+			</data>
+			<data key="d13"/>
+			<data key="d10">
+				<![CDATA[]]>
+			</data>
+			<data key="d11"/>
+			<data key="d12"/>
+			<data key="d14"/>
+			<data key="d15"/>
+			<data key="d16">4</data>
+			<graph id="l7:" edgedefault="directed">
+				<node id="l7:n10">
+					<data key="d8">10707</data>
+					<data key="d9">
+						<![CDATA[TCHSLRN>]]>
+					</data>
+					<data key="d13">
+						<![CDATA[6548090421]]>
+					</data>
+					<data key="d10">
+						<![CDATA[TCHSLRNT E]]>
+					</data>
+					<data key="d11">
+						<![CDATA[Einsetzpunkt]]>
+					</data>
+					<data key="d12">7</data>
+					<data key="d14">
+						<![CDATA[TCHSLRNT]]>
+					</data>
+					<data key="d15">11627</data>
+					<data key="d16">1</data>
+				</node>
+				<node id="l7:n11">
+					<data key="d8">10708</data>
+					<data key="d9">
+						<![CDATA[TCHSLRN<]]>
+					</data>
+					<data key="d13">
+						<![CDATA[6548090422]]>
+					</data>
+					<data key="d10">
+						<![CDATA[TCHSLRNT A]]>
+					</data>
+					<data key="d11">
+						<![CDATA[Aussetzpunkt]]>
+					</data>
+					<data key="d12">8</data>
+					<data key="d14">
+						<![CDATA[TCHSLRNT]]>
+					</data>
+					<data key="d15">11627</data>
+					<data key="d16">1</data>
+				</node>
+				<node id="l7:n29">
+					<data key="d8">10598</data>
+					<data key="d9">
+						<![CDATA[TCHSLRNT]]>
+					</data>
+					<data key="d13">
+						<![CDATA[65480904]]>
+					</data>
+					<data key="d10">
+						<![CDATA[Technoparc Saint Laurent]]>
+					</data>
+					<data key="d11">
+						<![CDATA[Haltestelle]]>
+					</data>
+					<data key="d12">2</data>
+					<data key="d14">
+						<![CDATA[TCHSLRNT]]>
+					</data>
+					<data key="d15">11627</data>
+					<data key="d16">1</data>
+				</node>
+				<node id="l7:n52">
+					<data key="d8">10627</data>
+					<data key="d9">
+						<![CDATA[TCHSLRN.]]>
+					</data>
+					<data key="d13">
+						<![CDATA[654809042]]>
+					</data>
+					<data key="d10">
+						<![CDATA[Technoparc Saint Laurent - Turnover]]>
+					</data>
+					<data key="d11">
+						<![CDATA[Betriebspunkt]]>
+					</data>
+					<data key="d12">1</data>
+					<data key="d14">
+						<![CDATA[TCHSLRNT]]>
+					</data>
+					<data key="d15">11627</data>
+					<data key="d16">1</data>
+				</node>
+			</graph>
+		</node>
+		<node id="l30">
+			<data key="d8">11628</data>
+			<data key="d9">
+				<![CDATA[TRNSTN]]>
+			</data>
+			<data key="d13"/>
+			<data key="d10">
+				<![CDATA[]]>
+			</data>
+			<data key="d11"/>
+			<data key="d12"/>
+			<data key="d14"/>
+			<data key="d15"/>
+			<data key="d16">2</data>
+			<graph id="l30:" edgedefault="directed">
+				<node id="l30:n20">
+					<data key="d8">10589</data>
+					<data key="d9">
+						<![CDATA[TRNSTN]]>
+					</data>
+					<data key="d13">
+						<![CDATA[33578774]]>
+					</data>
+					<data key="d10">
+						<![CDATA[Transition]]>
+					</data>
+					<data key="d11">
+						<![CDATA[Haltestelle]]>
+					</data>
+					<data key="d12">2</data>
+					<data key="d14">
+						<![CDATA[TRNSTN]]>
+					</data>
+					<data key="d15">11628</data>
+					<data key="d16">1</data>
+				</node>
+				<node id="l30:n50">
+					<data key="d8">10625</data>
+					<data key="d9">
+						<![CDATA[TRNSTN.]]>
+					</data>
+					<data key="d13">
+						<![CDATA[335787742]]>
+					</data>
+					<data key="d10">
+						<![CDATA[Transition - Turnover]]>
+					</data>
+					<data key="d11">
+						<![CDATA[Betriebspunkt]]>
+					</data>
+					<data key="d12">1</data>
+					<data key="d14">
+						<![CDATA[TRNSTN]]>
+					</data>
+					<data key="d15">11628</data>
+					<data key="d16">1</data>
+				</node>
+			</graph>
+		</node>
+		<node id="l21">
+			<data key="d8">11590</data>
+			<data key="d9">
+				<![CDATA[AEROPOR>]]>
+			</data>
+			<data key="d13"/>
+			<data key="d10">
+				<![CDATA[]]>
+			</data>
+			<data key="d11"/>
+			<data key="d12"/>
+			<data key="d14"/>
+			<data key="d15"/>
+			<data key="d16">1</data>
+			<graph id="l21:" edgedefault="directed">
+				<node id="l21:n4">
+					<data key="d8">10701</data>
+					<data key="d9">
+						<![CDATA[AEROPOR>]]>
+					</data>
+					<data key="d13">
+						<![CDATA[1114384221]]>
+					</data>
+					<data key="d10">
+						<![CDATA[AEROPORT E]]>
+					</data>
+					<data key="d11">
+						<![CDATA[Einsetzpunkt]]>
+					</data>
+					<data key="d12">7</data>
+					<data key="d14">
+						<![CDATA[AEROPOR>]]>
+					</data>
+					<data key="d15">11590</data>
+					<data key="d16">1</data>
+				</node>
+			</graph>
+		</node>
+		<node id="l2">
+			<data key="d8">11625</data>
+			<data key="d9">
+				<![CDATA[SNDRTH]]>
+			</data>
+			<data key="d13"/>
+			<data key="d10">
+				<![CDATA[]]>
+			</data>
+			<data key="d11"/>
+			<data key="d12"/>
+			<data key="d14"/>
+			<data key="d15"/>
+			<data key="d16">1</data>
+			<graph id="l2:" edgedefault="directed">
+				<node id="l2:n17">
+					<data key="d8">10586</data>
+					<data key="d9">
+						<![CDATA[SNDRTH]]>
+					</data>
+					<data key="d13">
+						<![CDATA[29854895]]>
+					</data>
+					<data key="d10">
+						<![CDATA[Sainte Dorothee]]>
+					</data>
+					<data key="d11">
+						<![CDATA[Haltestelle]]>
+					</data>
+					<data key="d12">2</data>
+					<data key="d14">
+						<![CDATA[SNDRTH]]>
+					</data>
+					<data key="d15">11625</data>
+					<data key="d16">1</data>
+				</node>
+			</graph>
+		</node>
+		<node id="l54">
+			<data key="d8">11626</data>
+			<data key="d9">
+				<![CDATA[SNNYBRK]]>
+			</data>
+			<data key="d13"/>
+			<data key="d10">
+				<![CDATA[]]>
+			</data>
+			<data key="d11"/>
+			<data key="d12"/>
+			<data key="d14"/>
+			<data key="d15"/>
+			<data key="d16">1</data>
+			<graph id="l54:" edgedefault="directed">
+				<node id="l54:n40">
+					<data key="d8">10609</data>
+					<data key="d9">
+						<![CDATA[SNNYBRK]]>
+					</data>
+					<data key="d13">
+						<![CDATA[81955732]]>
+					</data>
+					<data key="d10">
+						<![CDATA[Sunnybrooke]]>
+					</data>
+					<data key="d11">
+						<![CDATA[Haltestelle]]>
+					</data>
+					<data key="d12">2</data>
+					<data key="d14">
+						<![CDATA[SNNYBRK]]>
+					</data>
+					<data key="d15">11626</data>
+					<data key="d16">1</data>
+				</node>
+			</graph>
+		</node>
+		<node id="l19">
+			<data key="d8">11605</data>
+			<data key="d9">
+				<![CDATA[ILBGRS]]>
+			</data>
+			<data key="d13"/>
+			<data key="d10">
+				<![CDATA[]]>
+			</data>
+			<data key="d11"/>
+			<data key="d12"/>
+			<data key="d14"/>
+			<data key="d15"/>
+			<data key="d16">1</data>
+			<graph id="l19:" edgedefault="directed">
+				<node id="l19:n22">
+					<data key="d8">10591</data>
+					<data key="d9">
+						<![CDATA[ILBGRS]]>
+					</data>
+					<data key="d13">
+						<![CDATA[42600212]]>
+					</data>
+					<data key="d10">
+						<![CDATA[Ile Bigras]]>
+					</data>
+					<data key="d11">
+						<![CDATA[Haltestelle]]>
+					</data>
+					<data key="d12">2</data>
+					<data key="d14">
+						<![CDATA[ILBGRS]]>
+					</data>
+					<data key="d15">11605</data>
+					<data key="d16">1</data>
+				</node>
+			</graph>
+		</node>
+		<node id="l3">
+			<data key="d8">11603</data>
+			<data key="d9">
+				<![CDATA[GRCNTRL]]>
+			</data>
+			<data key="d13"/>
+			<data key="d10">
+				<![CDATA[]]>
+			</data>
+			<data key="d11"/>
+			<data key="d12"/>
+			<data key="d14"/>
+			<data key="d15"/>
+			<data key="d16">4</data>
+			<graph id="l3:" edgedefault="directed">
+				<node id="l3:n6">
+					<data key="d8">10703</data>
+					<data key="d9">
+						<![CDATA[GRCNTRL>]]>
+					</data>
+					<data key="d13">
+						<![CDATA[1297354221]]>
+					</data>
+					<data key="d10">
+						<![CDATA[GRCNTRL E]]>
+					</data>
+					<data key="d11">
+						<![CDATA[Einsetzpunkt]]>
+					</data>
+					<data key="d12">7</data>
+					<data key="d14">
+						<![CDATA[GRCNTRL]]>
+					</data>
+					<data key="d15">11603</data>
+					<data key="d16">1</data>
+				</node>
+				<node id="l3:n7">
+					<data key="d8">10704</data>
+					<data key="d9">
+						<![CDATA[GRCNTRL<]]>
+					</data>
+					<data key="d13">
+						<![CDATA[1297354222]]>
+					</data>
+					<data key="d10">
+						<![CDATA[GRCNTRL A]]>
+					</data>
+					<data key="d11">
+						<![CDATA[Aussetzpunkt]]>
+					</data>
+					<data key="d12">8</data>
+					<data key="d14">
+						<![CDATA[GRCNTRL]]>
+					</data>
+					<data key="d15">11603</data>
+					<data key="d16">1</data>
+				</node>
+				<node id="l3:n14">
+					<data key="d8">10582</data>
+					<data key="d9">
+						<![CDATA[GRCNTRL]]>
+					</data>
+					<data key="d13">
+						<![CDATA[12973542]]>
+					</data>
+					<data key="d10">
+						<![CDATA[Gare Central]]>
+					</data>
+					<data key="d11">
+						<![CDATA[Haltestelle]]>
+					</data>
+					<data key="d12">2</data>
+					<data key="d14">
+						<![CDATA[GRCNTRL]]>
+					</data>
+					<data key="d15">11603</data>
+					<data key="d16">1</data>
+				</node>
+				<node id="l3:n51">
+					<data key="d8">10626</data>
+					<data key="d9">
+						<![CDATA[GRCNTRL.]]>
+					</data>
+					<data key="d13">
+						<![CDATA[129735422]]>
+					</data>
+					<data key="d10">
+						<![CDATA[Gare Central - Turnover]]>
+					</data>
+					<data key="d11">
+						<![CDATA[Betriebspunkt]]>
+					</data>
+					<data key="d12">1</data>
+					<data key="d14">
+						<![CDATA[GRCNTRL]]>
+					</data>
+					<data key="d15">11603</data>
+					<data key="d16">1</data>
+				</node>
+			</graph>
+		</node>
+		<node id="l1">
+			<data key="d8">11599</data>
+			<data key="d9">
+				<![CDATA[DRSS]]>
+			</data>
+			<data key="d13"/>
+			<data key="d10">
+				<![CDATA[]]>
+			</data>
+			<data key="d11"/>
+			<data key="d12"/>
+			<data key="d14"/>
+			<data key="d15"/>
+			<data key="d16">1</data>
+			<graph id="l1:" edgedefault="directed">
+				<node id="l1:n25">
+					<data key="d8">10594</data>
+					<data key="d9">
+						<![CDATA[DRSS]]>
+					</data>
+					<data key="d13">
+						<![CDATA[53430330]]>
+					</data>
+					<data key="d10">
+						<![CDATA[Du Ruisseau]]>
+					</data>
+					<data key="d11">
+						<![CDATA[Haltestelle]]>
+					</data>
+					<data key="d12">2</data>
+					<data key="d14">
+						<![CDATA[DRSS]]>
+					</data>
+					<data key="d15">11599</data>
+					<data key="d16">1</data>
+				</node>
+			</graph>
+		</node>
+		<node id="l5">
+			<data key="d8">11600</data>
+			<data key="d9">
+				<![CDATA[DSSRCS]]>
+			</data>
+			<data key="d13"/>
+			<data key="d10">
+				<![CDATA[]]>
+			</data>
+			<data key="d11"/>
+			<data key="d12"/>
+			<data key="d14"/>
+			<data key="d15"/>
+			<data key="d16">1</data>
+			<graph id="l5:" edgedefault="directed">
+				<node id="l5:n26">
+					<data key="d8">10595</data>
+					<data key="d9">
+						<![CDATA[DSSRCS]]>
+					</data>
+					<data key="d13">
+						<![CDATA[54176178]]>
+					</data>
+					<data key="d10">
+						<![CDATA[Des Sources]]>
+					</data>
+					<data key="d11">
+						<![CDATA[Haltestelle]]>
+					</data>
+					<data key="d12">2</data>
+					<data key="d14">
+						<![CDATA[DSSRCS]]>
+					</data>
+					<data key="d15">11600</data>
+					<data key="d16">1</data>
+				</node>
+			</graph>
+		</node>
+		<node id="l39">
+			<data key="d8">11619</data>
+			<data key="d9">
+				<![CDATA[RS1.]]>
+			</data>
+			<data key="d13"/>
+			<data key="d10">
+				<![CDATA[]]>
+			</data>
+			<data key="d11"/>
+			<data key="d12"/>
+			<data key="d14"/>
+			<data key="d15"/>
+			<data key="d16">1</data>
+			<graph id="l39:" edgedefault="directed">
+				<node id="l39:n0">
+					<data key="d8">10681</data>
+					<data key="d9">
+						<![CDATA[RS1.]]>
+					</data>
+					<data key="d13">
+						<![CDATA[668423531]]>
+					</data>
+					<data key="d10">
+						<![CDATA[Rive Sud - Op point 1]]>
+					</data>
+					<data key="d11">
+						<![CDATA[Betriebspunkt]]>
+					</data>
+					<data key="d12">1</data>
+					<data key="d14">
+						<![CDATA[RS1.]]>
+					</data>
+					<data key="d15">11619</data>
+					<data key="d16">1</data>
+				</node>
+			</graph>
+		</node>
+		<node id="l18">
+			<data key="d8">11596</data>
+			<data key="d9">
+				<![CDATA[CRRSPA40]]>
+			</data>
+			<data key="d13"/>
+			<data key="d10">
+				<![CDATA[]]>
+			</data>
+			<data key="d11"/>
+			<data key="d12"/>
+			<data key="d14"/>
+			<data key="d15"/>
+			<data key="d16">1</data>
+			<graph id="l18:" edgedefault="directed">
+				<node id="l18:n15">
+					<data key="d8">10583</data>
+					<data key="d9">
+						<![CDATA[CRRSPA40]]>
+					</data>
+					<data key="d13">
+						<![CDATA[18199215]]>
+					</data>
+					<data key="d10">
+						<![CDATA[Correspondance A40]]>
+					</data>
+					<data key="d11">
+						<![CDATA[Haltestelle]]>
+					</data>
+					<data key="d12">2</data>
+					<data key="d14">
+						<![CDATA[CRRSPA40]]>
+					</data>
+					<data key="d15">11596</data>
+					<data key="d16">1</data>
+				</node>
+			</graph>
+		</node>
+		<node id="l15">
+			<data key="d8">11597</data>
+			<data key="d9">
+				<![CDATA[DMTRNSTN]]>
+			</data>
+			<data key="d13"/>
+			<data key="d10">
+				<![CDATA[]]>
+			</data>
+			<data key="d11"/>
+			<data key="d12"/>
+			<data key="d14"/>
+			<data key="d15"/>
+			<data key="d16">4</data>
+			<graph id="l15:" edgedefault="directed">
+				<node id="l15:n23">
+					<data key="d8">10592</data>
+					<data key="d9">
+						<![CDATA[DMTRNSTN]]>
+					</data>
+					<data key="d13">
+						<![CDATA[44872266]]>
+					</data>
+					<data key="d10">
+						<![CDATA[Deux Montagnes - Transition]]>
+					</data>
+					<data key="d11">
+						<![CDATA[Haltestelle]]>
+					</data>
+					<data key="d12">2</data>
+					<data key="d14">
+						<![CDATA[DMTRNSTN]]>
+					</data>
+					<data key="d15">11597</data>
+					<data key="d16">1</data>
+				</node>
+				<node id="l15:n49">
+					<data key="d8">10624</data>
+					<data key="d9">
+						<![CDATA[DMTRNST.]]>
+					</data>
+					<data key="d13">
+						<![CDATA[448722662]]>
+					</data>
+					<data key="d10">
+						<![CDATA[Deux Montagnes Transition - Turnover]]>
+					</data>
+					<data key="d11">
+						<![CDATA[Betriebspunkt]]>
+					</data>
+					<data key="d12">1</data>
+					<data key="d14">
+						<![CDATA[DMTRNSTN]]>
+					</data>
+					<data key="d15">11597</data>
+					<data key="d16">1</data>
+				</node>
+				<node id="l15:n55">
+					<data key="d8">10661</data>
+					<data key="d9">
+						<![CDATA[DMTRNST>]]>
+					</data>
+					<data key="d13">
+						<![CDATA[4487226621]]>
+					</data>
+					<data key="d10">
+						<![CDATA[DMTRNSTN E]]>
+					</data>
+					<data key="d11">
+						<![CDATA[Einsetzpunkt]]>
+					</data>
+					<data key="d12">7</data>
+					<data key="d14">
+						<![CDATA[DMTRNSTN]]>
+					</data>
+					<data key="d15">11597</data>
+					<data key="d16">1</data>
+				</node>
+				<node id="l15:n56">
+					<data key="d8">10662</data>
+					<data key="d9">
+						<![CDATA[DMTRNST<]]>
+					</data>
+					<data key="d13">
+						<![CDATA[4487226622]]>
+					</data>
+					<data key="d10">
+						<![CDATA[DMTRNSTN A]]>
+					</data>
+					<data key="d11">
+						<![CDATA[Aussetzpunkt]]>
+					</data>
+					<data key="d12">8</data>
+					<data key="d14">
+						<![CDATA[DMTRNSTN]]>
+					</data>
+					<data key="d15">11597</data>
+					<data key="d16">1</data>
+				</node>
+			</graph>
+		</node>
+		<node id="l56">
+			<data key="d8">11594</data>
+			<data key="d9">
+				<![CDATA[BSSNPL]]>
+			</data>
+			<data key="d13"/>
+			<data key="d10">
+				<![CDATA[]]>
+			</data>
+			<data key="d11"/>
+			<data key="d12"/>
+			<data key="d14"/>
+			<data key="d15"/>
+			<data key="d16">1</data>
+			<graph id="l56:" edgedefault="directed">
+				<node id="l56:n45">
+					<data key="d8">10614</data>
+					<data key="d9">
+						<![CDATA[BSSNPL]]>
+					</data>
+					<data key="d13">
+						<![CDATA[97787636]]>
+					</data>
+					<data key="d10">
+						<![CDATA[Bassin Peel]]>
+					</data>
+					<data key="d11">
+						<![CDATA[Haltestelle]]>
+					</data>
+					<data key="d12">2</data>
+					<data key="d14">
+						<![CDATA[BSSNPL]]>
+					</data>
+					<data key="d15">11594</data>
+					<data key="d16">1</data>
+				</node>
+			</graph>
+		</node>
+		<node id="l0">
+			<data key="d8">11602</data>
+			<data key="d9">
+				<![CDATA[EDMNTPTT]]>
+			</data>
+			<data key="d13"/>
+			<data key="d10">
+				<![CDATA[]]>
+			</data>
+			<data key="d11"/>
+			<data key="d12"/>
+			<data key="d14"/>
+			<data key="d15"/>
+			<data key="d16">1</data>
+			<graph id="l0:" edgedefault="directed">
+				<node id="l0:n18">
+					<data key="d8">10587</data>
+					<data key="d9">
+						<![CDATA[EDMNTPTT]]>
+					</data>
+					<data key="d13">
+						<![CDATA[31467831]]>
+					</data>
+					<data key="d10">
+						<![CDATA[Edouard Montpetit]]>
+					</data>
+					<data key="d11">
+						<![CDATA[Haltestelle]]>
+					</data>
+					<data key="d12">2</data>
+					<data key="d14">
+						<![CDATA[EDMNTPTT]]>
+					</data>
+					<data key="d15">11602</data>
+					<data key="d16">1</data>
+				</node>
+			</graph>
+		</node>
+		<node id="l12">
+			<data key="d8">11606</data>
+			<data key="d9">
+				<![CDATA[ILDSRS]]>
+			</data>
+			<data key="d13"/>
+			<data key="d10">
+				<![CDATA[]]>
+			</data>
+			<data key="d11"/>
+			<data key="d12"/>
+			<data key="d14"/>
+			<data key="d15"/>
+			<data key="d16">1</data>
+			<graph id="l12:" edgedefault="directed">
+				<node id="l12:n27">
+					<data key="d8">10596</data>
+					<data key="d9">
+						<![CDATA[ILDSRS]]>
+					</data>
+					<data key="d13">
+						<![CDATA[54776198]]>
+					</data>
+					<data key="d10">
+						<![CDATA[Ile Des Soeurs]]>
+					</data>
+					<data key="d11">
+						<![CDATA[Haltestelle]]>
+					</data>
+					<data key="d12">2</data>
+					<data key="d14">
+						<![CDATA[ILDSRS]]>
+					</data>
+					<data key="d15">11606</data>
+					<data key="d16">1</data>
+				</node>
+			</graph>
+		</node>
+		<node id="l47">
+			<data key="d8">11601</data>
+			<data key="d9">
+				<![CDATA[DXMNTGNS]]>
+			</data>
+			<data key="d13"/>
+			<data key="d10">
+				<![CDATA[]]>
+			</data>
+			<data key="d11"/>
+			<data key="d12"/>
+			<data key="d14"/>
+			<data key="d15"/>
+			<data key="d16">1</data>
+			<graph id="l47:" edgedefault="directed">
+				<node id="l47:n37">
+					<data key="d8">10606</data>
+					<data key="d9">
+						<![CDATA[DXMNTGNS]]>
+					</data>
+					<data key="d13">
+						<![CDATA[74436526]]>
+					</data>
+					<data key="d10">
+						<![CDATA[Deux Montagnes]]>
+					</data>
+					<data key="d11">
+						<![CDATA[Haltestelle]]>
+					</data>
+					<data key="d12">2</data>
+					<data key="d14">
+						<![CDATA[DXMNTGNS]]>
+					</data>
+					<data key="d15">11601</data>
+					<data key="d16">1</data>
+				</node>
+			</graph>
+		</node>
+		<node id="l57">
+			<data key="d8">11593</data>
+			<data key="d9">
+				<![CDATA[BSFRNC]]>
+			</data>
+			<data key="d13"/>
+			<data key="d10">
+				<![CDATA[]]>
+			</data>
+			<data key="d11"/>
+			<data key="d12"/>
+			<data key="d14"/>
+			<data key="d15"/>
+			<data key="d16">1</data>
+			<graph id="l57:" edgedefault="directed">
+				<node id="l57:n36">
+					<data key="d8">10605</data>
+					<data key="d9">
+						<![CDATA[BSFRNC]]>
+					</data>
+					<data key="d13">
+						<![CDATA[73554941]]>
+					</data>
+					<data key="d10">
+						<![CDATA[Bois Franc]]>
+					</data>
+					<data key="d11">
+						<![CDATA[Haltestelle]]>
+					</data>
+					<data key="d12">2</data>
+					<data key="d14">
+						<![CDATA[BSFRNC]]>
+					</data>
+					<data key="d15">11593</data>
+					<data key="d16">1</data>
+				</node>
+			</graph>
+		</node>
+		<node id="l53">
+			<data key="d8">11595</data>
+			<data key="d9">
+				<![CDATA[CANORA]]>
+			</data>
+			<data key="d13"/>
+			<data key="d10">
+				<![CDATA[]]>
+			</data>
+			<data key="d11"/>
+			<data key="d12"/>
+			<data key="d14"/>
+			<data key="d15"/>
+			<data key="d16">1</data>
+			<graph id="l53:" edgedefault="directed">
+				<node id="l53:n42">
+					<data key="d8">10611</data>
+					<data key="d9">
+						<![CDATA[CANORA]]>
+					</data>
+					<data key="d13">
+						<![CDATA[87733738]]>
+					</data>
+					<data key="d10">
+						<![CDATA[Canora]]>
+					</data>
+					<data key="d11">
+						<![CDATA[Haltestelle]]>
+					</data>
+					<data key="d12">2</data>
+					<data key="d14">
+						<![CDATA[CANORA]]>
+					</data>
+					<data key="d15">11595</data>
+					<data key="d16">1</data>
+				</node>
+			</graph>
+		</node>
+		<node id="l26">
+			<data key="d8">11591</data>
+			<data key="d9">
+				<![CDATA[AEROPORT]]>
+			</data>
+			<data key="d13"/>
+			<data key="d10">
+				<![CDATA[]]>
+			</data>
+			<data key="d11"/>
+			<data key="d12"/>
+			<data key="d14"/>
+			<data key="d15"/>
+			<data key="d16">3</data>
+			<graph id="l26:" edgedefault="directed">
+				<node id="l26:n5">
+					<data key="d8">10702</data>
+					<data key="d9">
+						<![CDATA[AEROPOR<]]>
+					</data>
+					<data key="d13">
+						<![CDATA[1114384222]]>
+					</data>
+					<data key="d10">
+						<![CDATA[AEROPORT A]]>
+					</data>
+					<data key="d11">
+						<![CDATA[Aussetzpunkt]]>
+					</data>
+					<data key="d12">8</data>
+					<data key="d14">
+						<![CDATA[AEROPORT]]>
+					</data>
+					<data key="d15">11591</data>
+					<data key="d16">1</data>
+				</node>
+				<node id="l26:n13">
+					<data key="d8">10581</data>
+					<data key="d9">
+						<![CDATA[AEROPORT]]>
+					</data>
+					<data key="d13">
+						<![CDATA[11143842]]>
+					</data>
+					<data key="d10">
+						<![CDATA[Aeroport]]>
+					</data>
+					<data key="d11">
+						<![CDATA[Haltestelle]]>
+					</data>
+					<data key="d12">2</data>
+					<data key="d14">
+						<![CDATA[AEROPORT]]>
+					</data>
+					<data key="d15">11591</data>
+					<data key="d16">1</data>
+				</node>
+				<node id="l26:n47">
+					<data key="d8">10622</data>
+					<data key="d9">
+						<![CDATA[AEROPOR.]]>
+					</data>
+					<data key="d13">
+						<![CDATA[111438422]]>
+					</data>
+					<data key="d10">
+						<![CDATA[Aeroport - Turnover]]>
+					</data>
+					<data key="d11">
+						<![CDATA[Betriebspunkt]]>
+					</data>
+					<data key="d12">1</data>
+					<data key="d14">
+						<![CDATA[AEROPORT]]>
+					</data>
+					<data key="d15">11591</data>
+					<data key="d16">1</data>
+				</node>
+			</graph>
+		</node>
+		<node id="l40">
+			<data key="d8">11620</data>
+			<data key="d9">
+				<![CDATA[RS2.]]>
+			</data>
+			<data key="d13"/>
+			<data key="d10">
+				<![CDATA[]]>
+			</data>
+			<data key="d11"/>
+			<data key="d12"/>
+			<data key="d14"/>
+			<data key="d15"/>
+			<data key="d16">1</data>
+			<graph id="l40:" edgedefault="directed">
+				<node id="l40:n1">
+					<data key="d8">10682</data>
+					<data key="d9">
+						<![CDATA[RS2.]]>
+					</data>
+					<data key="d13">
+						<![CDATA[668423532]]>
+					</data>
+					<data key="d10">
+						<![CDATA[Rive Sud - Op point 2]]>
+					</data>
+					<data key="d11">
+						<![CDATA[Betriebspunkt]]>
+					</data>
+					<data key="d12">1</data>
+					<data key="d14">
+						<![CDATA[RS2.]]>
+					</data>
+					<data key="d15">11620</data>
+					<data key="d16">1</data>
+				</node>
+			</graph>
+		</node>
+		<node id="l36">
+			<data key="d8">11621</data>
+			<data key="d9">
+				<![CDATA[RS3.]]>
+			</data>
+			<data key="d13"/>
+			<data key="d10">
+				<![CDATA[]]>
+			</data>
+			<data key="d11"/>
+			<data key="d12"/>
+			<data key="d14"/>
+			<data key="d15"/>
+			<data key="d16">1</data>
+			<graph id="l36:" edgedefault="directed">
+				<node id="l36:n2">
+					<data key="d8">10683</data>
+					<data key="d9">
+						<![CDATA[RS3.]]>
+					</data>
+					<data key="d13">
+						<![CDATA[668423533]]>
+					</data>
+					<data key="d10">
+						<![CDATA[Rive Sud - Op point 3]]>
+					</data>
+					<data key="d11">
+						<![CDATA[Betriebspunkt]]>
+					</data>
+					<data key="d12">1</data>
+					<data key="d14">
+						<![CDATA[RS3.]]>
+					</data>
+					<data key="d15">11621</data>
+					<data key="d16">1</data>
+				</node>
+			</graph>
+		</node>
+		<node id="l20">
+			<data key="d8">11592</data>
+			<data key="d9">
+				<![CDATA[AUTR13]]>
+			</data>
+			<data key="d13"/>
+			<data key="d10">
+				<![CDATA[]]>
+			</data>
+			<data key="d11"/>
+			<data key="d12"/>
+			<data key="d14"/>
+			<data key="d15"/>
+			<data key="d16">1</data>
+			<graph id="l20:" edgedefault="directed">
+				<node id="l20:n12">
+					<data key="d8">10584</data>
+					<data key="d9">
+						<![CDATA[AUTR13]]>
+					</data>
+					<data key="d13">
+						<![CDATA[24398686]]>
+					</data>
+					<data key="d10">
+						<![CDATA[Autoroute 13]]>
+					</data>
+					<data key="d11">
+						<![CDATA[Haltestelle]]>
+					</data>
+					<data key="d12">2</data>
+					<data key="d14">
+						<![CDATA[AUTR13]]>
+					</data>
+					<data key="d15">11592</data>
+					<data key="d16">1</data>
+				</node>
+			</graph>
+		</node>
+		<node id="l52">
+			<data key="d8">11598</data>
+			<data key="d9">
+				<![CDATA[DQRTR]]>
+			</data>
+			<data key="d13"/>
+			<data key="d10">
+				<![CDATA[]]>
+			</data>
+			<data key="d11"/>
+			<data key="d12"/>
+			<data key="d14"/>
+			<data key="d15"/>
+			<data key="d16">1</data>
+			<graph id="l52:" edgedefault="directed">
+				<node id="l52:n41">
+					<data key="d8">10610</data>
+					<data key="d9">
+						<![CDATA[DQRTR]]>
+					</data>
+					<data key="d13">
+						<![CDATA[83642806]]>
+					</data>
+					<data key="d10">
+						<![CDATA[Du Quartier]]>
+					</data>
+					<data key="d11">
+						<![CDATA[Haltestelle]]>
+					</data>
+					<data key="d12">2</data>
+					<data key="d14">
+						<![CDATA[DQRTR]]>
+					</data>
+					<data key="d15">11598</data>
+					<data key="d16">1</data>
+				</node>
+			</graph>
+		</node>
+		<node id="l58">
+			<data key="d8">11604</data>
+			<data key="d9">
+				<![CDATA[GRNMLN]]>
+			</data>
+			<data key="d13"/>
+			<data key="d10">
+				<![CDATA[]]>
+			</data>
+			<data key="d11"/>
+			<data key="d12"/>
+			<data key="d14"/>
+			<data key="d15"/>
+			<data key="d16">1</data>
+			<graph id="l58:" edgedefault="directed">
+				<node id="l58:n34">
+					<data key="d8">10603</data>
+					<data key="d9">
+						<![CDATA[GRNMLN]]>
+					</data>
+					<data key="d13">
+						<![CDATA[67981759]]>
+					</data>
+					<data key="d10">
+						<![CDATA[Grand Moulin]]>
+					</data>
+					<data key="d11">
+						<![CDATA[Haltestelle]]>
+					</data>
+					<data key="d12">2</data>
+					<data key="d14">
+						<![CDATA[GRNMLN]]>
+					</data>
+					<data key="d15">11604</data>
+					<data key="d16">1</data>
+				</node>
+			</graph>
+		</node>
+		<node id="l14">
+			<data key="d8">11622</data>
+			<data key="d9">
+				<![CDATA[RST.]]>
+			</data>
+			<data key="d13"/>
+			<data key="d10">
+				<![CDATA[RST. / RST> / RST<]]>
+			</data>
+			<data key="d11"/>
+			<data key="d12"/>
+			<data key="d14"/>
+			<data key="d15"/>
+			<data key="d16">3</data>
+			<graph id="l14:" edgedefault="directed">
+				<node id="l14:n3">
+					<data key="d8">10684</data>
+					<data key="d9">
+						<![CDATA[RST.]]>
+					</data>
+					<data key="d13">
+						<![CDATA[668423534]]>
+					</data>
+					<data key="d10">
+						<![CDATA[Rive Sud - Transition]]>
+					</data>
+					<data key="d11">
+						<![CDATA[Betriebspunkt]]>
+					</data>
+					<data key="d12">1</data>
+					<data key="d14">
+						<![CDATA[RST.]]>
+					</data>
+					<data key="d15">11622</data>
+					<data key="d16">1</data>
+				</node>
+				<node id="l14:n57">
+					<data key="d8">10685</data>
+					<data key="d9">
+						<![CDATA[RST>]]>
+					</data>
+					<data key="d13">
+						<![CDATA[668423535]]>
+					</data>
+					<data key="d10">
+						<![CDATA[RIVE SUD E]]>
+					</data>
+					<data key="d11">
+						<![CDATA[Einsetzpunkt]]>
+					</data>
+					<data key="d12">7</data>
+					<data key="d14">
+						<![CDATA[RST.]]>
+					</data>
+					<data key="d15">11622</data>
+					<data key="d16">1</data>
+				</node>
+				<node id="l14:n58">
+					<data key="d8">10686</data>
+					<data key="d9">
+						<![CDATA[RST<]]>
+					</data>
+					<data key="d13">
+						<![CDATA[668423536]]>
+					</data>
+					<data key="d10">
+						<![CDATA[RIVE SUD A]]>
+					</data>
+					<data key="d11">
+						<![CDATA[Aussetzpunkt]]>
+					</data>
+					<data key="d12">8</data>
+					<data key="d14">
+						<![CDATA[RST.]]>
+					</data>
+					<data key="d15">11622</data>
+					<data key="d16">1</data>
+				</node>
+			</graph>
+		</node>
+		<node id="l51">
+			<data key="d8">11616</data>
+			<data key="d9">
+				<![CDATA[RS 1]]>
+			</data>
+			<data key="d13"/>
+			<data key="d10">
+				<![CDATA[]]>
+			</data>
+			<data key="d11"/>
+			<data key="d12"/>
+			<data key="d14"/>
+			<data key="d15"/>
+			<data key="d16">1</data>
+			<graph id="l51:" edgedefault="directed">
+				<node id="l51:n44">
+					<data key="d8">10613</data>
+					<data key="d9">
+						<![CDATA[RS 1]]>
+					</data>
+					<data key="d13">
+						<![CDATA[94598792]]>
+					</data>
+					<data key="d10">
+						<![CDATA[Rs 1]]>
+					</data>
+					<data key="d11">
+						<![CDATA[Haltestelle]]>
+					</data>
+					<data key="d12">2</data>
+					<data key="d14">
+						<![CDATA[RS 1]]>
+					</data>
+					<data key="d15">11616</data>
+					<data key="d16">1</data>
+				</node>
+			</graph>
+		</node>
+		<node id="l10">
+			<data key="d8">11610</data>
+			<data key="d9">
+				<![CDATA[MCGILL]]>
+			</data>
+			<data key="d13"/>
+			<data key="d10">
+				<![CDATA[]]>
+			</data>
+			<data key="d11"/>
+			<data key="d12"/>
+			<data key="d14"/>
+			<data key="d15"/>
+			<data key="d16">1</data>
+			<graph id="l10:" edgedefault="directed">
+				<node id="l10:n32">
+					<data key="d8">10601</data>
+					<data key="d9">
+						<![CDATA[MCGILL]]>
+					</data>
+					<data key="d13">
+						<![CDATA[67486951]]>
+					</data>
+					<data key="d10">
+						<![CDATA[Mcgill]]>
+					</data>
+					<data key="d11">
+						<![CDATA[Haltestelle]]>
+					</data>
+					<data key="d12">2</data>
+					<data key="d14">
+						<![CDATA[MCGILL]]>
+					</data>
+					<data key="d15">11610</data>
+					<data key="d16">1</data>
+				</node>
+			</graph>
+		</node>
+		<node id="l6">
+			<data key="d8">11612</data>
+			<data key="d9">
+				<![CDATA[MNTRYL]]>
+			</data>
+			<data key="d13"/>
+			<data key="d10">
+				<![CDATA[]]>
+			</data>
+			<data key="d11"/>
+			<data key="d12"/>
+			<data key="d14"/>
+			<data key="d15"/>
+			<data key="d16">1</data>
+			<graph id="l6:" edgedefault="directed">
+				<node id="l6:n28">
+					<data key="d8">10597</data>
+					<data key="d9">
+						<![CDATA[MNTRYL]]>
+					</data>
+					<data key="d13">
+						<![CDATA[56819846]]>
+					</data>
+					<data key="d10">
+						<![CDATA[Mont Royal]]>
+					</data>
+					<data key="d11">
+						<![CDATA[Haltestelle]]>
+					</data>
+					<data key="d12">2</data>
+					<data key="d14">
+						<![CDATA[MNTRYL]]>
+					</data>
+					<data key="d15">11612</data>
+					<data key="d16">1</data>
+				</node>
+			</graph>
+		</node>
+		<node id="l49">
+			<data key="d8">11623</data>
+			<data key="d9">
+				<![CDATA[RXPRRFND]]>
+			</data>
+			<data key="d13"/>
+			<data key="d10">
+				<![CDATA[]]>
+			</data>
+			<data key="d11"/>
+			<data key="d12"/>
+			<data key="d14"/>
+			<data key="d15"/>
+			<data key="d16">1</data>
+			<graph id="l49:" edgedefault="directed">
+				<node id="l49:n39">
+					<data key="d8">10608</data>
+					<data key="d9">
+						<![CDATA[RXPRRFND]]>
+					</data>
+					<data key="d13">
+						<![CDATA[77176046]]>
+					</data>
+					<data key="d10">
+						<![CDATA[Roxboro Pierrefonds]]>
+					</data>
+					<data key="d11">
+						<![CDATA[Haltestelle]]>
+					</data>
+					<data key="d12">2</data>
+					<data key="d14">
+						<![CDATA[RXPRRFND]]>
+					</data>
+					<data key="d15">11623</data>
+					<data key="d16">1</data>
+				</node>
+			</graph>
+		</node>
+		<node id="l55">
+			<data key="d8">11608</data>
+			<data key="d9">
+				<![CDATA[JNCT02]]>
+			</data>
+			<data key="d13"/>
+			<data key="d10">
+				<![CDATA[]]>
+			</data>
+			<data key="d11"/>
+			<data key="d12"/>
+			<data key="d14"/>
+			<data key="d15"/>
+			<data key="d16">1</data>
+			<graph id="l55:" edgedefault="directed">
+				<node id="l55:n43">
+					<data key="d8">10612</data>
+					<data key="d9">
+						<![CDATA[JNCT02]]>
+					</data>
+					<data key="d13">
+						<![CDATA[91819823]]>
+					</data>
+					<data key="d10">
+						<![CDATA[Junction 02]]>
+					</data>
+					<data key="d11">
+						<![CDATA[Haltestelle]]>
+					</data>
+					<data key="d12">2</data>
+					<data key="d14">
+						<![CDATA[JNCT02]]>
+					</data>
+					<data key="d15">11608</data>
+					<data key="d16">1</data>
+				</node>
+			</graph>
+		</node>
+		<node id="l50">
+			<data key="d8">11609</data>
+			<data key="d9">
+				<![CDATA[KIRKLAND]]>
+			</data>
+			<data key="d13"/>
+			<data key="d10">
+				<![CDATA[]]>
+			</data>
+			<data key="d11"/>
+			<data key="d12"/>
+			<data key="d14"/>
+			<data key="d15"/>
+			<data key="d16">1</data>
+			<graph id="l50:" edgedefault="directed">
+				<node id="l50:n35">
+					<data key="d8">10604</data>
+					<data key="d9">
+						<![CDATA[KIRKLAND]]>
+					</data>
+					<data key="d13">
+						<![CDATA[72580528]]>
+					</data>
+					<data key="d10">
+						<![CDATA[Kirkland]]>
+					</data>
+					<data key="d11">
+						<![CDATA[Haltestelle]]>
+					</data>
+					<data key="d12">2</data>
+					<data key="d14">
+						<![CDATA[KIRKLAND]]>
+					</data>
+					<data key="d15">11609</data>
+					<data key="d16">1</data>
+				</node>
+			</graph>
+		</node>
+		<node id="l27">
+			<data key="d8">11624</data>
+			<data key="d9">
+				<![CDATA[SNADBLLV]]>
+			</data>
+			<data key="d13"/>
+			<data key="d10">
+				<![CDATA[]]>
+			</data>
+			<data key="d11"/>
+			<data key="d12"/>
+			<data key="d14"/>
+			<data key="d15"/>
+			<data key="d16">4</data>
+			<graph id="l27:" edgedefault="directed">
+				<node id="l27:n8">
+					<data key="d8">10705</data>
+					<data key="d9">
+						<![CDATA[SNADBLL>]]>
+					</data>
+					<data key="d13">
+						<![CDATA[3267906521]]>
+					</data>
+					<data key="d10">
+						<![CDATA[SNADBLLV E]]>
+					</data>
+					<data key="d11">
+						<![CDATA[Einsetzpunkt]]>
+					</data>
+					<data key="d12">7</data>
+					<data key="d14">
+						<![CDATA[SNADBLLV]]>
+					</data>
+					<data key="d15">11624</data>
+					<data key="d16">1</data>
+				</node>
+				<node id="l27:n9">
+					<data key="d8">10706</data>
+					<data key="d9">
+						<![CDATA[SNADBLL<]]>
+					</data>
+					<data key="d13">
+						<![CDATA[3267906522]]>
+					</data>
+					<data key="d10">
+						<![CDATA[SNADBLLV A]]>
+					</data>
+					<data key="d11">
+						<![CDATA[Aussetzpunkt]]>
+					</data>
+					<data key="d12">8</data>
+					<data key="d14">
+						<![CDATA[SNADBLLV]]>
+					</data>
+					<data key="d15">11624</data>
+					<data key="d16">1</data>
+				</node>
+				<node id="l27:n19">
+					<data key="d8">10588</data>
+					<data key="d9">
+						<![CDATA[SNADBLLV]]>
+					</data>
+					<data key="d13">
+						<![CDATA[32679065]]>
+					</data>
+					<data key="d10">
+						<![CDATA[Sainte Anne De Bellevue]]>
+					</data>
+					<data key="d11">
+						<![CDATA[Haltestelle]]>
+					</data>
+					<data key="d12">2</data>
+					<data key="d14">
+						<![CDATA[SNADBLLV]]>
+					</data>
+					<data key="d15">11624</data>
+					<data key="d16">1</data>
+				</node>
+				<node id="l27:n46">
+					<data key="d8">10621</data>
+					<data key="d9">
+						<![CDATA[SNADBLL.]]>
+					</data>
+					<data key="d13">
+						<![CDATA[326790652]]>
+					</data>
+					<data key="d10">
+						<![CDATA[Sainte Anne De Bellevue - Turnover]]>
+					</data>
+					<data key="d11">
+						<![CDATA[Betriebspunkt]]>
+					</data>
+					<data key="d12">1</data>
+					<data key="d14">
+						<![CDATA[SNADBLLV]]>
+					</data>
+					<data key="d15">11624</data>
+					<data key="d16">1</data>
+				</node>
+			</graph>
+		</node>
+		<node id="l4">
+			<data key="d8">11617</data>
+			<data key="d9">
+				<![CDATA[RS 2]]>
+			</data>
+			<data key="d13"/>
+			<data key="d10">
+				<![CDATA[]]>
+			</data>
+			<data key="d11"/>
+			<data key="d12"/>
+			<data key="d14"/>
+			<data key="d15"/>
+			<data key="d16">1</data>
+			<graph id="l4:" edgedefault="directed">
+				<node id="l4:n21">
+					<data key="d8">10590</data>
+					<data key="d9">
+						<![CDATA[RS 2]]>
+					</data>
+					<data key="d13">
+						<![CDATA[42118784]]>
+					</data>
+					<data key="d10">
+						<![CDATA[Rs 2]]>
+					</data>
+					<data key="d11">
+						<![CDATA[Haltestelle]]>
+					</data>
+					<data key="d12">2</data>
+					<data key="d14">
+						<![CDATA[RS 2]]>
+					</data>
+					<data key="d15">11617</data>
+					<data key="d16">1</data>
+				</node>
+			</graph>
+		</node>
+		<node id="l31">
+			<data key="d8">11611</data>
+			<data key="d9">
+				<![CDATA[MNTPLLR]]>
+			</data>
+			<data key="d13"/>
+			<data key="d10">
+				<![CDATA[]]>
+			</data>
+			<data key="d11"/>
+			<data key="d12"/>
+			<data key="d14"/>
+			<data key="d15"/>
+			<data key="d16">1</data>
+			<graph id="l31:" edgedefault="directed">
+				<node id="l31:n16">
+					<data key="d8">10585</data>
+					<data key="d9">
+						<![CDATA[MNTPLLR]]>
+					</data>
+					<data key="d13">
+						<![CDATA[29831104]]>
+					</data>
+					<data key="d10">
+						<![CDATA[Montpellier]]>
+					</data>
+					<data key="d11">
+						<![CDATA[Haltestelle]]>
+					</data>
+					<data key="d12">2</data>
+					<data key="d14">
+						<![CDATA[MNTPLLR]]>
+					</data>
+					<data key="d15">11611</data>
+					<data key="d16">1</data>
+				</node>
+			</graph>
+		</node>
+		<node id="l33">
+			<data key="d8">11614</data>
+			<data key="d9">
+				<![CDATA[PNTCLR]]>
+			</data>
+			<data key="d13"/>
+			<data key="d10">
+				<![CDATA[]]>
+			</data>
+			<data key="d11"/>
+			<data key="d12"/>
+			<data key="d14"/>
+			<data key="d15"/>
+			<data key="d16">1</data>
+			<graph id="l33:" edgedefault="directed">
+				<node id="l33:n24">
+					<data key="d8">10593</data>
+					<data key="d9">
+						<![CDATA[PNTCLR]]>
+					</data>
+					<data key="d13">
+						<![CDATA[45752087]]>
+					</data>
+					<data key="d10">
+						<![CDATA[Point Claire]]>
+					</data>
+					<data key="d11">
+						<![CDATA[Haltestelle]]>
+					</data>
+					<data key="d12">2</data>
+					<data key="d14">
+						<![CDATA[PNTCLR]]>
+					</data>
+					<data key="d15">11614</data>
+					<data key="d16">1</data>
+				</node>
+			</graph>
+		</node>
+		<node id="l11">
+			<data key="d8">11613</data>
+			<data key="d9">
+				<![CDATA[PANAMA]]>
+			</data>
+			<data key="d13"/>
+			<data key="d10">
+				<![CDATA[]]>
+			</data>
+			<data key="d11"/>
+			<data key="d12"/>
+			<data key="d14"/>
+			<data key="d15"/>
+			<data key="d16">1</data>
+			<graph id="l11:" edgedefault="directed">
+				<node id="l11:n33">
+					<data key="d8">10602</data>
+					<data key="d9">
+						<![CDATA[PANAMA]]>
+					</data>
+					<data key="d13">
+						<![CDATA[67637282]]>
+					</data>
+					<data key="d10">
+						<![CDATA[Panama]]>
+					</data>
+					<data key="d11">
+						<![CDATA[Haltestelle]]>
+					</data>
+					<data key="d12">2</data>
+					<data key="d14">
+						<![CDATA[PANAMA]]>
+					</data>
+					<data key="d15">11613</data>
+					<data key="d16">1</data>
+				</node>
+			</graph>
+		</node>
+		<node id="l8">
+			<data key="d8">11615</data>
+			<data key="d9">
+				<![CDATA[RIVE SUD]]>
+			</data>
+			<data key="d13"/>
+			<data key="d10">
+				<![CDATA[]]>
+			</data>
+			<data key="d11"/>
+			<data key="d12"/>
+			<data key="d14"/>
+			<data key="d15"/>
+			<data key="d16">4</data>
+			<graph id="l8:" edgedefault="directed">
+				<node id="l8:n30">
+					<data key="d8">10599</data>
+					<data key="d9">
+						<![CDATA[RIVE SUD]]>
+					</data>
+					<data key="d13">
+						<![CDATA[66842352]]>
+					</data>
+					<data key="d10">
+						<![CDATA[Rive Sud]]>
+					</data>
+					<data key="d11">
+						<![CDATA[Haltestelle]]>
+					</data>
+					<data key="d12">2</data>
+					<data key="d14">
+						<![CDATA[RIVE SUD]]>
+					</data>
+					<data key="d15">11615</data>
+					<data key="d16">1</data>
+				</node>
+				<node id="l8:n48">
+					<data key="d8">10623</data>
+					<data key="d9">
+						<![CDATA[RIVE SU.]]>
+					</data>
+					<data key="d13">
+						<![CDATA[668423522]]>
+					</data>
+					<data key="d10">
+						<![CDATA[Rive Sud - Turnover]]>
+					</data>
+					<data key="d11">
+						<![CDATA[Betriebspunkt]]>
+					</data>
+					<data key="d12">1</data>
+					<data key="d14">
+						<![CDATA[RIVE SUD]]>
+					</data>
+					<data key="d15">11615</data>
+					<data key="d16">1</data>
+				</node>
+				<node id="l8:n53">
+					<data key="d8">10641</data>
+					<data key="d9">
+						<![CDATA[RIVE SU>]]>
+					</data>
+					<data key="d13">
+						<![CDATA[6684235221]]>
+					</data>
+					<data key="d10">
+						<![CDATA[Rive Sud - Turnover - Out]]>
+					</data>
+					<data key="d11">
+						<![CDATA[Einsetzpunkt]]>
+					</data>
+					<data key="d12">7</data>
+					<data key="d14">
+						<![CDATA[RIVE SUD]]>
+					</data>
+					<data key="d15">11615</data>
+					<data key="d16">1</data>
+				</node>
+				<node id="l8:n54">
+					<data key="d8">10642</data>
+					<data key="d9">
+						<![CDATA[RIVE SU<]]>
+					</data>
+					<data key="d13">
+						<![CDATA[6684235222]]>
+					</data>
+					<data key="d10">
+						<![CDATA[Rive Sud - Turnover - In]]>
+					</data>
+					<data key="d11">
+						<![CDATA[Aussetzpunkt]]>
+					</data>
+					<data key="d12">8</data>
+					<data key="d14">
+						<![CDATA[RIVE SUD]]>
+					</data>
+					<data key="d15">11615</data>
+					<data key="d16">1</data>
+				</node>
+			</graph>
+		</node>
+		<node id="l9">
+			<data key="d8">11618</data>
+			<data key="d9">
+				<![CDATA[RS 3]]>
+			</data>
+			<data key="d13"/>
+			<data key="d10">
+				<![CDATA[]]>
+			</data>
+			<data key="d11"/>
+			<data key="d12"/>
+			<data key="d14"/>
+			<data key="d15"/>
+			<data key="d16">1</data>
+			<graph id="l9:" edgedefault="directed">
+				<node id="l9:n31">
+					<data key="d8">10600</data>
+					<data key="d9">
+						<![CDATA[RS 3]]>
+					</data>
+					<data key="d13">
+						<![CDATA[67466009]]>
+					</data>
+					<data key="d10">
+						<![CDATA[Rs 3]]>
+					</data>
+					<data key="d11">
+						<![CDATA[Haltestelle]]>
+					</data>
+					<data key="d12">2</data>
+					<data key="d14">
+						<![CDATA[RS 3]]>
+					</data>
+					<data key="d15">11618</data>
+					<data key="d16">1</data>
+				</node>
+			</graph>
+		</node>
+		<node id="l48">
+			<data key="d8">11607</data>
+			<data key="d9">
+				<![CDATA[JNCT01]]>
+			</data>
+			<data key="d13"/>
+			<data key="d10">
+				<![CDATA[]]>
+			</data>
+			<data key="d11"/>
+			<data key="d12"/>
+			<data key="d14"/>
+			<data key="d15"/>
+			<data key="d16">1</data>
+			<graph id="l48:" edgedefault="directed">
+				<node id="l48:n38">
+					<data key="d8">10607</data>
+					<data key="d9">
+						<![CDATA[JNCT01]]>
+					</data>
+					<data key="d13">
+						<![CDATA[75809567]]>
+					</data>
+					<data key="d10">
+						<![CDATA[Junction 01]]>
+					</data>
+					<data key="d11">
+						<![CDATA[Haltestelle]]>
+					</data>
+					<data key="d12">2</data>
+					<data key="d14">
+						<![CDATA[JNCT01]]>
+					</data>
+					<data key="d15">11607</data>
+					<data key="d16">1</data>
+				</node>
+			</graph>
+		</node>
+		<node id="l0:n18">
+			<data key="d8">10587</data>
+			<data key="d9">
+				<![CDATA[EDMNTPTT]]>
+			</data>
+			<data key="d13">
+				<![CDATA[31467831]]>
+			</data>
+			<data key="d10">
+				<![CDATA[Edouard Montpetit]]>
+			</data>
+			<data key="d11">
+				<![CDATA[Haltestelle]]>
+			</data>
+			<data key="d12">2</data>
+			<data key="d14">
+				<![CDATA[EDMNTPTT]]>
+			</data>
+			<data key="d15">11602</data>
+			<data key="d16">1</data>
+		</node>
+		<node id="l1:n25">
+			<data key="d8">10594</data>
+			<data key="d9">
+				<![CDATA[DRSS]]>
+			</data>
+			<data key="d13">
+				<![CDATA[53430330]]>
+			</data>
+			<data key="d10">
+				<![CDATA[Du Ruisseau]]>
+			</data>
+			<data key="d11">
+				<![CDATA[Haltestelle]]>
+			</data>
+			<data key="d12">2</data>
+			<data key="d14">
+				<![CDATA[DRSS]]>
+			</data>
+			<data key="d15">11599</data>
+			<data key="d16">1</data>
+		</node>
+		<node id="l2:n17">
+			<data key="d8">10586</data>
+			<data key="d9">
+				<![CDATA[SNDRTH]]>
+			</data>
+			<data key="d13">
+				<![CDATA[29854895]]>
+			</data>
+			<data key="d10">
+				<![CDATA[Sainte Dorothee]]>
+			</data>
+			<data key="d11">
+				<![CDATA[Haltestelle]]>
+			</data>
+			<data key="d12">2</data>
+			<data key="d14">
+				<![CDATA[SNDRTH]]>
+			</data>
+			<data key="d15">11625</data>
+			<data key="d16">1</data>
+		</node>
+		<node id="l3:n14">
+			<data key="d8">10582</data>
+			<data key="d9">
+				<![CDATA[GRCNTRL]]>
+			</data>
+			<data key="d13">
+				<![CDATA[12973542]]>
+			</data>
+			<data key="d10">
+				<![CDATA[Gare Central]]>
+			</data>
+			<data key="d11">
+				<![CDATA[Haltestelle]]>
+			</data>
+			<data key="d12">2</data>
+			<data key="d14">
+				<![CDATA[GRCNTRL]]>
+			</data>
+			<data key="d15">11603</data>
+			<data key="d16">1</data>
+		</node>
+		<node id="l4:n21">
+			<data key="d8">10590</data>
+			<data key="d9">
+				<![CDATA[RS 2]]>
+			</data>
+			<data key="d13">
+				<![CDATA[42118784]]>
+			</data>
+			<data key="d10">
+				<![CDATA[Rs 2]]>
+			</data>
+			<data key="d11">
+				<![CDATA[Haltestelle]]>
+			</data>
+			<data key="d12">2</data>
+			<data key="d14">
+				<![CDATA[RS 2]]>
+			</data>
+			<data key="d15">11617</data>
+			<data key="d16">1</data>
+		</node>
+		<node id="l5:n26">
+			<data key="d8">10595</data>
+			<data key="d9">
+				<![CDATA[DSSRCS]]>
+			</data>
+			<data key="d13">
+				<![CDATA[54176178]]>
+			</data>
+			<data key="d10">
+				<![CDATA[Des Sources]]>
+			</data>
+			<data key="d11">
+				<![CDATA[Haltestelle]]>
+			</data>
+			<data key="d12">2</data>
+			<data key="d14">
+				<![CDATA[DSSRCS]]>
+			</data>
+			<data key="d15">11600</data>
+			<data key="d16">1</data>
+		</node>
+		<node id="l6:n28">
+			<data key="d8">10597</data>
+			<data key="d9">
+				<![CDATA[MNTRYL]]>
+			</data>
+			<data key="d13">
+				<![CDATA[56819846]]>
+			</data>
+			<data key="d10">
+				<![CDATA[Mont Royal]]>
+			</data>
+			<data key="d11">
+				<![CDATA[Haltestelle]]>
+			</data>
+			<data key="d12">2</data>
+			<data key="d14">
+				<![CDATA[MNTRYL]]>
+			</data>
+			<data key="d15">11612</data>
+			<data key="d16">1</data>
+		</node>
+		<node id="l7:n29">
+			<data key="d8">10598</data>
+			<data key="d9">
+				<![CDATA[TCHSLRNT]]>
+			</data>
+			<data key="d13">
+				<![CDATA[65480904]]>
+			</data>
+			<data key="d10">
+				<![CDATA[Technoparc Saint Laurent]]>
+			</data>
+			<data key="d11">
+				<![CDATA[Haltestelle]]>
+			</data>
+			<data key="d12">2</data>
+			<data key="d14">
+				<![CDATA[TCHSLRNT]]>
+			</data>
+			<data key="d15">11627</data>
+			<data key="d16">1</data>
+		</node>
+		<node id="l8:n30">
+			<data key="d8">10599</data>
+			<data key="d9">
+				<![CDATA[RIVE SUD]]>
+			</data>
+			<data key="d13">
+				<![CDATA[66842352]]>
+			</data>
+			<data key="d10">
+				<![CDATA[Rive Sud]]>
+			</data>
+			<data key="d11">
+				<![CDATA[Haltestelle]]>
+			</data>
+			<data key="d12">2</data>
+			<data key="d14">
+				<![CDATA[RIVE SUD]]>
+			</data>
+			<data key="d15">11615</data>
+			<data key="d16">1</data>
+		</node>
+		<node id="l9:n31">
+			<data key="d8">10600</data>
+			<data key="d9">
+				<![CDATA[RS 3]]>
+			</data>
+			<data key="d13">
+				<![CDATA[67466009]]>
+			</data>
+			<data key="d10">
+				<![CDATA[Rs 3]]>
+			</data>
+			<data key="d11">
+				<![CDATA[Haltestelle]]>
+			</data>
+			<data key="d12">2</data>
+			<data key="d14">
+				<![CDATA[RS 3]]>
+			</data>
+			<data key="d15">11618</data>
+			<data key="d16">1</data>
+		</node>
+		<node id="l10:n32">
+			<data key="d8">10601</data>
+			<data key="d9">
+				<![CDATA[MCGILL]]>
+			</data>
+			<data key="d13">
+				<![CDATA[67486951]]>
+			</data>
+			<data key="d10">
+				<![CDATA[Mcgill]]>
+			</data>
+			<data key="d11">
+				<![CDATA[Haltestelle]]>
+			</data>
+			<data key="d12">2</data>
+			<data key="d14">
+				<![CDATA[MCGILL]]>
+			</data>
+			<data key="d15">11610</data>
+			<data key="d16">1</data>
+		</node>
+		<node id="l11:n33">
+			<data key="d8">10602</data>
+			<data key="d9">
+				<![CDATA[PANAMA]]>
+			</data>
+			<data key="d13">
+				<![CDATA[67637282]]>
+			</data>
+			<data key="d10">
+				<![CDATA[Panama]]>
+			</data>
+			<data key="d11">
+				<![CDATA[Haltestelle]]>
+			</data>
+			<data key="d12">2</data>
+			<data key="d14">
+				<![CDATA[PANAMA]]>
+			</data>
+			<data key="d15">11613</data>
+			<data key="d16">1</data>
+		</node>
+		<node id="l12:n27">
+			<data key="d8">10596</data>
+			<data key="d9">
+				<![CDATA[ILDSRS]]>
+			</data>
+			<data key="d13">
+				<![CDATA[54776198]]>
+			</data>
+			<data key="d10">
+				<![CDATA[Ile Des Soeurs]]>
+			</data>
+			<data key="d11">
+				<![CDATA[Haltestelle]]>
+			</data>
+			<data key="d12">2</data>
+			<data key="d14">
+				<![CDATA[ILDSRS]]>
+			</data>
+			<data key="d15">11606</data>
+			<data key="d16">1</data>
+		</node>
+		<node id="l8:n54">
+			<data key="d8">10642</data>
+			<data key="d9">
+				<![CDATA[RIVE SU<]]>
+			</data>
+			<data key="d13">
+				<![CDATA[6684235222]]>
+			</data>
+			<data key="d10">
+				<![CDATA[Rive Sud - Turnover - In]]>
+			</data>
+			<data key="d11">
+				<![CDATA[Aussetzpunkt]]>
+			</data>
+			<data key="d12">8</data>
+			<data key="d14">
+				<![CDATA[RIVE SUD]]>
+			</data>
+			<data key="d15">11615</data>
+			<data key="d16">1</data>
+		</node>
+		<node id="l14:n58">
+			<data key="d8">10686</data>
+			<data key="d9">
+				<![CDATA[RST<]]>
+			</data>
+			<data key="d13">
+				<![CDATA[668423536]]>
+			</data>
+			<data key="d10">
+				<![CDATA[RIVE SUD A]]>
+			</data>
+			<data key="d11">
+				<![CDATA[Aussetzpunkt]]>
+			</data>
+			<data key="d12">8</data>
+			<data key="d14">
+				<![CDATA[RST.]]>
+			</data>
+			<data key="d15">11622</data>
+			<data key="d16">1</data>
+		</node>
+		<node id="l15:n55">
+			<data key="d8">10661</data>
+			<data key="d9">
+				<![CDATA[DMTRNST>]]>
+			</data>
+			<data key="d13">
+				<![CDATA[4487226621]]>
+			</data>
+			<data key="d10">
+				<![CDATA[DMTRNSTN E]]>
+			</data>
+			<data key="d11">
+				<![CDATA[Einsetzpunkt]]>
+			</data>
+			<data key="d12">7</data>
+			<data key="d14">
+				<![CDATA[DMTRNSTN]]>
+			</data>
+			<data key="d15">11597</data>
+			<data key="d16">1</data>
+		</node>
+		<node id="l14:n57">
+			<data key="d8">10685</data>
+			<data key="d9">
+				<![CDATA[RST>]]>
+			</data>
+			<data key="d13">
+				<![CDATA[668423535]]>
+			</data>
+			<data key="d10">
+				<![CDATA[RIVE SUD E]]>
+			</data>
+			<data key="d11">
+				<![CDATA[Einsetzpunkt]]>
+			</data>
+			<data key="d12">7</data>
+			<data key="d14">
+				<![CDATA[RST.]]>
+			</data>
+			<data key="d15">11622</data>
+			<data key="d16">1</data>
+		</node>
+		<node id="l15:n56">
+			<data key="d8">10662</data>
+			<data key="d9">
+				<![CDATA[DMTRNST<]]>
+			</data>
+			<data key="d13">
+				<![CDATA[4487226622]]>
+			</data>
+			<data key="d10">
+				<![CDATA[DMTRNSTN A]]>
+			</data>
+			<data key="d11">
+				<![CDATA[Aussetzpunkt]]>
+			</data>
+			<data key="d12">8</data>
+			<data key="d14">
+				<![CDATA[DMTRNSTN]]>
+			</data>
+			<data key="d15">11597</data>
+			<data key="d16">1</data>
+		</node>
+		<node id="l18:n15">
+			<data key="d8">10583</data>
+			<data key="d9">
+				<![CDATA[CRRSPA40]]>
+			</data>
+			<data key="d13">
+				<![CDATA[18199215]]>
+			</data>
+			<data key="d10">
+				<![CDATA[Correspondance A40]]>
+			</data>
+			<data key="d11">
+				<![CDATA[Haltestelle]]>
+			</data>
+			<data key="d12">2</data>
+			<data key="d14">
+				<![CDATA[CRRSPA40]]>
+			</data>
+			<data key="d15">11596</data>
+			<data key="d16">1</data>
+		</node>
+		<node id="l19:n22">
+			<data key="d8">10591</data>
+			<data key="d9">
+				<![CDATA[ILBGRS]]>
+			</data>
+			<data key="d13">
+				<![CDATA[42600212]]>
+			</data>
+			<data key="d10">
+				<![CDATA[Ile Bigras]]>
+			</data>
+			<data key="d11">
+				<![CDATA[Haltestelle]]>
+			</data>
+			<data key="d12">2</data>
+			<data key="d14">
+				<![CDATA[ILBGRS]]>
+			</data>
+			<data key="d15">11605</data>
+			<data key="d16">1</data>
+		</node>
+		<node id="l20:n12">
+			<data key="d8">10584</data>
+			<data key="d9">
+				<![CDATA[AUTR13]]>
+			</data>
+			<data key="d13">
+				<![CDATA[24398686]]>
+			</data>
+			<data key="d10">
+				<![CDATA[Autoroute 13]]>
+			</data>
+			<data key="d11">
+				<![CDATA[Haltestelle]]>
+			</data>
+			<data key="d12">2</data>
+			<data key="d14">
+				<![CDATA[AUTR13]]>
+			</data>
+			<data key="d15">11592</data>
+			<data key="d16">1</data>
+		</node>
+		<node id="l21:n4">
+			<data key="d8">10701</data>
+			<data key="d9">
+				<![CDATA[AEROPOR>]]>
+			</data>
+			<data key="d13">
+				<![CDATA[1114384221]]>
+			</data>
+			<data key="d10">
+				<![CDATA[AEROPORT E]]>
+			</data>
+			<data key="d11">
+				<![CDATA[Einsetzpunkt]]>
+			</data>
+			<data key="d12">7</data>
+			<data key="d14">
+				<![CDATA[AEROPOR>]]>
+			</data>
+			<data key="d15">11590</data>
+			<data key="d16">1</data>
+		</node>
+		<node id="l3:n7">
+			<data key="d8">10704</data>
+			<data key="d9">
+				<![CDATA[GRCNTRL<]]>
+			</data>
+			<data key="d13">
+				<![CDATA[1297354222]]>
+			</data>
+			<data key="d10">
+				<![CDATA[GRCNTRL A]]>
+			</data>
+			<data key="d11">
+				<![CDATA[Aussetzpunkt]]>
+			</data>
+			<data key="d12">8</data>
+			<data key="d14">
+				<![CDATA[GRCNTRL]]>
+			</data>
+			<data key="d15">11603</data>
+			<data key="d16">1</data>
+		</node>
+		<node id="l3:n6">
+			<data key="d8">10703</data>
+			<data key="d9">
+				<![CDATA[GRCNTRL>]]>
+			</data>
+			<data key="d13">
+				<![CDATA[1297354221]]>
+			</data>
+			<data key="d10">
+				<![CDATA[GRCNTRL E]]>
+			</data>
+			<data key="d11">
+				<![CDATA[Einsetzpunkt]]>
+			</data>
+			<data key="d12">7</data>
+			<data key="d14">
+				<![CDATA[GRCNTRL]]>
+			</data>
+			<data key="d15">11603</data>
+			<data key="d16">1</data>
+		</node>
+		<node id="l7:n10">
+			<data key="d8">10707</data>
+			<data key="d9">
+				<![CDATA[TCHSLRN>]]>
+			</data>
+			<data key="d13">
+				<![CDATA[6548090421]]>
+			</data>
+			<data key="d10">
+				<![CDATA[TCHSLRNT E]]>
+			</data>
+			<data key="d11">
+				<![CDATA[Einsetzpunkt]]>
+			</data>
+			<data key="d12">7</data>
+			<data key="d14">
+				<![CDATA[TCHSLRNT]]>
+			</data>
+			<data key="d15">11627</data>
+			<data key="d16">1</data>
+		</node>
+		<node id="l7:n11">
+			<data key="d8">10708</data>
+			<data key="d9">
+				<![CDATA[TCHSLRN<]]>
+			</data>
+			<data key="d13">
+				<![CDATA[6548090422]]>
+			</data>
+			<data key="d10">
+				<![CDATA[TCHSLRNT A]]>
+			</data>
+			<data key="d11">
+				<![CDATA[Aussetzpunkt]]>
+			</data>
+			<data key="d12">8</data>
+			<data key="d14">
+				<![CDATA[TCHSLRNT]]>
+			</data>
+			<data key="d15">11627</data>
+			<data key="d16">1</data>
+		</node>
+		<node id="l26:n5">
+			<data key="d8">10702</data>
+			<data key="d9">
+				<![CDATA[AEROPOR<]]>
+			</data>
+			<data key="d13">
+				<![CDATA[1114384222]]>
+			</data>
+			<data key="d10">
+				<![CDATA[AEROPORT A]]>
+			</data>
+			<data key="d11">
+				<![CDATA[Aussetzpunkt]]>
+			</data>
+			<data key="d12">8</data>
+			<data key="d14">
+				<![CDATA[AEROPORT]]>
+			</data>
+			<data key="d15">11591</data>
+			<data key="d16">1</data>
+		</node>
+		<node id="l27:n8">
+			<data key="d8">10705</data>
+			<data key="d9">
+				<![CDATA[SNADBLL>]]>
+			</data>
+			<data key="d13">
+				<![CDATA[3267906521]]>
+			</data>
+			<data key="d10">
+				<![CDATA[SNADBLLV E]]>
+			</data>
+			<data key="d11">
+				<![CDATA[Einsetzpunkt]]>
+			</data>
+			<data key="d12">7</data>
+			<data key="d14">
+				<![CDATA[SNADBLLV]]>
+			</data>
+			<data key="d15">11624</data>
+			<data key="d16">1</data>
+		</node>
+		<node id="l27:n9">
+			<data key="d8">10706</data>
+			<data key="d9">
+				<![CDATA[SNADBLL<]]>
+			</data>
+			<data key="d13">
+				<![CDATA[3267906522]]>
+			</data>
+			<data key="d10">
+				<![CDATA[SNADBLLV A]]>
+			</data>
+			<data key="d11">
+				<![CDATA[Aussetzpunkt]]>
+			</data>
+			<data key="d12">8</data>
+			<data key="d14">
+				<![CDATA[SNADBLLV]]>
+			</data>
+			<data key="d15">11624</data>
+			<data key="d16">1</data>
+		</node>
+		<node id="l8:n53">
+			<data key="d8">10641</data>
+			<data key="d9">
+				<![CDATA[RIVE SU>]]>
+			</data>
+			<data key="d13">
+				<![CDATA[6684235221]]>
+			</data>
+			<data key="d10">
+				<![CDATA[Rive Sud - Turnover - Out]]>
+			</data>
+			<data key="d11">
+				<![CDATA[Einsetzpunkt]]>
+			</data>
+			<data key="d12">7</data>
+			<data key="d14">
+				<![CDATA[RIVE SUD]]>
+			</data>
+			<data key="d15">11615</data>
+			<data key="d16">1</data>
+		</node>
+		<node id="l30:n20">
+			<data key="d8">10589</data>
+			<data key="d9">
+				<![CDATA[TRNSTN]]>
+			</data>
+			<data key="d13">
+				<![CDATA[33578774]]>
+			</data>
+			<data key="d10">
+				<![CDATA[Transition]]>
+			</data>
+			<data key="d11">
+				<![CDATA[Haltestelle]]>
+			</data>
+			<data key="d12">2</data>
+			<data key="d14">
+				<![CDATA[TRNSTN]]>
+			</data>
+			<data key="d15">11628</data>
+			<data key="d16">1</data>
+		</node>
+		<node id="l31:n16">
+			<data key="d8">10585</data>
+			<data key="d9">
+				<![CDATA[MNTPLLR]]>
+			</data>
+			<data key="d13">
+				<![CDATA[29831104]]>
+			</data>
+			<data key="d10">
+				<![CDATA[Montpellier]]>
+			</data>
+			<data key="d11">
+				<![CDATA[Haltestelle]]>
+			</data>
+			<data key="d12">2</data>
+			<data key="d14">
+				<![CDATA[MNTPLLR]]>
+			</data>
+			<data key="d15">11611</data>
+			<data key="d16">1</data>
+		</node>
+		<node id="l15:n23">
+			<data key="d8">10592</data>
+			<data key="d9">
+				<![CDATA[DMTRNSTN]]>
+			</data>
+			<data key="d13">
+				<![CDATA[44872266]]>
+			</data>
+			<data key="d10">
+				<![CDATA[Deux Montagnes - Transition]]>
+			</data>
+			<data key="d11">
+				<![CDATA[Haltestelle]]>
+			</data>
+			<data key="d12">2</data>
+			<data key="d14">
+				<![CDATA[DMTRNSTN]]>
+			</data>
+			<data key="d15">11597</data>
+			<data key="d16">1</data>
+		</node>
+		<node id="l33:n24">
+			<data key="d8">10593</data>
+			<data key="d9">
+				<![CDATA[PNTCLR]]>
+			</data>
+			<data key="d13">
+				<![CDATA[45752087]]>
+			</data>
+			<data key="d10">
+				<![CDATA[Point Claire]]>
+			</data>
+			<data key="d11">
+				<![CDATA[Haltestelle]]>
+			</data>
+			<data key="d12">2</data>
+			<data key="d14">
+				<![CDATA[PNTCLR]]>
+			</data>
+			<data key="d15">11614</data>
+			<data key="d16">1</data>
+		</node>
+		<node id="l26:n13">
+			<data key="d8">10581</data>
+			<data key="d9">
+				<![CDATA[AEROPORT]]>
+			</data>
+			<data key="d13">
+				<![CDATA[11143842]]>
+			</data>
+			<data key="d10">
+				<![CDATA[Aeroport]]>
+			</data>
+			<data key="d11">
+				<![CDATA[Haltestelle]]>
+			</data>
+			<data key="d12">2</data>
+			<data key="d14">
+				<![CDATA[AEROPORT]]>
+			</data>
+			<data key="d15">11591</data>
+			<data key="d16">1</data>
+		</node>
+		<node id="l27:n19">
+			<data key="d8">10588</data>
+			<data key="d9">
+				<![CDATA[SNADBLLV]]>
+			</data>
+			<data key="d13">
+				<![CDATA[32679065]]>
+			</data>
+			<data key="d10">
+				<![CDATA[Sainte Anne De Bellevue]]>
+			</data>
+			<data key="d11">
+				<![CDATA[Haltestelle]]>
+			</data>
+			<data key="d12">2</data>
+			<data key="d14">
+				<![CDATA[SNADBLLV]]>
+			</data>
+			<data key="d15">11624</data>
+			<data key="d16">1</data>
+		</node>
+		<node id="l36:n2">
+			<data key="d8">10683</data>
+			<data key="d9">
+				<![CDATA[RS3.]]>
+			</data>
+			<data key="d13">
+				<![CDATA[668423533]]>
+			</data>
+			<data key="d10">
+				<![CDATA[Rive Sud - Op point 3]]>
+			</data>
+			<data key="d11">
+				<![CDATA[Betriebspunkt]]>
+			</data>
+			<data key="d12">1</data>
+			<data key="d14">
+				<![CDATA[RS3.]]>
+			</data>
+			<data key="d15">11621</data>
+			<data key="d16">1</data>
+		</node>
+		<node id="l30:n50">
+			<data key="d8">10625</data>
+			<data key="d9">
+				<![CDATA[TRNSTN.]]>
+			</data>
+			<data key="d13">
+				<![CDATA[335787742]]>
+			</data>
+			<data key="d10">
+				<![CDATA[Transition - Turnover]]>
+			</data>
+			<data key="d11">
+				<![CDATA[Betriebspunkt]]>
+			</data>
+			<data key="d12">1</data>
+			<data key="d14">
+				<![CDATA[TRNSTN]]>
+			</data>
+			<data key="d15">11628</data>
+			<data key="d16">1</data>
+		</node>
+		<node id="l15:n49">
+			<data key="d8">10624</data>
+			<data key="d9">
+				<![CDATA[DMTRNST.]]>
+			</data>
+			<data key="d13">
+				<![CDATA[448722662]]>
+			</data>
+			<data key="d10">
+				<![CDATA[Deux Montagnes Transition - Turnover]]>
+			</data>
+			<data key="d11">
+				<![CDATA[Betriebspunkt]]>
+			</data>
+			<data key="d12">1</data>
+			<data key="d14">
+				<![CDATA[DMTRNSTN]]>
+			</data>
+			<data key="d15">11597</data>
+			<data key="d16">1</data>
+		</node>
+		<node id="l39:n0">
+			<data key="d8">10681</data>
+			<data key="d9">
+				<![CDATA[RS1.]]>
+			</data>
+			<data key="d13">
+				<![CDATA[668423531]]>
+			</data>
+			<data key="d10">
+				<![CDATA[Rive Sud - Op point 1]]>
+			</data>
+			<data key="d11">
+				<![CDATA[Betriebspunkt]]>
+			</data>
+			<data key="d12">1</data>
+			<data key="d14">
+				<![CDATA[RS1.]]>
+			</data>
+			<data key="d15">11619</data>
+			<data key="d16">1</data>
+		</node>
+		<node id="l40:n1">
+			<data key="d8">10682</data>
+			<data key="d9">
+				<![CDATA[RS2.]]>
+			</data>
+			<data key="d13">
+				<![CDATA[668423532]]>
+			</data>
+			<data key="d10">
+				<![CDATA[Rive Sud - Op point 2]]>
+			</data>
+			<data key="d11">
+				<![CDATA[Betriebspunkt]]>
+			</data>
+			<data key="d12">1</data>
+			<data key="d14">
+				<![CDATA[RS2.]]>
+			</data>
+			<data key="d15">11620</data>
+			<data key="d16">1</data>
+		</node>
+		<node id="l14:n3">
+			<data key="d8">10684</data>
+			<data key="d9">
+				<![CDATA[RST.]]>
+			</data>
+			<data key="d13">
+				<![CDATA[668423534]]>
+			</data>
+			<data key="d10">
+				<![CDATA[Rive Sud - Transition]]>
+			</data>
+			<data key="d11">
+				<![CDATA[Betriebspunkt]]>
+			</data>
+			<data key="d12">1</data>
+			<data key="d14">
+				<![CDATA[RST.]]>
+			</data>
+			<data key="d15">11622</data>
+			<data key="d16">1</data>
+		</node>
+		<node id="l27:n46">
+			<data key="d8">10621</data>
+			<data key="d9">
+				<![CDATA[SNADBLL.]]>
+			</data>
+			<data key="d13">
+				<![CDATA[326790652]]>
+			</data>
+			<data key="d10">
+				<![CDATA[Sainte Anne De Bellevue - Turnover]]>
+			</data>
+			<data key="d11">
+				<![CDATA[Betriebspunkt]]>
+			</data>
+			<data key="d12">1</data>
+			<data key="d14">
+				<![CDATA[SNADBLLV]]>
+			</data>
+			<data key="d15">11624</data>
+			<data key="d16">1</data>
+		</node>
+		<node id="l26:n47">
+			<data key="d8">10622</data>
+			<data key="d9">
+				<![CDATA[AEROPOR.]]>
+			</data>
+			<data key="d13">
+				<![CDATA[111438422]]>
+			</data>
+			<data key="d10">
+				<![CDATA[Aeroport - Turnover]]>
+			</data>
+			<data key="d11">
+				<![CDATA[Betriebspunkt]]>
+			</data>
+			<data key="d12">1</data>
+			<data key="d14">
+				<![CDATA[AEROPORT]]>
+			</data>
+			<data key="d15">11591</data>
+			<data key="d16">1</data>
+		</node>
+		<node id="l8:n48">
+			<data key="d8">10623</data>
+			<data key="d9">
+				<![CDATA[RIVE SU.]]>
+			</data>
+			<data key="d13">
+				<![CDATA[668423522]]>
+			</data>
+			<data key="d10">
+				<![CDATA[Rive Sud - Turnover]]>
+			</data>
+			<data key="d11">
+				<![CDATA[Betriebspunkt]]>
+			</data>
+			<data key="d12">1</data>
+			<data key="d14">
+				<![CDATA[RIVE SUD]]>
+			</data>
+			<data key="d15">11615</data>
+			<data key="d16">1</data>
+		</node>
+		<node id="l7:n52">
+			<data key="d8">10627</data>
+			<data key="d9">
+				<![CDATA[TCHSLRN.]]>
+			</data>
+			<data key="d13">
+				<![CDATA[654809042]]>
+			</data>
+			<data key="d10">
+				<![CDATA[Technoparc Saint Laurent - Turnover]]>
+			</data>
+			<data key="d11">
+				<![CDATA[Betriebspunkt]]>
+			</data>
+			<data key="d12">1</data>
+			<data key="d14">
+				<![CDATA[TCHSLRNT]]>
+			</data>
+			<data key="d15">11627</data>
+			<data key="d16">1</data>
+		</node>
+		<node id="l3:n51">
+			<data key="d8">10626</data>
+			<data key="d9">
+				<![CDATA[GRCNTRL.]]>
+			</data>
+			<data key="d13">
+				<![CDATA[129735422]]>
+			</data>
+			<data key="d10">
+				<![CDATA[Gare Central - Turnover]]>
+			</data>
+			<data key="d11">
+				<![CDATA[Betriebspunkt]]>
+			</data>
+			<data key="d12">1</data>
+			<data key="d14">
+				<![CDATA[GRCNTRL]]>
+			</data>
+			<data key="d15">11603</data>
+			<data key="d16">1</data>
+		</node>
+		<node id="l47:n37">
+			<data key="d8">10606</data>
+			<data key="d9">
+				<![CDATA[DXMNTGNS]]>
+			</data>
+			<data key="d13">
+				<![CDATA[74436526]]>
+			</data>
+			<data key="d10">
+				<![CDATA[Deux Montagnes]]>
+			</data>
+			<data key="d11">
+				<![CDATA[Haltestelle]]>
+			</data>
+			<data key="d12">2</data>
+			<data key="d14">
+				<![CDATA[DXMNTGNS]]>
+			</data>
+			<data key="d15">11601</data>
+			<data key="d16">1</data>
+		</node>
+		<node id="l48:n38">
+			<data key="d8">10607</data>
+			<data key="d9">
+				<![CDATA[JNCT01]]>
+			</data>
+			<data key="d13">
+				<![CDATA[75809567]]>
+			</data>
+			<data key="d10">
+				<![CDATA[Junction 01]]>
+			</data>
+			<data key="d11">
+				<![CDATA[Haltestelle]]>
+			</data>
+			<data key="d12">2</data>
+			<data key="d14">
+				<![CDATA[JNCT01]]>
+			</data>
+			<data key="d15">11607</data>
+			<data key="d16">1</data>
+		</node>
+		<node id="l49:n39">
+			<data key="d8">10608</data>
+			<data key="d9">
+				<![CDATA[RXPRRFND]]>
+			</data>
+			<data key="d13">
+				<![CDATA[77176046]]>
+			</data>
+			<data key="d10">
+				<![CDATA[Roxboro Pierrefonds]]>
+			</data>
+			<data key="d11">
+				<![CDATA[Haltestelle]]>
+			</data>
+			<data key="d12">2</data>
+			<data key="d14">
+				<![CDATA[RXPRRFND]]>
+			</data>
+			<data key="d15">11623</data>
+			<data key="d16">1</data>
+		</node>
+		<node id="l50:n35">
+			<data key="d8">10604</data>
+			<data key="d9">
+				<![CDATA[KIRKLAND]]>
+			</data>
+			<data key="d13">
+				<![CDATA[72580528]]>
+			</data>
+			<data key="d10">
+				<![CDATA[Kirkland]]>
+			</data>
+			<data key="d11">
+				<![CDATA[Haltestelle]]>
+			</data>
+			<data key="d12">2</data>
+			<data key="d14">
+				<![CDATA[KIRKLAND]]>
+			</data>
+			<data key="d15">11609</data>
+			<data key="d16">1</data>
+		</node>
+		<node id="l51:n44">
+			<data key="d8">10613</data>
+			<data key="d9">
+				<![CDATA[RS 1]]>
+			</data>
+			<data key="d13">
+				<![CDATA[94598792]]>
+			</data>
+			<data key="d10">
+				<![CDATA[Rs 1]]>
+			</data>
+			<data key="d11">
+				<![CDATA[Haltestelle]]>
+			</data>
+			<data key="d12">2</data>
+			<data key="d14">
+				<![CDATA[RS 1]]>
+			</data>
+			<data key="d15">11616</data>
+			<data key="d16">1</data>
+		</node>
+		<node id="l52:n41">
+			<data key="d8">10610</data>
+			<data key="d9">
+				<![CDATA[DQRTR]]>
+			</data>
+			<data key="d13">
+				<![CDATA[83642806]]>
+			</data>
+			<data key="d10">
+				<![CDATA[Du Quartier]]>
+			</data>
+			<data key="d11">
+				<![CDATA[Haltestelle]]>
+			</data>
+			<data key="d12">2</data>
+			<data key="d14">
+				<![CDATA[DQRTR]]>
+			</data>
+			<data key="d15">11598</data>
+			<data key="d16">1</data>
+		</node>
+		<node id="l53:n42">
+			<data key="d8">10611</data>
+			<data key="d9">
+				<![CDATA[CANORA]]>
+			</data>
+			<data key="d13">
+				<![CDATA[87733738]]>
+			</data>
+			<data key="d10">
+				<![CDATA[Canora]]>
+			</data>
+			<data key="d11">
+				<![CDATA[Haltestelle]]>
+			</data>
+			<data key="d12">2</data>
+			<data key="d14">
+				<![CDATA[CANORA]]>
+			</data>
+			<data key="d15">11595</data>
+			<data key="d16">1</data>
+		</node>
+		<node id="l54:n40">
+			<data key="d8">10609</data>
+			<data key="d9">
+				<![CDATA[SNNYBRK]]>
+			</data>
+			<data key="d13">
+				<![CDATA[81955732]]>
+			</data>
+			<data key="d10">
+				<![CDATA[Sunnybrooke]]>
+			</data>
+			<data key="d11">
+				<![CDATA[Haltestelle]]>
+			</data>
+			<data key="d12">2</data>
+			<data key="d14">
+				<![CDATA[SNNYBRK]]>
+			</data>
+			<data key="d15">11626</data>
+			<data key="d16">1</data>
+		</node>
+		<node id="l55:n43">
+			<data key="d8">10612</data>
+			<data key="d9">
+				<![CDATA[JNCT02]]>
+			</data>
+			<data key="d13">
+				<![CDATA[91819823]]>
+			</data>
+			<data key="d10">
+				<![CDATA[Junction 02]]>
+			</data>
+			<data key="d11">
+				<![CDATA[Haltestelle]]>
+			</data>
+			<data key="d12">2</data>
+			<data key="d14">
+				<![CDATA[JNCT02]]>
+			</data>
+			<data key="d15">11608</data>
+			<data key="d16">1</data>
+		</node>
+		<node id="l56:n45">
+			<data key="d8">10614</data>
+			<data key="d9">
+				<![CDATA[BSSNPL]]>
+			</data>
+			<data key="d13">
+				<![CDATA[97787636]]>
+			</data>
+			<data key="d10">
+				<![CDATA[Bassin Peel]]>
+			</data>
+			<data key="d11">
+				<![CDATA[Haltestelle]]>
+			</data>
+			<data key="d12">2</data>
+			<data key="d14">
+				<![CDATA[BSSNPL]]>
+			</data>
+			<data key="d15">11594</data>
+			<data key="d16">1</data>
+		</node>
+		<node id="l57:n36">
+			<data key="d8">10605</data>
+			<data key="d9">
+				<![CDATA[BSFRNC]]>
+			</data>
+			<data key="d13">
+				<![CDATA[73554941]]>
+			</data>
+			<data key="d10">
+				<![CDATA[Bois Franc]]>
+			</data>
+			<data key="d11">
+				<![CDATA[Haltestelle]]>
+			</data>
+			<data key="d12">2</data>
+			<data key="d14">
+				<![CDATA[BSFRNC]]>
+			</data>
+			<data key="d15">11593</data>
+			<data key="d16">1</data>
+		</node>
+		<node id="l58:n34">
+			<data key="d8">10603</data>
+			<data key="d9">
+				<![CDATA[GRNMLN]]>
+			</data>
+			<data key="d13">
+				<![CDATA[67981759]]>
+			</data>
+			<data key="d10">
+				<![CDATA[Grand Moulin]]>
+			</data>
+			<data key="d11">
+				<![CDATA[Haltestelle]]>
+			</data>
+			<data key="d12">2</data>
+			<data key="d14">
+				<![CDATA[GRNMLN]]>
+			</data>
+			<data key="d15">11604</data>
+			<data key="d16">1</data>
+		</node>
+		<edge id="e0" source="l26:n13" target="l7:n29">
+			<data key="d0">10902</data>
+			<data key="d1">Revenue</data>
+			<data key="d2">2811</data>
+			<data key="d3">0</data>
+			<data key="d4">1</data>
+			<data key="d5">2</data>
+			<data key="d6">
+				<![CDATA[AEROPORT -> TCHSLRNT]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e1" source="l15:n49" target="l15:n56">
+			<data key="d0">11023</data>
+			<data key="d1">Dead</data>
+			<data key="d2">0</data>
+			<data key="d3">1</data>
+			<data key="d4">-1</data>
+			<data key="d5">-1</data>
+			<data key="d6">
+				<![CDATA[DMTRNST. -> DMTRNST<]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e2" source="l0:n18" target="l10:n32">
+			<data key="d0">10913</data>
+			<data key="d1">Revenue</data>
+			<data key="d2">3284</data>
+			<data key="d3">0</data>
+			<data key="d4">1</data>
+			<data key="d5">2</data>
+			<data key="d6">
+				<![CDATA[EDMNTPTT -> MCGILL]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e3" source="l2:n17" target="l58:n34">
+			<data key="d0">10912</data>
+			<data key="d1">Revenue</data>
+			<data key="d2">2679</data>
+			<data key="d3">0</data>
+			<data key="d4">1</data>
+			<data key="d5">1</data>
+			<data key="d6">
+				<![CDATA[SNDRTH -> GRNMLN]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e4" source="l18:n15" target="l31:n16">
+			<data key="d0">10905</data>
+			<data key="d1">Revenue</data>
+			<data key="d2">895</data>
+			<data key="d3">0</data>
+			<data key="d4">1</data>
+			<data key="d5">1</data>
+			<data key="d6">
+				<![CDATA[CRRSPA40 -> MNTPLLR]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e5" source="l0:n18" target="l53:n42">
+			<data key="d0">10914</data>
+			<data key="d1">Revenue</data>
+			<data key="d2">1768</data>
+			<data key="d3">0</data>
+			<data key="d4">2</data>
+			<data key="d5">1</data>
+			<data key="d6">
+				<![CDATA[EDMNTPTT -> CANORA]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e6" source="l27:n19" target="l50:n35">
+			<data key="d0">10915</data>
+			<data key="d1">Revenue</data>
+			<data key="d2">4301</data>
+			<data key="d3">0</data>
+			<data key="d4">2</data>
+			<data key="d5">1</data>
+			<data key="d6">
+				<![CDATA[SNADBLLV -> KIRKLAND]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e7" source="l7:n29" target="l7:n52">
+			<data key="d0">10995</data>
+			<data key="d1">TerminusArea</data>
+			<data key="d2">0</data>
+			<data key="d3">1</data>
+			<data key="d4">-1</data>
+			<data key="d5">-1</data>
+			<data key="d6">
+				<![CDATA[TCHSLRNT -> TCHSLRN.]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e8" source="l30:n20" target="l9:n31">
+			<data key="d0">10916</data>
+			<data key="d1">Revenue</data>
+			<data key="d2">393</data>
+			<data key="d3">0</data>
+			<data key="d4">2</data>
+			<data key="d5">1</data>
+			<data key="d6">
+				<![CDATA[TRNSTN -> RS 3]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e9" source="l18:n15" target="l6:n28">
+			<data key="d0">10906</data>
+			<data key="d1">Revenue</data>
+			<data key="d2">1503</data>
+			<data key="d3">0</data>
+			<data key="d4">2</data>
+			<data key="d5">2</data>
+			<data key="d6">
+				<![CDATA[CRRSPA40 -> MNTRYL]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e10" source="l4:n21" target="l51:n44">
+			<data key="d0">10918</data>
+			<data key="d1">Revenue</data>
+			<data key="d2">135</data>
+			<data key="d3">0</data>
+			<data key="d4">2</data>
+			<data key="d5">2</data>
+			<data key="d6">
+				<![CDATA[RS 2 -> RS 1]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e11" source="l19:n22" target="l49:n39">
+			<data key="d0">10920</data>
+			<data key="d1">Revenue</data>
+			<data key="d2">3440</data>
+			<data key="d3">0</data>
+			<data key="d4">2</data>
+			<data key="d5">2</data>
+			<data key="d6">
+				<![CDATA[ILBGRS -> RXPRRFND]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e12" source="l31:n16" target="l1:n25">
+			<data key="d0">10910</data>
+			<data key="d1">Revenue</data>
+			<data key="d2">1466</data>
+			<data key="d3">0</data>
+			<data key="d4">2</data>
+			<data key="d5">1</data>
+			<data key="d6">
+				<![CDATA[MNTPLLR -> DRSS]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e13" source="l20:n12" target="l48:n38">
+			<data key="d0">10907</data>
+			<data key="d1">Revenue</data>
+			<data key="d2">3229</data>
+			<data key="d3">0</data>
+			<data key="d4">2</data>
+			<data key="d5">1</data>
+			<data key="d6">
+				<![CDATA[AUTR13 -> JNCT01]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e14" source="l19:n22" target="l2:n17">
+			<data key="d0">10919</data>
+			<data key="d1">Revenue</data>
+			<data key="d2">924</data>
+			<data key="d3">0</data>
+			<data key="d4">1</data>
+			<data key="d5">2</data>
+			<data key="d6">
+				<![CDATA[ILBGRS -> SNDRTH]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e15" source="l15:n23" target="l47:n37">
+			<data key="d0">10921</data>
+			<data key="d1">Revenue</data>
+			<data key="d2">626</data>
+			<data key="d3">0</data>
+			<data key="d4">1</data>
+			<data key="d5">2</data>
+			<data key="d6">
+				<![CDATA[DMTRNSTN -> DXMNTGNS]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e16" source="l4:n21" target="l9:n31">
+			<data key="d0">10917</data>
+			<data key="d1">Revenue</data>
+			<data key="d2">76</data>
+			<data key="d3">0</data>
+			<data key="d4">1</data>
+			<data key="d5">2</data>
+			<data key="d6">
+				<![CDATA[RS 2 -> RS 3]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e17" source="l33:n24" target="l5:n26">
+			<data key="d0">10922</data>
+			<data key="d1">Revenue</data>
+			<data key="d2">4050</data>
+			<data key="d3">0</data>
+			<data key="d4">2</data>
+			<data key="d5">2</data>
+			<data key="d6">
+				<![CDATA[PNTCLR -> DSSRCS]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e18" source="l33:n24" target="l50:n35">
+			<data key="d0">10923</data>
+			<data key="d1">Revenue</data>
+			<data key="d2">2595</data>
+			<data key="d3">0</data>
+			<data key="d4">1</data>
+			<data key="d5">2</data>
+			<data key="d6">
+				<![CDATA[PNTCLR -> KIRKLAND]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e19" source="l20:n12" target="l55:n43">
+			<data key="d0">10908</data>
+			<data key="d1">Revenue</data>
+			<data key="d2">1771</data>
+			<data key="d3">0</data>
+			<data key="d4">1</data>
+			<data key="d5">2</data>
+			<data key="d6">
+				<![CDATA[AUTR13 -> JNCT02]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e20" source="l15:n55" target="l15:n49">
+			<data key="d0">11022</data>
+			<data key="d1">Dead</data>
+			<data key="d2">0</data>
+			<data key="d3">1</data>
+			<data key="d4">-1</data>
+			<data key="d5">-1</data>
+			<data key="d6">
+				<![CDATA[DMTRNST> -> DMTRNST.]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e21" source="l31:n16" target="l18:n15">
+			<data key="d0">10909</data>
+			<data key="d1">Revenue</data>
+			<data key="d2">895</data>
+			<data key="d3">0</data>
+			<data key="d4">1</data>
+			<data key="d5">1</data>
+			<data key="d6">
+				<![CDATA[MNTPLLR -> CRRSPA40]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e22" source="l3:n14" target="l56:n45">
+			<data key="d0">10904</data>
+			<data key="d1">Revenue</data>
+			<data key="d2">1599</data>
+			<data key="d3">0</data>
+			<data key="d4">2</data>
+			<data key="d5">1</data>
+			<data key="d6">
+				<![CDATA[GRCNTRL -> BSSNPL]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e23" source="l3:n14" target="l10:n32">
+			<data key="d0">10903</data>
+			<data key="d1">Revenue</data>
+			<data key="d2">510</data>
+			<data key="d3">0</data>
+			<data key="d4">1</data>
+			<data key="d5">1</data>
+			<data key="d6">
+				<![CDATA[GRCNTRL -> MCGILL]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e24" source="l2:n17" target="l19:n22">
+			<data key="d0">10911</data>
+			<data key="d1">Revenue</data>
+			<data key="d2">924</data>
+			<data key="d3">0</data>
+			<data key="d4">2</data>
+			<data key="d5">1</data>
+			<data key="d6">
+				<![CDATA[SNDRTH -> ILBGRS]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e25" source="l48:n38" target="l20:n12">
+			<data key="d0">10950</data>
+			<data key="d1">Revenue</data>
+			<data key="d2">3229</data>
+			<data key="d3">0</data>
+			<data key="d4">1</data>
+			<data key="d5">2</data>
+			<data key="d6">
+				<![CDATA[JNCT01 -> AUTR13]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e26" source="l48:n38" target="l54:n40">
+			<data key="d0">10952</data>
+			<data key="d1">Revenue</data>
+			<data key="d2">2041</data>
+			<data key="d3">0</data>
+			<data key="d4">1</data>
+			<data key="d5">2</data>
+			<data key="d6">
+				<![CDATA[JNCT01 -> SNNYBRK]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e27" source="l47:n37" target="l58:n34">
+			<data key="d0">10949</data>
+			<data key="d1">Revenue</data>
+			<data key="d2">2172</data>
+			<data key="d3">0</data>
+			<data key="d4">1</data>
+			<data key="d5">2</data>
+			<data key="d6">
+				<![CDATA[DXMNTGNS -> GRNMLN]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e28" source="l49:n39" target="l54:n40">
+			<data key="d0">10954</data>
+			<data key="d1">Revenue</data>
+			<data key="d2">2131</data>
+			<data key="d3">0</data>
+			<data key="d4">1</data>
+			<data key="d5">1</data>
+			<data key="d6">
+				<![CDATA[RXPRRFND -> SNNYBRK]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e29" source="l54:n40" target="l49:n39">
+			<data key="d0">10956</data>
+			<data key="d1">Revenue</data>
+			<data key="d2">2131</data>
+			<data key="d3">0</data>
+			<data key="d4">1</data>
+			<data key="d5">1</data>
+			<data key="d6">
+				<![CDATA[SNNYBRK -> RXPRRFND]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e30" source="l52:n41" target="l11:n33">
+			<data key="d0">10958</data>
+			<data key="d1">Revenue</data>
+			<data key="d2">3708</data>
+			<data key="d3">0</data>
+			<data key="d4">2</data>
+			<data key="d5">2</data>
+			<data key="d6">
+				<![CDATA[DQRTR -> PANAMA]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e31" source="l48:n38" target="l57:n36">
+			<data key="d0">10951</data>
+			<data key="d1">Revenue</data>
+			<data key="d2">1009</data>
+			<data key="d3">0</data>
+			<data key="d4">2</data>
+			<data key="d5">2</data>
+			<data key="d6">
+				<![CDATA[JNCT01 -> BSFRNC]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e32" source="l54:n40" target="l48:n38">
+			<data key="d0">10955</data>
+			<data key="d1">Revenue</data>
+			<data key="d2">2041</data>
+			<data key="d3">0</data>
+			<data key="d4">2</data>
+			<data key="d5">1</data>
+			<data key="d6">
+				<![CDATA[SNNYBRK -> JNCT01]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e33" source="l49:n39" target="l19:n22">
+			<data key="d0">10953</data>
+			<data key="d1">Revenue</data>
+			<data key="d2">3440</data>
+			<data key="d3">0</data>
+			<data key="d4">2</data>
+			<data key="d5">2</data>
+			<data key="d6">
+				<![CDATA[RXPRRFND -> ILBGRS]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e34" source="l52:n41" target="l8:n30">
+			<data key="d0">10957</data>
+			<data key="d1">Revenue</data>
+			<data key="d2">1478</data>
+			<data key="d3">0</data>
+			<data key="d4">1</data>
+			<data key="d5">2</data>
+			<data key="d6">
+				<![CDATA[DQRTR -> RIVE SUD]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e35" source="l53:n42" target="l0:n18">
+			<data key="d0">10959</data>
+			<data key="d1">Revenue</data>
+			<data key="d2">1768</data>
+			<data key="d3">0</data>
+			<data key="d4">1</data>
+			<data key="d5">2</data>
+			<data key="d6">
+				<![CDATA[CANORA -> EDMNTPTT]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e36" source="l55:n43" target="l7:n29">
+			<data key="d0">10963</data>
+			<data key="d1">Revenue</data>
+			<data key="d2">1262</data>
+			<data key="d3">0</data>
+			<data key="d4">1</data>
+			<data key="d5">1</data>
+			<data key="d6">
+				<![CDATA[JNCT02 -> TCHSLRNT]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e37" source="l39:n0" target="l8:n30">
+			<data key="d0">11043</data>
+			<data key="d1">TerminusArea</data>
+			<data key="d2">96</data>
+			<data key="d3">0</data>
+			<data key="d4">2</data>
+			<data key="d5">1</data>
+			<data key="d6">
+				<![CDATA[RS1. Betriebspunkt - RIVE SUD Haltestelle]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e38" source="l40:n1" target="l39:n0">
+			<data key="d0">11045</data>
+			<data key="d1">TerminusArea</data>
+			<data key="d2">135</data>
+			<data key="d3">0</data>
+			<data key="d4">1</data>
+			<data key="d5">1</data>
+			<data key="d6">
+				<![CDATA[RS2. Betriebspunkt - RS1. Betriebspunkt]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e39" source="l36:n2" target="l40:n1">
+			<data key="d0">11048</data>
+			<data key="d1">TerminusArea</data>
+			<data key="d2">76</data>
+			<data key="d3">0</data>
+			<data key="d4">2</data>
+			<data key="d5">2</data>
+			<data key="d6">
+				<![CDATA[RS3. Betriebspunkt - RS2. Betriebspunkt]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e40" source="l56:n45" target="l12:n27">
+			<data key="d0">10967</data>
+			<data key="d1">Revenue</data>
+			<data key="d2">4015</data>
+			<data key="d3">0</data>
+			<data key="d4">2</data>
+			<data key="d5">2</data>
+			<data key="d6">
+				<![CDATA[BSSNPL -> ILDSRS]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e41" source="l51:n44" target="l4:n21">
+			<data key="d0">10964</data>
+			<data key="d1">Revenue</data>
+			<data key="d2">135</data>
+			<data key="d3">0</data>
+			<data key="d4">2</data>
+			<data key="d5">2</data>
+			<data key="d6">
+				<![CDATA[RS 1 -> RS 2]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e42" source="l53:n42" target="l6:n28">
+			<data key="d0">10960</data>
+			<data key="d1">Revenue</data>
+			<data key="d2">813</data>
+			<data key="d3">0</data>
+			<data key="d4">2</data>
+			<data key="d5">1</data>
+			<data key="d6">
+				<![CDATA[CANORA -> MNTRYL]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e43" source="l55:n43" target="l20:n12">
+			<data key="d0">10961</data>
+			<data key="d1">Revenue</data>
+			<data key="d2">1771</data>
+			<data key="d3">0</data>
+			<data key="d4">2</data>
+			<data key="d5">1</data>
+			<data key="d6">
+				<![CDATA[JNCT02 -> AUTR13]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e44" source="l55:n43" target="l5:n26">
+			<data key="d0">10962</data>
+			<data key="d1">Revenue</data>
+			<data key="d2">2620</data>
+			<data key="d3">0</data>
+			<data key="d4">1</data>
+			<data key="d5">1</data>
+			<data key="d6">
+				<![CDATA[JNCT02 -> DSSRCS]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e45" source="l56:n45" target="l3:n14">
+			<data key="d0">10966</data>
+			<data key="d1">Revenue</data>
+			<data key="d2">1599</data>
+			<data key="d3">0</data>
+			<data key="d4">1</data>
+			<data key="d5">2</data>
+			<data key="d6">
+				<![CDATA[BSSNPL -> GRCNTRL]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e46" source="l51:n44" target="l8:n30">
+			<data key="d0">10965</data>
+			<data key="d1">Revenue</data>
+			<data key="d2">96</data>
+			<data key="d3">0</data>
+			<data key="d4">1</data>
+			<data key="d5">1</data>
+			<data key="d6">
+				<![CDATA[RS 1 -> RIVE SUD]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e47" source="l8:n30" target="l39:n0">
+			<data key="d0">11042</data>
+			<data key="d1">TerminusArea</data>
+			<data key="d2">96</data>
+			<data key="d3">0</data>
+			<data key="d4">1</data>
+			<data key="d5">2</data>
+			<data key="d6">
+				<![CDATA[RIVE SUD Haltestelle - RS1. Betriebspunkt]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e48" source="l15:n49" target="l15:n23">
+			<data key="d0">10988</data>
+			<data key="d1">TerminusArea</data>
+			<data key="d2">0</data>
+			<data key="d3">1</data>
+			<data key="d4">-1</data>
+			<data key="d5">-1</data>
+			<data key="d6">
+				<![CDATA[DMTRNST. -> DMTRNSTN]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e49" source="l30:n20" target="l30:n50">
+			<data key="d0">10991</data>
+			<data key="d1">TerminusArea</data>
+			<data key="d2">0</data>
+			<data key="d3">1</data>
+			<data key="d4">-1</data>
+			<data key="d5">-1</data>
+			<data key="d6">
+				<![CDATA[TRNSTN -> TRNSTN.]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e50" source="l3:n51" target="l3:n14">
+			<data key="d0">10992</data>
+			<data key="d1">TerminusArea</data>
+			<data key="d2">0</data>
+			<data key="d3">1</data>
+			<data key="d4">-1</data>
+			<data key="d5">-1</data>
+			<data key="d6">
+				<![CDATA[GRCNTRL. -> GRCNTRL]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e51" source="l3:n51" target="l3:n7">
+			<data key="d0">11065</data>
+			<data key="d1">Dead</data>
+			<data key="d2">0</data>
+			<data key="d3">1</data>
+			<data key="d4">-1</data>
+			<data key="d5">-1</data>
+			<data key="d6">
+				<![CDATA[GRCNTRL. -> GRCNTRL<]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e52" source="l27:n19" target="l27:n46">
+			<data key="d0">10983</data>
+			<data key="d1">TerminusArea</data>
+			<data key="d2">0</data>
+			<data key="d3">1</data>
+			<data key="d4">-1</data>
+			<data key="d5">-1</data>
+			<data key="d6">
+				<![CDATA[SNADBLLV -> SNADBLL.]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e53" source="l15:n23" target="l15:n49">
+			<data key="d0">10989</data>
+			<data key="d1">TerminusArea</data>
+			<data key="d2">0</data>
+			<data key="d3">1</data>
+			<data key="d4">-1</data>
+			<data key="d5">-1</data>
+			<data key="d6">
+				<![CDATA[DMTRNSTN -> DMTRNST.]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e54" source="l26:n47" target="l26:n5">
+			<data key="d0">11063</data>
+			<data key="d1">Dead</data>
+			<data key="d2">0</data>
+			<data key="d3">1</data>
+			<data key="d4">-1</data>
+			<data key="d5">-1</data>
+			<data key="d6">
+				<![CDATA[AEROPOR. -> AEROPOR<]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e55" source="l27:n46" target="l27:n9">
+			<data key="d0">11067</data>
+			<data key="d1">Dead</data>
+			<data key="d2">0</data>
+			<data key="d3">1</data>
+			<data key="d4">-1</data>
+			<data key="d5">-1</data>
+			<data key="d6">
+				<![CDATA[SNADBLL. -> SNADBLL<]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e56" source="l40:n1" target="l36:n2">
+			<data key="d0">11047</data>
+			<data key="d1">TerminusArea</data>
+			<data key="d2">76</data>
+			<data key="d3">0</data>
+			<data key="d4">2</data>
+			<data key="d5">2</data>
+			<data key="d6">
+				<![CDATA[RS2. Betriebspunkt - RS3. Betriebspunkt]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e57" source="l26:n13" target="l26:n47">
+			<data key="d0">10985</data>
+			<data key="d1">TerminusArea</data>
+			<data key="d2">0</data>
+			<data key="d3">1</data>
+			<data key="d4">-1</data>
+			<data key="d5">-1</data>
+			<data key="d6">
+				<![CDATA[AEROPORT -> AEROPOR.]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e58" source="l3:n14" target="l3:n51">
+			<data key="d0">10993</data>
+			<data key="d1">TerminusArea</data>
+			<data key="d2">0</data>
+			<data key="d3">1</data>
+			<data key="d4">-1</data>
+			<data key="d5">-1</data>
+			<data key="d6">
+				<![CDATA[GRCNTRL -> GRCNTRL.]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e59" source="l27:n46" target="l27:n19">
+			<data key="d0">10982</data>
+			<data key="d1">TerminusArea</data>
+			<data key="d2">0</data>
+			<data key="d3">1</data>
+			<data key="d4">-1</data>
+			<data key="d5">-1</data>
+			<data key="d6">
+				<![CDATA[SNADBLL. -> SNADBLLV]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e60" source="l7:n52" target="l7:n29">
+			<data key="d0">10994</data>
+			<data key="d1">TerminusArea</data>
+			<data key="d2">0</data>
+			<data key="d3">1</data>
+			<data key="d4">-1</data>
+			<data key="d5">-1</data>
+			<data key="d6">
+				<![CDATA[TCHSLRN. -> TCHSLRNT]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e61" source="l14:n57" target="l14:n3">
+			<data key="d0">11052</data>
+			<data key="d1">Dead</data>
+			<data key="d2">0</data>
+			<data key="d3">1</data>
+			<data key="d4">-1</data>
+			<data key="d5">-1</data>
+			<data key="d6">
+				<![CDATA[RST> Einsetzpunkt - RST. Betriebspunkt]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e62" source="l7:n10" target="l7:n52">
+			<data key="d0">11068</data>
+			<data key="d1">Dead</data>
+			<data key="d2">0</data>
+			<data key="d3">1</data>
+			<data key="d4">-1</data>
+			<data key="d5">-1</data>
+			<data key="d6">
+				<![CDATA[TCHSLRN> -> TCHSLRN.]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e63" source="l14:n3" target="l14:n58">
+			<data key="d0">11051</data>
+			<data key="d1">Dead</data>
+			<data key="d2">0</data>
+			<data key="d3">1</data>
+			<data key="d4">-1</data>
+			<data key="d5">-1</data>
+			<data key="d6">
+				<![CDATA[RST. Betriebspunkt - RST< Aussetzpunkt]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e64" source="l30:n50" target="l30:n20">
+			<data key="d0">10990</data>
+			<data key="d1">TerminusArea</data>
+			<data key="d2">0</data>
+			<data key="d3">1</data>
+			<data key="d4">-1</data>
+			<data key="d5">-1</data>
+			<data key="d6">
+				<![CDATA[TRNSTN. -> TRNSTN]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e65" source="l39:n0" target="l40:n1">
+			<data key="d0">11046</data>
+			<data key="d1">TerminusArea</data>
+			<data key="d2">135</data>
+			<data key="d3">0</data>
+			<data key="d4">1</data>
+			<data key="d5">1</data>
+			<data key="d6">
+				<![CDATA[RS1. Betriebspunkt - RS2. Betriebspunkt]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e66" source="l36:n2" target="l14:n3">
+			<data key="d0">11049</data>
+			<data key="d1">TerminusArea</data>
+			<data key="d2">393</data>
+			<data key="d3">0</data>
+			<data key="d4">1</data>
+			<data key="d5">1</data>
+			<data key="d6">
+				<![CDATA[RS3. Betriebspunkt - RST. Betriebspunkt]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e67" source="l14:n3" target="l36:n2">
+			<data key="d0">11050</data>
+			<data key="d1">TerminusArea</data>
+			<data key="d2">393</data>
+			<data key="d3">0</data>
+			<data key="d4">1</data>
+			<data key="d5">1</data>
+			<data key="d6">
+				<![CDATA[RST. Betriebspunkt - RS3. Betriebspunkt]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e68" source="l7:n52" target="l7:n11">
+			<data key="d0">11069</data>
+			<data key="d1">Dead</data>
+			<data key="d2">0</data>
+			<data key="d3">1</data>
+			<data key="d4">-1</data>
+			<data key="d5">-1</data>
+			<data key="d6">
+				<![CDATA[TCHSLRN. -> TCHSLRN<]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e69" source="l3:n6" target="l3:n51">
+			<data key="d0">11064</data>
+			<data key="d1">Dead</data>
+			<data key="d2">0</data>
+			<data key="d3">1</data>
+			<data key="d4">-1</data>
+			<data key="d5">-1</data>
+			<data key="d6">
+				<![CDATA[GRCNTRL> -> GRCNTRL.]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e70" source="l21:n4" target="l26:n47">
+			<data key="d0">11062</data>
+			<data key="d1">Dead</data>
+			<data key="d2">0</data>
+			<data key="d3">0</data>
+			<data key="d4">-1</data>
+			<data key="d5">-1</data>
+			<data key="d6">
+				<![CDATA[AEROPOR> -> AEROPOR.]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e71" source="l27:n8" target="l27:n46">
+			<data key="d0">11066</data>
+			<data key="d1">Dead</data>
+			<data key="d2">0</data>
+			<data key="d3">1</data>
+			<data key="d4">-1</data>
+			<data key="d5">-1</data>
+			<data key="d6">
+				<![CDATA[SNADBLL> -> SNADBLL.]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e72" source="l26:n47" target="l26:n13">
+			<data key="d0">10984</data>
+			<data key="d1">TerminusArea</data>
+			<data key="d2">0</data>
+			<data key="d3">1</data>
+			<data key="d4">-1</data>
+			<data key="d5">-1</data>
+			<data key="d6">
+				<![CDATA[AEROPOR. -> AEROPORT]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e73" source="l1:n25" target="l57:n36">
+			<data key="d0">10925</data>
+			<data key="d1">Revenue</data>
+			<data key="d2">1916</data>
+			<data key="d3">0</data>
+			<data key="d4">2</data>
+			<data key="d5">1</data>
+			<data key="d6">
+				<![CDATA[DRSS -> BSFRNC]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e74" source="l8:n30" target="l51:n44">
+			<data key="d0">10935</data>
+			<data key="d1">Revenue</data>
+			<data key="d2">96</data>
+			<data key="d3">0</data>
+			<data key="d4">1</data>
+			<data key="d5">1</data>
+			<data key="d6">
+				<![CDATA[RIVE SUD -> RS 1]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e75" source="l10:n32" target="l3:n14">
+			<data key="d0">10938</data>
+			<data key="d1">Revenue</data>
+			<data key="d2">510</data>
+			<data key="d3">0</data>
+			<data key="d4">1</data>
+			<data key="d5">1</data>
+			<data key="d6">
+				<![CDATA[MCGILL -> GRCNTRL]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e76" source="l7:n29" target="l55:n43">
+			<data key="d0">10933</data>
+			<data key="d1">Revenue</data>
+			<data key="d2">1262</data>
+			<data key="d3">0</data>
+			<data key="d4">1</data>
+			<data key="d5">1</data>
+			<data key="d6">
+				<![CDATA[TCHSLRNT -> JNCT02]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e77" source="l6:n28" target="l53:n42">
+			<data key="d0">10931</data>
+			<data key="d1">Revenue</data>
+			<data key="d2">813</data>
+			<data key="d3">0</data>
+			<data key="d4">1</data>
+			<data key="d5">2</data>
+			<data key="d6">
+				<![CDATA[MNTRYL -> CANORA]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e78" source="l1:n25" target="l31:n16">
+			<data key="d0">10924</data>
+			<data key="d1">Revenue</data>
+			<data key="d2">1466</data>
+			<data key="d3">0</data>
+			<data key="d4">1</data>
+			<data key="d5">2</data>
+			<data key="d6">
+				<![CDATA[DRSS -> MNTPLLR]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e79" source="l7:n29" target="l26:n13">
+			<data key="d0">10932</data>
+			<data key="d1">Revenue</data>
+			<data key="d2">2811</data>
+			<data key="d3">0</data>
+			<data key="d4">2</data>
+			<data key="d5">1</data>
+			<data key="d6">
+				<![CDATA[TCHSLRNT -> AEROPORT]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e80" source="l9:n31" target="l4:n21">
+			<data key="d0">10937</data>
+			<data key="d1">Revenue</data>
+			<data key="d2">76</data>
+			<data key="d3">0</data>
+			<data key="d4">2</data>
+			<data key="d5">1</data>
+			<data key="d6">
+				<![CDATA[RS 3 -> RS 2]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e81" source="l5:n26" target="l33:n24">
+			<data key="d0">10926</data>
+			<data key="d1">Revenue</data>
+			<data key="d2">4050</data>
+			<data key="d3">0</data>
+			<data key="d4">2</data>
+			<data key="d5">2</data>
+			<data key="d6">
+				<![CDATA[DSSRCS -> PNTCLR]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e82" source="l5:n26" target="l55:n43">
+			<data key="d0">10927</data>
+			<data key="d1">Revenue</data>
+			<data key="d2">2620</data>
+			<data key="d3">0</data>
+			<data key="d4">1</data>
+			<data key="d5">1</data>
+			<data key="d6">
+				<![CDATA[DSSRCS -> JNCT02]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e83" source="l10:n32" target="l0:n18">
+			<data key="d0">10939</data>
+			<data key="d1">Revenue</data>
+			<data key="d2">3284</data>
+			<data key="d3">0</data>
+			<data key="d4">2</data>
+			<data key="d5">1</data>
+			<data key="d6">
+				<![CDATA[MCGILL -> EDMNTPTT]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e84" source="l11:n33" target="l12:n27">
+			<data key="d0">10940</data>
+			<data key="d1">Revenue</data>
+			<data key="d2">5336</data>
+			<data key="d3">0</data>
+			<data key="d4">1</data>
+			<data key="d5">1</data>
+			<data key="d6">
+				<![CDATA[PANAMA -> ILDSRS]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e85" source="l11:n33" target="l52:n41">
+			<data key="d0">10941</data>
+			<data key="d1">Revenue</data>
+			<data key="d2">3708</data>
+			<data key="d3">0</data>
+			<data key="d4">2</data>
+			<data key="d5">2</data>
+			<data key="d6">
+				<![CDATA[PANAMA -> DQRTR]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e86" source="l58:n34" target="l2:n17">
+			<data key="d0">10942</data>
+			<data key="d1">Revenue</data>
+			<data key="d2">2679</data>
+			<data key="d3">0</data>
+			<data key="d4">1</data>
+			<data key="d5">1</data>
+			<data key="d6">
+				<![CDATA[GRNMLN -> SNDRTH]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e87" source="l50:n35" target="l27:n19">
+			<data key="d0">10944</data>
+			<data key="d1">Revenue</data>
+			<data key="d2">4301</data>
+			<data key="d3">0</data>
+			<data key="d4">1</data>
+			<data key="d5">2</data>
+			<data key="d6">
+				<![CDATA[KIRKLAND -> SNADBLLV]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e88" source="l50:n35" target="l33:n24">
+			<data key="d0">10945</data>
+			<data key="d1">Revenue</data>
+			<data key="d2">2595</data>
+			<data key="d3">0</data>
+			<data key="d4">2</data>
+			<data key="d5">1</data>
+			<data key="d6">
+				<![CDATA[KIRKLAND -> PNTCLR]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e89" source="l57:n36" target="l48:n38">
+			<data key="d0">10947</data>
+			<data key="d1">Revenue</data>
+			<data key="d2">1009</data>
+			<data key="d3">0</data>
+			<data key="d4">2</data>
+			<data key="d5">2</data>
+			<data key="d6">
+				<![CDATA[BSFRNC -> JNCT01]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e90" source="l12:n27" target="l56:n45">
+			<data key="d0">10929</data>
+			<data key="d1">Revenue</data>
+			<data key="d2">4015</data>
+			<data key="d3">0</data>
+			<data key="d4">2</data>
+			<data key="d5">2</data>
+			<data key="d6">
+				<![CDATA[ILDSRS -> BSSNPL]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e91" source="l57:n36" target="l1:n25">
+			<data key="d0">10946</data>
+			<data key="d1">Revenue</data>
+			<data key="d2">1916</data>
+			<data key="d3">0</data>
+			<data key="d4">1</data>
+			<data key="d5">2</data>
+			<data key="d6">
+				<![CDATA[BSFRNC -> DRSS]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e92" source="l58:n34" target="l47:n37">
+			<data key="d0">10943</data>
+			<data key="d1">Revenue</data>
+			<data key="d2">2172</data>
+			<data key="d3">0</data>
+			<data key="d4">2</data>
+			<data key="d5">1</data>
+			<data key="d6">
+				<![CDATA[GRNMLN -> DXMNTGNS]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e93" source="l47:n37" target="l15:n23">
+			<data key="d0">10948</data>
+			<data key="d1">Revenue</data>
+			<data key="d2">626</data>
+			<data key="d3">0</data>
+			<data key="d4">2</data>
+			<data key="d5">1</data>
+			<data key="d6">
+				<![CDATA[DXMNTGNS -> DMTRNSTN]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e94" source="l12:n27" target="l11:n33">
+			<data key="d0">10928</data>
+			<data key="d1">Revenue</data>
+			<data key="d2">5336</data>
+			<data key="d3">0</data>
+			<data key="d4">1</data>
+			<data key="d5">1</data>
+			<data key="d6">
+				<![CDATA[ILDSRS -> PANAMA]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e95" source="l6:n28" target="l18:n15">
+			<data key="d0">10930</data>
+			<data key="d1">Revenue</data>
+			<data key="d2">1503</data>
+			<data key="d3">0</data>
+			<data key="d4">2</data>
+			<data key="d5">2</data>
+			<data key="d6">
+				<![CDATA[MNTRYL -> CRRSPA40]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e96" source="l8:n30" target="l52:n41">
+			<data key="d0">10934</data>
+			<data key="d1">Revenue</data>
+			<data key="d2">1478</data>
+			<data key="d3">0</data>
+			<data key="d4">2</data>
+			<data key="d5">1</data>
+			<data key="d6">
+				<![CDATA[RIVE SUD -> DQRTR]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+		<edge id="e97" source="l9:n31" target="l30:n20">
+			<data key="d0">10936</data>
+			<data key="d1">Revenue</data>
+			<data key="d2">393</data>
+			<data key="d3">0</data>
+			<data key="d4">1</data>
+			<data key="d5">2</data>
+			<data key="d6">
+				<![CDATA[RS 3 -> TRNSTN]]>
+			</data>
+			<data key="d7"/>
+		</edge>
+	</graph>
+</graphml>
