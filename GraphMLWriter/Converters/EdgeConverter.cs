@@ -21,8 +21,8 @@ namespace GraphMLWriter.Converters
         public EdgeConverter(Type type, KeyConverter keyConverter)
             : base(type, keyConverter, keyfortype.edge)
         {
-            sourceGetter = GetAttributeGetter<Source>(type);
-            targetGetter = GetAttributeGetter<Target>(type);
+            sourceGetter = GetAttributeGetter<SourceId>(type);
+            targetGetter = GetAttributeGetter<TargetId>(type);
 
             graphGetter = GetItemGetter<graphtype, Graph>(
                 type: type,

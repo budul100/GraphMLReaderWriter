@@ -18,7 +18,7 @@ namespace GraphMLWriterTest.Test
 
         public Point From { get; set; }
 
-        [Source]
+        [SourceId]
         public string FromId => From?.Abbreviation;
 
         [Id]
@@ -26,7 +26,7 @@ namespace GraphMLWriterTest.Test
 
         public Point To { get; set; }
 
-        [Target]
+        [TargetId]
         public string ToId => To.Abbreviation;
 
         #endregion Public Properties
