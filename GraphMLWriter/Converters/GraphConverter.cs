@@ -6,7 +6,7 @@ using System.Linq;
 namespace GraphMLWriter.Converters
 {
     internal class GraphConverter
-        : BaseConverter<graphtype>
+        : ItemsConverter<graphtype>
     {
         #region Private Fields
 

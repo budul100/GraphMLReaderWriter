@@ -6,7 +6,7 @@ using System.Linq;
 namespace GraphMLWriter.Converters
 {
     internal class NodeConverter
-        : BaseConverter<nodetype>
+        : ItemsConverter<nodetype>
     {
         #region Protected Fields
 

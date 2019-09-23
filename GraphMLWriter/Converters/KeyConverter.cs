@@ -16,7 +16,7 @@ namespace GraphMLWriter.Converters
 
         #region Public Properties
 
-        public IList<keytype> Keys { get; private set; }
+        public IList<keytype> Keys { get; private set; } = new List<keytype>();
 
         #endregion Public Properties
 
@@ -43,11 +43,6 @@ namespace GraphMLWriter.Converters
             }
         }
 
-        public void Initialize()
-        {
-            Keys = new List<keytype>();
-        }
-
         #endregion Public Methods
 
         #region Private Methods
@@ -67,7 +62,7 @@ namespace GraphMLWriter.Converters
         {
             var keyType = GetKeyType(type);
 
-            var key = Keys
+            var key = Keys?
                 .Where(k => k.attrname == name)
                 .Where(k => k.@for == forType)
                 .Where(k => k.attrtype == keyType.ToString())

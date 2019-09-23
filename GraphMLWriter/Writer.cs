@@ -50,7 +50,7 @@ namespace GraphMLWriter
 
         private graphmltype GetContent(T input)
         {
-            keyConverter.Initialize();
+            BaseConverter.Initialize();
 
             var content = new graphmltype
             {

@@ -6,7 +6,7 @@ using System.Linq;
 namespace GraphMLWriter.Converters
 {
     internal class EdgeConverter
-        : BaseConverter<edgetype>
+        : ItemsConverter<edgetype>
     {
         #region Private Fields
 
