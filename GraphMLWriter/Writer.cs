@@ -50,6 +50,8 @@ namespace GraphMLWriter
 
         private graphmltype GetContent(T input)
         {
+            keyConverter.Initialize();
+
             var content = new graphmltype
             {
                 Items = GetItems(input).ToArray(),

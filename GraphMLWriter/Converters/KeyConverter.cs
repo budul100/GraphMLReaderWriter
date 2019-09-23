@@ -16,7 +16,7 @@ namespace GraphMLWriter.Converters
 
         #region Public Properties
 
-        public IList<keytype> Keys { get; private set; } = new List<keytype>();
+        public IList<keytype> Keys { get; private set; }
 
         #endregion Public Properties
 
@@ -41,6 +41,11 @@ namespace GraphMLWriter.Converters
                     property: property,
                     key: key);
             }
+        }
+
+        public void Initialize()
+        {
+            Keys = new List<keytype>();
         }
 
         #endregion Public Methods
