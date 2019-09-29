@@ -12,6 +12,7 @@ namespace GraphMLWriterTest
         private static Network GetNetwork()
         {
             var pointA = new Point("A");
+            pointA.IsImportant = true;
             var pointB = new Point("B");
             var pointC = new Point("C");
 

@@ -1,7 +1,4 @@
-﻿using System;
-using System.Xml;
-
-[System.SerializableAttribute()]
+﻿[System.SerializableAttribute()]
 [System.Xml.Serialization.XmlTypeAttribute(TypeName = "endpoint.type.type", Namespace = "http://graphml.graphdrawing.org/xmlns")]
 public enum endpointtypetype
 {
@@ -86,32 +83,8 @@ public partial class dataextensiontype
 {
     #region Public Properties
 
-    [System.Xml.Serialization.XmlTextAttribute()]
-    public XmlNode[] Content
-    {
-        get
-        {
-            return new XmlNode[] { (new XmlDocument()).CreateCDataSection(Text) };
-        }
-        set
-        {
-            if (value == null)
-            {
-                Text = null;
-                return;
-            }
-
-            if (value.Length != 1)
-            {
-                throw new InvalidOperationException($"Invalid array length {value.Length}");
-            }
-
-            Text = value[0].Value;
-        }
-    }
-
-    [System.Xml.Serialization.XmlIgnore()]
-    public string Text { get; set; }
+    [System.Xml.Serialization.XmlText()]
+    public string Content { get; set; }
 
     #endregion Public Properties
 }

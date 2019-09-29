@@ -19,6 +19,9 @@ namespace GraphMLWriterTest.Test
         [Key(nameof(Abbreviation))]
         public string Abbreviation { get; set; }
 
+        [Key(nameof(IsImportant))]
+        public bool IsImportant { get; set; }
+
         #endregion Public Properties
     }
 }

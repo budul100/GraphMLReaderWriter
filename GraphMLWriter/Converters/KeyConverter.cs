@@ -49,12 +49,10 @@ namespace GraphMLWriter.Converters
 
         private datatype GetData(object input, PropertyInfo property, keytype key)
         {
-            var text = property.GetValue(input).ToString();
-
             return new datatype
             {
                 key = key.id,
-                Text = text,
+                Content = property.GetValue(input).ToString(),
             };
         }
 
