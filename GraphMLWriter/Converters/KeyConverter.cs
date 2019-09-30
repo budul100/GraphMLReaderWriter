@@ -52,7 +52,7 @@ namespace GraphMLWriter.Converters
             return new datatype
             {
                 key = key.id,
-                Content = property.GetValue(input).ToString(),
+                Content = property.GetValue(input)?.ToString(),
             };
         }
 
