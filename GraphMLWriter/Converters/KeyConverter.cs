@@ -29,7 +29,8 @@ namespace GraphMLWriter.Converters
 
             foreach (var property in properties)
             {
-                var name = (property.GetCustomAttribute(typeof(Key)) as Key).Name;
+                var name = (property.GetCustomAttribute(typeof(Key)) as Key).Name
+                    ?? property.Name;
 
                 var key = GetKey(
                     name: name,

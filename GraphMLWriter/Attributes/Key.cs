@@ -6,6 +6,9 @@ namespace GraphMLWriter.Attributes
     {
         #region Public Constructors
 
+        public Key()
+        { }
+
         public Key(string name)
         {
             Name = name;
