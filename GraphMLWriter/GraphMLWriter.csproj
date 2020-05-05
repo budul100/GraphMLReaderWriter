@@ -11,8 +11,8 @@
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <RepositoryUrl>https://github.com/budul100/GraphMLWriter</RepositoryUrl>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageTags>File writer, Content serializer, XML writer, Data serializer</PackageTags>
-    <Description>File writer for simple data serialization</Description>
+    <PackageTags>GraphML writer, GraphML serializer</PackageTags>
+    <Description>Serialization objects into graphML files</Description>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard2.0|AnyCPU'">
