@@ -5,9 +5,9 @@ VisualStudioVersion = 16.0.29215.179
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GraphMLWriter", "GraphMLWriter\GraphMLWriter.csproj", "{2216A69D-2CBE-426F-A891-34512208226D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GraphMLWriterTest", "GraphMLWriterTest\GraphMLWriterTest.csproj", "{72D54C2D-DF56-412D-9AA8-8358C9284A04}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GraphML", "GraphML\GraphML.csproj", "{FF743838-5609-4E06-849C-63DBDB9474FC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphML", "GraphML\GraphML.csproj", "{FF743838-5609-4E06-849C-63DBDB9474FC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphMLWriterTest", "GraphMLWriterTest\GraphMLWriterTest.csproj", "{CB83DC43-6894-4DF1-AD83-FF36052CB9F1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,14 +19,14 @@ Global
 		{2216A69D-2CBE-426F-A891-34512208226D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2216A69D-2CBE-426F-A891-34512208226D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2216A69D-2CBE-426F-A891-34512208226D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{72D54C2D-DF56-412D-9AA8-8358C9284A04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{72D54C2D-DF56-412D-9AA8-8358C9284A04}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{72D54C2D-DF56-412D-9AA8-8358C9284A04}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{72D54C2D-DF56-412D-9AA8-8358C9284A04}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FF743838-5609-4E06-849C-63DBDB9474FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{FF743838-5609-4E06-849C-63DBDB9474FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FF743838-5609-4E06-849C-63DBDB9474FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FF743838-5609-4E06-849C-63DBDB9474FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CB83DC43-6894-4DF1-AD83-FF36052CB9F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB83DC43-6894-4DF1-AD83-FF36052CB9F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB83DC43-6894-4DF1-AD83-FF36052CB9F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB83DC43-6894-4DF1-AD83-FF36052CB9F1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

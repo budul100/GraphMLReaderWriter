@@ -1,6 +1,6 @@
 ﻿using GraphMLWriter.Attributes;
 
-namespace GraphMLWriterTest.Test
+namespace GraphMLWriterTest.Models
 {
     public class Link
     {
