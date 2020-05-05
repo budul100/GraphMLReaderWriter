@@ -19,7 +19,7 @@ namespace GraphMLWriter.Converters
         public NodeConverter(Type type, KeyConverter keyConverter)
             : base(type, keyConverter, keyfortype.node)
         {
-            graphsGetter = GetItemsGetter<graphtype, Graph>(
+            graphsGetter = GetItemsGetter<graphtype, GraphAttribute>(
                 type: type,
                 converterGetter: GetGraphConverterGetter(keyConverter));
         }
@@ -49,11 +49,12 @@ namespace GraphMLWriter.Converters
             {
                 var data = dataGetter.Invoke(input);
 
-                if (data != null) yield return data;
+                if (data != default)
+                    yield return data;
             }
 
             var graphs = graphsGetter?.Invoke(input)?
-                .Where(g => g != null).ToArray();
+                .Where(g => g != default).ToArray();
 
             if (graphs?.Any() ?? false)
             {

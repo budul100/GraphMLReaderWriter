@@ -3,7 +3,7 @@
 namespace GraphMLWriter.Attributes
 {
     [AttributeUsage(AttributeTargets.Property, AllowMultiple = false, Inherited = false)]
-    public class Edge
+    public class SourceIdAttribute
         : Attribute
     {
     }

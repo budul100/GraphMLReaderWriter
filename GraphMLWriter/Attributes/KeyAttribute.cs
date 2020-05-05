@@ -2,14 +2,16 @@
 
 namespace GraphMLWriter.Attributes
 {
-    public class Key : Attribute
+    [AttributeUsage(AttributeTargets.Property, AllowMultiple = false, Inherited = false)]
+    public class KeyAttribute
+        : Attribute
     {
         #region Public Constructors
 
-        public Key()
+        public KeyAttribute()
         { }
 
-        public Key(string name)
+        public KeyAttribute(string name)
         {
             Name = name;
         }

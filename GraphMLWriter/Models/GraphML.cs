@@ -1,4 +1,8 @@
-﻿[System.SerializableAttribute()]
+﻿#pragma warning disable IDE1006 // Benennungsstile
+#pragma warning disable CA1819 // Eigenschaften dürfen keine Arrays zurückgeben
+#pragma warning disable CA1720 // Bezeichner enthält Typnamen
+
+[System.SerializableAttribute()]
 [System.Xml.Serialization.XmlTypeAttribute(TypeName = "endpoint.type.type", Namespace = "http://graphml.graphdrawing.org/xmlns")]
 public enum endpointtypetype
 {
@@ -930,3 +934,7 @@ public partial class porttype
 
     #endregion Public Properties
 }
+
+#pragma warning restore CA1720 // Bezeichner enthält Typnamen
+#pragma warning restore CA1819 // Eigenschaften dürfen keine Arrays zurückgeben
+#pragma warning restore IDE1006 // Benennungsstile

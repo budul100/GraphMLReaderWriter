@@ -25,11 +25,11 @@ namespace GraphMLWriter.Converters
         public IEnumerable<Func<object, datatype>> GetDataGetters(Type type, keyfortype forType = keyfortype.all)
         {
             var properties = type.GetProperties()
-                .Where(p => p.GetCustomAttribute(typeof(Key)) != null).ToArray();
+                .Where(p => p.GetCustomAttribute(typeof(KeyAttribute)) != default).ToArray();
 
             foreach (var property in properties)
             {
-                var name = (property.GetCustomAttribute(typeof(Key)) as Key).Name
+                var name = (property.GetCustomAttribute(typeof(KeyAttribute)) as KeyAttribute).Name
                     ?? property.Name;
 
                 var key = GetKey(
@@ -48,7 +48,7 @@ namespace GraphMLWriter.Converters
 
         #region Private Methods
 
-        private datatype GetData(object input, PropertyInfo property, keytype key)
+        private static datatype GetData(object input, PropertyInfo property, keytype key)
         {
             return new datatype
             {
@@ -57,33 +57,7 @@ namespace GraphMLWriter.Converters
             };
         }
 
-        private keytype GetKey(string name, Type type, keyfortype forType)
-        {
-            var keyType = GetKeyType(type);
-
-            var key = Keys?
-                .Where(k => k.attrname == name)
-                .Where(k => k.@for == forType)
-                .Where(k => k.attrtype == keyType.ToString())
-                .SingleOrDefault();
-
-            if (key == null)
-            {
-                key = new keytype
-                {
-                    @for = forType,
-                    attrname = name,
-                    attrtype = keyType.ToString(),
-                    id = $"Key-{keyIndex++}",
-                };
-
-                Keys.Add(key);
-            }
-
-            return key;
-        }
-
-        private keytypetype GetKeyType(Type type)
+        private static keytypetype GetKeyType(Type type)
         {
             if (type == typeof(bool))
             {
@@ -109,6 +83,32 @@ namespace GraphMLWriter.Converters
             {
                 return keytypetype.@string;
             }
+        }
+
+        private keytype GetKey(string name, Type type, keyfortype forType)
+        {
+            var keyType = GetKeyType(type);
+
+            var key = Keys?
+                .Where(k => k.attrname == name)
+                .Where(k => k.@for == forType)
+                .Where(k => k.attrtype == keyType.ToString())
+                .SingleOrDefault();
+
+            if (key == default)
+            {
+                key = new keytype
+                {
+                    @for = forType,
+                    attrname = name,
+                    attrtype = keyType.ToString(),
+                    id = $"Key-{keyIndex++}",
+                };
+
+                Keys.Add(key);
+            }
+
+            return key;
         }
 
         #endregion Private Methods

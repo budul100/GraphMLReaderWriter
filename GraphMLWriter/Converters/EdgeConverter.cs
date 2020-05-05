@@ -21,10 +21,10 @@ namespace GraphMLWriter.Converters
         public EdgeConverter(Type type, KeyConverter keyConverter)
             : base(type, keyConverter, keyfortype.edge)
         {
-            sourceGetter = GetAttributeGetter<SourceId>(type);
-            targetGetter = GetAttributeGetter<TargetId>(type);
+            sourceGetter = GetAttributeGetter<SourceIdAttribute>(type);
+            targetGetter = GetAttributeGetter<TargetIdAttribute>(type);
 
-            graphGetter = GetItemGetter<graphtype, Graph>(
+            graphGetter = GetItemGetter<graphtype, GraphAttribute>(
                 type: type,
                 converterGetter: GetGraphConverterGetter(keyConverter));
         }
@@ -37,13 +37,13 @@ namespace GraphMLWriter.Converters
         {
             var source = sourceGetter.Invoke(input);
 
-            if (source == null)
-                throw new ApplicationException($"The edge {input.ToString()} has no source.");
+            if (source == default)
+                throw new ApplicationException($"The edge {input} has no source.");
 
             var target = targetGetter.Invoke(input);
 
-            if (target == null)
-                throw new ApplicationException($"The edge {input.ToString()} has no target.");
+            if (target == default)
+                throw new ApplicationException($"The edge {input} has no target.");
 
             var content = new edgetype
             {
@@ -67,7 +67,8 @@ namespace GraphMLWriter.Converters
             {
                 var data = dataGetter.Invoke(input);
 
-                if (data != null) yield return data;
+                if (data != default) 
+                    yield return data;
             }
         }
 

@@ -15,7 +15,7 @@ namespace GraphMLWriterTest.Models
 
         #region Public Properties
 
-        [Id]
+        [IdAttribute]
         [Key(nameof(Abbreviation))]
         public string Abbreviation { get; set; }
 

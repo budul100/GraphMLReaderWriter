@@ -36,6 +36,20 @@ namespace GraphMLWriter.Converters
 
         #region Protected Methods
 
+        protected static Func<object, string> GetAttributeGetter<U>(Type type)
+            where U : Attribute
+        {
+            var properties = type.GetProperties()
+                .Where(p => p.GetCustomAttribute(typeof(U)) != default).ToArray();
+
+            if (properties.Length > 1)
+            {
+                throw new TypeLoadException($"There can be only one property with the {typeof(U)} attribute in {type} types.");
+            }
+
+            return (input) => properties.SingleOrDefault()?.GetValue(input)?.ToString();
+        }
+
         protected static Func<Type, ItemsConverter<edgetype>> GetEdgeConverterGetter(KeyConverter keyConverter)
         {
             return (propertyType) => new EdgeConverter(
@@ -50,38 +64,17 @@ namespace GraphMLWriter.Converters
                 keyConverter: keyConverter);
         }
 
-        protected static Func<Type, ItemsConverter<nodetype>> GetNodeConverterGetter(KeyConverter keyConverter)
-        {
-            return (propertyType) => new NodeConverter(
-                type: propertyType,
-                keyConverter: keyConverter);
-        }
-
-        protected Func<object, string> GetAttributeGetter<U>(Type type)
+        protected static Func<object, V> GetItemGetter<V, U>(Type type, Func<Type, ItemsConverter<V>> converterGetter)
             where U : Attribute
         {
             var properties = type.GetProperties()
-                .Where(p => p.GetCustomAttribute(typeof(U)) != null).ToArray();
-
-            if (properties.Count() > 1)
-            {
-                throw new TypeLoadException($"There can be only one property with the {typeof(U).ToString()} attribute in {type.ToString()} types.");
-            }
-
-            return (input) => properties.SingleOrDefault()?.GetValue(input)?.ToString();
-        }
-
-        protected Func<object, V> GetItemGetter<V, U>(Type type, Func<Type, ItemsConverter<V>> converterGetter)
-            where U : Attribute
-        {
-            var properties = type.GetProperties()
-                .Where(p => p.GetCustomAttribute(typeof(U)) != null).ToArray();
+                .Where(p => p.GetCustomAttribute(typeof(U)) != default).ToArray();
 
             if (properties.Any())
             {
-                if (properties.Count() > 1)
+                if (properties.Length > 1)
                 {
-                    throw new TypeLoadException($"There can be only one property with the {typeof(U).ToString()} attribute in {type.ToString()} types.");
+                    throw new TypeLoadException($"There can be only one property with the {typeof(U)} attribute in {type} types.");
                 }
 
                 return (input) => converterGetter
@@ -92,17 +85,17 @@ namespace GraphMLWriter.Converters
             return default;
         }
 
-        protected Func<object, IEnumerable<V>> GetItemsGetter<V, U>(Type type, Func<Type, ItemsConverter<V>> converterGetter)
+        protected static Func<object, IEnumerable<V>> GetItemsGetter<V, U>(Type type, Func<Type, ItemsConverter<V>> converterGetter)
             where U : Attribute
         {
             var properties = type.GetProperties()
-                .Where(p => p.GetCustomAttribute(typeof(U)) != null).ToArray();
+                .Where(p => p.GetCustomAttribute(typeof(U)) != default).ToArray();
 
             if (properties?.Any() ?? false)
             {
-                if (properties.Count() > 1)
+                if (properties.Length > 1)
                 {
-                    throw new TypeLoadException($"There can be only one property with the {typeof(U).ToString()} attribute in {type.ToString()} types.");
+                    throw new TypeLoadException($"There can be only one property with the {typeof(U)} attribute in {type} types.");
                 }
 
                 var property = properties.Single();
@@ -110,7 +103,7 @@ namespace GraphMLWriter.Converters
                 var contentType = GetContentType(property.PropertyType);
                 var converter = converterGetter?.Invoke(contentType);
 
-                if (converter != null)
+                if (converter != default)
                 {
                     return (input) => GetContents(
                         input: input,
@@ -122,22 +115,18 @@ namespace GraphMLWriter.Converters
             return default;
         }
 
+        protected static Func<Type, ItemsConverter<nodetype>> GetNodeConverterGetter(KeyConverter keyConverter)
+        {
+            return (propertyType) => new NodeConverter(
+                type: propertyType,
+                keyConverter: keyConverter);
+        }
+
         #endregion Protected Methods
 
         #region Private Methods
 
-        private static Type GetContentType(Type type)
-        {
-            return type.GetGenericArguments().FirstOrDefault()
-                ?? type.GetElementType();
-        }
-
-        private static Func<int, string> GetNewIdGetter(Type type)
-        {
-            return (newId) => $"{type.Name}-{newId.ToString()}";
-        }
-
-        private IEnumerable<V> GetContents<V>(object input, PropertyInfo property, ItemsConverter<V> converter)
+        private static IEnumerable<V> GetContents<V>(object input, PropertyInfo property, ItemsConverter<V> converter)
         {
             var contents = (Array)property.GetValue(input);
 
@@ -150,13 +139,19 @@ namespace GraphMLWriter.Converters
             }
         }
 
-        private string GetId(Func<object, string> currentIdGetter, Func<int, string> newIdGetter, object input)
+        private static Type GetContentType(Type type)
+        {
+            return type.GetGenericArguments().FirstOrDefault()
+                ?? type.GetElementType();
+        }
+
+        private static string GetId(Func<object, string> currentIdGetter, Func<int, string> newIdGetter, object input)
         {
             var id = currentIdGetter?.Invoke(input);
 
-            if (id == null)
+            if (id == default)
             {
-                var newId = ids.Count();
+                var newId = ids.Count;
 
                 do
                 {
@@ -173,12 +168,17 @@ namespace GraphMLWriter.Converters
             return id;
         }
 
-        private Func<object, string> GetIdGetter(Type type)
+        private static Func<object, string> GetIdGetter(Type type)
         {
             return (input) => GetId(
-                currentIdGetter: GetAttributeGetter<Id>(type),
+                currentIdGetter: GetAttributeGetter<IdAttribute>(type),
                 newIdGetter: GetNewIdGetter(type),
                 input: input);
+        }
+
+        private static Func<int, string> GetNewIdGetter(Type type)
+        {
+            return (newId) => $"{type.Name}-{newId}";
         }
 
         #endregion Private Methods

@@ -20,10 +20,10 @@ namespace GraphMLWriter.Converters
         public GraphConverter(Type type, KeyConverter keyConverter)
             : base(type, keyConverter, keyfortype.graph)
         {
-            nodesGetter = GetItemsGetter<nodetype, Node>(
+            nodesGetter = GetItemsGetter<nodetype, NodeAttribute>(
                 type: type,
                 converterGetter: GetNodeConverterGetter(keyConverter));
-            edgesGetter = GetItemsGetter<edgetype, Edge>(
+            edgesGetter = GetItemsGetter<edgetype, EdgeAttribute>(
                 type: type,
                 converterGetter: GetEdgeConverterGetter(keyConverter));
         }
@@ -53,11 +53,12 @@ namespace GraphMLWriter.Converters
             {
                 var data = dataGetter.Invoke(input);
 
-                if (data != null) yield return data;
+                if (data != default) 
+                    yield return data;
             }
 
             var nodes = nodesGetter?.Invoke(input)?
-                .Where(n => n != null).ToArray();
+                .Where(n => n != default).ToArray();
 
             if (nodes?.Any() ?? false)
             {
@@ -68,7 +69,7 @@ namespace GraphMLWriter.Converters
             }
 
             var edges = edgesGetter?.Invoke(input)?
-                .Where(e => e != null).ToArray();
+                .Where(e => e != default).ToArray();
 
             if (edges?.Any() ?? false)
             {

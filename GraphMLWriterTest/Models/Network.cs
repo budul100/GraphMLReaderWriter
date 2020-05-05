@@ -1,4 +1,6 @@
-﻿using GraphMLWriter.Attributes;
+﻿#pragma warning disable CA1819 // Eigenschaften dürfen keine Arrays zurückgeben
+
+using GraphMLWriter.Attributes;
 
 namespace GraphMLWriterTest.Models
 {
@@ -8,12 +10,14 @@ namespace GraphMLWriterTest.Models
 
         public Area[] Areas { get; set; }
 
-        [Edge()]
+        [EdgeAttribute()]
         public Link[] Links { get; set; }
 
-        [Node()]
+        [NodeAttribute()]
         public Point[] Points { get; set; }
 
         #endregion Public Properties
     }
 }
+
+#pragma warning restore CA1819 // Eigenschaften dürfen keine Arrays zurückgeben
