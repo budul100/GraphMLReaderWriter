@@ -9,24 +9,17 @@ namespace GraphMLWriterTest
     {
         #region Public Methods
 
-        [SetUp]
-        public void Setup()
-        {
-        }
-
         [Test]
         public void TestWriter()
         {
-            var test = GetNetwork();
+            var input = GetNetwork();
 
             var writer = new Writer<Network>();
-            var path = @".\..\..\..\test.graphml";
 
-            if (File.Exists(path))
-                File.Delete(path);
+            var path = Path.GetTempFileName();
 
             writer.Save(
-                input: test,
+                input: input,
                 path: path);
 
             Assert.IsTrue(File.Exists(path));
@@ -46,17 +39,23 @@ namespace GraphMLWriterTest
             var pointB = new Point("B");
             var pointC = new Point("C");
 
+            var area = new Area("BC")
+            {
+                Points = new Point[] { pointB, pointC }
+            };
+
+            var locations = new Location[] { pointA, area };
+
             var linkAB = new Link(pointA, pointB);
             var linkAC = new Link(pointA, pointC);
             var linkBC = new Link(pointC, pointB);
 
-            var points = new Point[] { pointA, pointB, pointC };
             var links = new Link[] { linkAB, linkAC, linkBC };
 
             return new Network
             {
                 Links = links,
-                Points = points,
+                Locations = locations,
             };
         }
 

@@ -10,7 +10,6 @@ namespace GraphMLWriter.Converters
     {
         #region Private Fields
 
-        private readonly Func<object, graphtype> graphGetter;
         private readonly Func<object, string> sourceGetter;
         private readonly Func<object, string> targetGetter;
 
@@ -23,10 +22,6 @@ namespace GraphMLWriter.Converters
         {
             sourceGetter = GetAttributeGetter<SourceIdAttribute>(type);
             targetGetter = GetAttributeGetter<TargetIdAttribute>(type);
-
-            graphGetter = GetItemGetter<graphtype, GraphAttribute>(
-                type: type,
-                converterGetter: GetGraphConverterGetter(keyConverter));
         }
 
         #endregion Public Constructors
@@ -48,7 +43,6 @@ namespace GraphMLWriter.Converters
             var content = new edgetype
             {
                 data = GetData(input).ToArray(),
-                graph = graphGetter?.Invoke(input),
                 id = idGetter.Invoke(input),
                 source = source,
                 target = target,
@@ -67,7 +61,7 @@ namespace GraphMLWriter.Converters
             {
                 var data = dataGetter.Invoke(input);
 
-                if (data != default) 
+                if (data != default)
                     yield return data;
             }
         }

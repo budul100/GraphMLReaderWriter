@@ -1,4 +1,5 @@
 ﻿using GraphMLWriter.Attributes;
+using GraphMLWriter.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,12 +21,8 @@ namespace GraphMLWriter.Converters
         public GraphConverter(Type type, KeyConverter keyConverter)
             : base(type, keyConverter, keyfortype.graph)
         {
-            nodesGetter = GetItemsGetter<nodetype, NodeAttribute>(
-                type: type,
-                converterGetter: GetNodeConverterGetter(keyConverter));
-            edgesGetter = GetItemsGetter<edgetype, EdgeAttribute>(
-                type: type,
-                converterGetter: GetEdgeConverterGetter(keyConverter));
+            nodesGetter = type.GetItemsGetter<nodetype, NodeAttribute>(GetNodeConverterGetter(keyConverter));
+            edgesGetter = type.GetItemsGetter<edgetype, EdgeAttribute>(GetEdgeConverterGetter(keyConverter));
         }
 
         #endregion Public Constructors
@@ -49,14 +46,6 @@ namespace GraphMLWriter.Converters
 
         private IEnumerable<object> GetItems(object input)
         {
-            foreach (var dataGetter in dataGetters)
-            {
-                var data = dataGetter.Invoke(input);
-
-                if (data != default) 
-                    yield return data;
-            }
-
             var nodes = nodesGetter?.Invoke(input)?
                 .Where(n => n != default).ToArray();
 

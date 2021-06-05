@@ -8,13 +8,11 @@ namespace GraphMLWriterTest.Models
     {
         #region Public Properties
 
-        public Area[] Areas { get; set; }
-
-        [EdgeAttribute()]
+        [Edge()]
         public Link[] Links { get; set; }
 
-        [NodeAttribute()]
-        public Point[] Points { get; set; }
+        [Node()]
+        public Location[] Locations { get; set; }
 
         #endregion Public Properties
     }

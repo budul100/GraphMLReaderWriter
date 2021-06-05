@@ -3,8 +3,7 @@
 namespace GraphMLWriter.Attributes
 {
     [AttributeUsage(AttributeTargets.Property, AllowMultiple = false, Inherited = false)]
-    public class GraphAttribute
+    public sealed class GraphAttribute
         : Attribute
-    {
-    }
+    { }
 }

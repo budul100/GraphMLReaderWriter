@@ -1,5 +1,4 @@
-﻿using GraphMLWriter.Attributes;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -8,20 +7,20 @@ namespace GraphMLWriter.Converters
     internal class NodeConverter
         : ItemsConverter<nodetype>
     {
-        #region Protected Fields
+        #region Private Fields
 
-        protected readonly Func<object, IEnumerable<graphtype>> graphsGetter;
+        private readonly GraphConverter graphConverter;
 
-        #endregion Protected Fields
+        #endregion Private Fields
 
         #region Public Constructors
 
         public NodeConverter(Type type, KeyConverter keyConverter)
             : base(type, keyConverter, keyfortype.node)
         {
-            graphsGetter = GetItemsGetter<graphtype, GraphAttribute>(
+            graphConverter = new GraphConverter(
                 type: type,
-                converterGetter: GetGraphConverterGetter(keyConverter));
+                keyConverter: keyConverter);
         }
 
         #endregion Public Constructors
@@ -53,15 +52,11 @@ namespace GraphMLWriter.Converters
                     yield return data;
             }
 
-            var graphs = graphsGetter?.Invoke(input)?
-                .Where(g => g != default).ToArray();
+            var graph = graphConverter.GetContent(input);
 
-            if (graphs?.Any() ?? false)
+            if (graph?.Items?.Any() ?? false)
             {
-                foreach (var graph in graphs)
-                {
-                    yield return graphs;
-                }
+                yield return graph;
             }
         }
 

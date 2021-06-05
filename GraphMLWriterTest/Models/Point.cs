@@ -3,24 +3,22 @@
 namespace GraphMLWriterTest.Models
 {
     public class Point
+        : Location
     {
         #region Public Constructors
 
         public Point(string name)
-        {
-            Abbreviation = name;
-        }
+            : base(name)
+        { }
 
         #endregion Public Constructors
 
         #region Public Properties
 
-        [IdAttribute]
-        [Key(nameof(Abbreviation))]
-        public string Abbreviation { get; set; }
-
         [Key(nameof(IsImportant))]
         public bool IsImportant { get; set; }
+
+        public override Point[] Points => default;
 
         #endregion Public Properties
     }
