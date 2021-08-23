@@ -21,8 +21,11 @@ namespace GraphMLWriter.Converters
         public GraphConverter(Type type, KeyConverter keyConverter)
             : base(type, keyConverter, keyfortype.graph)
         {
-            nodesGetter = type.GetItemsGetter<nodetype, NodeAttribute>(GetNodeConverterGetter(keyConverter));
-            edgesGetter = type.GetItemsGetter<edgetype, EdgeAttribute>(GetEdgeConverterGetter(keyConverter));
+            var nodesConverterGetter = GetNodeConverterGetter(keyConverter);
+            nodesGetter = type.GetItemsGetter<nodetype, NodeAttribute>(nodesConverterGetter);
+
+            var edgesConverterGetter = GetEdgeConverterGetter(keyConverter);
+            edgesGetter = type.GetItemsGetter<edgetype, EdgeAttribute>(edgesConverterGetter);
         }
 
         #endregion Public Constructors

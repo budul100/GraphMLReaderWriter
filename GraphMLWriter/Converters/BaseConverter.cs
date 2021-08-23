@@ -6,7 +6,7 @@ namespace GraphMLWriter.Converters
     {
         #region Protected Fields
 
-        protected static List<string> ids;
+        protected static HashSet<string> ids;
 
         #endregion Protected Fields
 
@@ -14,7 +14,7 @@ namespace GraphMLWriter.Converters
 
         public static void Initialize()
         {
-            ids = new List<string>();
+            ids = new HashSet<string>();
         }
 
         #endregion Public Methods

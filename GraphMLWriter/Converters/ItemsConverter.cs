@@ -21,6 +21,7 @@ namespace GraphMLWriter.Converters
         public ItemsConverter(Type type, KeyConverter keyConverter, keyfortype forType)
         {
             idGetter = GetIdGetter(type);
+
             dataGetters = keyConverter.GetDataGetters(
                 type: type,
                 forType: forType).ToArray();
@@ -106,24 +107,23 @@ namespace GraphMLWriter.Converters
 
                 do
                 {
-                    newId++;
-                    id = newIdGetter.Invoke(newId);
-                } while (ids.Any(i => i == id));
+                    id = newIdGetter.Invoke(newId++);
+                } while (ids.Contains(id));
             }
 
-            if (!ids.Any(i => i == id))
-            {
-                ids.Add(id);
-            }
+            ids.Add(id);
 
             return id;
         }
 
         private static Func<object, string> GetIdGetter(Type type)
         {
+            var currentIdGetter = GetAttributeGetter<IdAttribute>(type);
+            var newIdGetter = GetNewIdGetter(type);
+
             return (input) => GetId(
-                currentIdGetter: GetAttributeGetter<IdAttribute>(type),
-                newIdGetter: GetNewIdGetter(type),
+                currentIdGetter: currentIdGetter,
+                newIdGetter: newIdGetter,
                 input: input);
         }
 
