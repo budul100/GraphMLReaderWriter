@@ -1,4 +1,5 @@
-﻿using GraphMLRW.Attributes;
+﻿using GraphML;
+using GraphMLRW.Attributes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,20 +17,20 @@ namespace GraphMLRW.Converters
 
         #region Public Properties
 
-        public IList<keytype> Keys { get; private set; } = new List<keytype>();
+        public IList<KeyType> Keys { get; } = new List<KeyType>();
 
         #endregion Public Properties
 
         #region Public Methods
 
-        public IEnumerable<Func<object, datatype>> GetDataGetters(Type type, keyfortype forType = keyfortype.all)
+        public IEnumerable<Func<object, DataType>> GetDataGetters(Type type, KeyForType forType = KeyForType.All)
         {
             var properties = type.GetProperties()
                 .Where(p => p.GetCustomAttribute(typeof(KeyAttribute)) != default).ToArray();
 
             foreach (var property in properties)
             {
-                var name = (property.GetCustomAttribute(typeof(KeyAttribute)) as KeyAttribute).Name
+                var name = (property.GetCustomAttribute(typeof(KeyAttribute)) as KeyAttribute)?.Name
                     ?? property.Name;
 
                 var key = GetKey(
@@ -48,61 +49,73 @@ namespace GraphMLRW.Converters
 
         #region Private Methods
 
-        private static datatype GetData(object input, PropertyInfo property, keytype key)
+        private static DataType GetData(object input, PropertyInfo property, KeyType key)
         {
-            return new datatype
+            var text = GetValue(
+                input: input,
+                property: property).ToArray();
+
+            return new DataType
             {
-                key = key.id,
-                Content = property.GetValue(input)?.ToString(),
+                Key = key.Id,
+                Text = text,
             };
         }
 
-        private static keytypetype GetKeyType(Type type)
+        private static KeyTypeType GetKeyType(Type type)
         {
             if (type == typeof(bool))
             {
-                return keytypetype.boolean;
+                return KeyTypeType.Boolean;
             }
             else if (type == typeof(double))
             {
-                return keytypetype.@double;
+                return KeyTypeType.Double;
             }
             else if (type == typeof(float))
             {
-                return keytypetype.@float;
+                return KeyTypeType.Float;
             }
             else if (type == typeof(int))
             {
-                return keytypetype.@int;
+                return KeyTypeType.Int;
             }
             else if (type == typeof(long))
             {
-                return keytypetype.@long;
+                return KeyTypeType.Long;
             }
             else
             {
-                return keytypetype.@string;
+                return KeyTypeType.String;
             }
         }
 
-        private keytype GetKey(string name, Type type, keyfortype forType)
+        private static IEnumerable<string> GetValue(object input, PropertyInfo property)
+        {
+            var value = property.GetValue(input)?.ToString();
+
+            if (!string.IsNullOrWhiteSpace(value))
+            {
+                yield return value;
+            }
+        }
+
+        private KeyType GetKey(string name, Type type, KeyForType forType)
         {
             var keyType = GetKeyType(type);
 
-            var key = Keys?
-                .Where(k => k.attrname == name)
-                .Where(k => k.@for == forType)
-                .Where(k => k.attrtype == keyType.ToString())
-                .SingleOrDefault();
+            var key = Keys?.SingleOrDefault(k => k.AttrName == name
+                && k.For == forType
+                && k.AttrType == keyType);
 
             if (key == default)
             {
-                key = new keytype
+                key = new KeyType
                 {
-                    @for = forType,
-                    attrname = name,
-                    attrtype = keyType.ToString(),
-                    id = $"Key-{keyIndex++}",
+                    For = forType,
+                    AttrName = name,
+                    AttrType = keyType,
+                    Id = $"Key-{keyIndex++}",
                 };
 
                 Keys.Add(key);

@@ -33,7 +33,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="..\.editorconfig" Link=".editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Commons\Attributes\Attributes.csproj" />
+    <ProjectReference Include="..\Commons\GraphML\GraphML.csproj" />
   </ItemGroup>
 
 </Project>

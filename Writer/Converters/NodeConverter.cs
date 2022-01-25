@@ -1,11 +1,12 @@
-﻿using System;
+﻿using GraphML;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace GraphMLRW.Converters
 {
     internal class NodeConverter
-        : ItemsConverter<nodetype>
+        : ItemsConverter<NodeType>
     {
         #region Private Fields
 
@@ -16,7 +17,7 @@ namespace GraphMLRW.Converters
         #region Public Constructors
 
         public NodeConverter(Type type, KeyConverter keyConverter)
-            : base(type, keyConverter, keyfortype.node)
+            : base(type, keyConverter, KeyForType.Node)
         {
             graphConverter = new GraphConverter(
                 type: type,
@@ -27,12 +28,13 @@ namespace GraphMLRW.Converters
 
         #region Public Methods
 
-        public override nodetype GetContent(object input)
+        public override NodeType GetContent(object input)
         {
-            var content = new nodetype
+            var content = new NodeType
             {
-                id = idGetter.Invoke(input),
-                Items = GetItems(input).ToArray()
+                Id = idGetter.Invoke(input),
+                Data = GetDatas(input).ToArray(),
+                Graph = GetGraph(input),
             };
 
             return content;
@@ -42,22 +44,32 @@ namespace GraphMLRW.Converters
 
         #region Private Methods
 
-        private IEnumerable<object> GetItems(object input)
+        private IEnumerable<DataType> GetDatas(object input)
         {
             foreach (var dataGetter in dataGetters)
             {
                 var data = dataGetter.Invoke(input);
 
                 if (data != default)
+                {
                     yield return data;
+                }
             }
+        }
+
+        private GraphType GetGraph(object input)
+        {
+            var result = default(GraphType);
 
             var graph = graphConverter.GetContent(input);
 
-            if (graph?.Items?.Any() ?? false)
+            if ((graph?.Node?.Any() ?? false)
+                || (graph?.Edge?.Any() ?? false))
             {
-                yield return graph;
+                result = graph;
             }
+
+            return result;
         }
 
         #endregion Private Methods

@@ -1,4 +1,5 @@
-﻿using GraphMLRW.Attributes;
+﻿using GraphML;
+using GraphMLRW.Attributes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,14 +12,14 @@ namespace GraphMLRW.Converters
     {
         #region Protected Fields
 
-        protected readonly IEnumerable<Func<object, datatype>> dataGetters;
+        protected readonly IEnumerable<Func<object, DataType>> dataGetters;
         protected readonly Func<object, string> idGetter;
 
         #endregion Protected Fields
 
-        #region Public Constructors
+        #region Protected Constructors
 
-        public ItemsConverter(Type type, KeyConverter keyConverter, keyfortype forType)
+        protected ItemsConverter(Type type, KeyConverter keyConverter, KeyForType forType)
         {
             idGetter = GetIdGetter(type);
 
@@ -27,7 +28,7 @@ namespace GraphMLRW.Converters
                 forType: forType).ToArray();
         }
 
-        #endregion Public Constructors
+        #endregion Protected Constructors
 
         #region Public Methods
 
@@ -51,14 +52,14 @@ namespace GraphMLRW.Converters
             return (input) => properties.SingleOrDefault()?.GetValue(input)?.ToString();
         }
 
-        protected static Func<Type, ItemsConverter<edgetype>> GetEdgeConverterGetter(KeyConverter keyConverter)
+        protected static Func<Type, ItemsConverter<EdgeType>> GetEdgeConverterGetter(KeyConverter keyConverter)
         {
             return (propertyType) => new EdgeConverter(
                 type: propertyType,
                 keyConverter: keyConverter);
         }
 
-        protected static Func<Type, ItemsConverter<graphtype>> GetGraphConverterGetter(KeyConverter keyConverter)
+        protected static Func<Type, ItemsConverter<GraphType>> GetGraphConverterGetter(KeyConverter keyConverter)
         {
             return (propertyType) => new GraphConverter(
                 type: propertyType,
@@ -71,7 +72,7 @@ namespace GraphMLRW.Converters
             var properties = type.GetProperties()
                 .Where(p => p.GetCustomAttribute(typeof(U)) != default).ToArray();
 
-            if (properties.Any())
+            if (properties.Length > 0)
             {
                 if (properties.Length > 1)
                 {
@@ -86,7 +87,7 @@ namespace GraphMLRW.Converters
             return default;
         }
 
-        protected static Func<Type, ItemsConverter<nodetype>> GetNodeConverterGetter(KeyConverter keyConverter)
+        protected static Func<Type, ItemsConverter<NodeType>> GetNodeConverterGetter(KeyConverter keyConverter)
         {
             return (propertyType) => new NodeConverter(
                 type: propertyType,

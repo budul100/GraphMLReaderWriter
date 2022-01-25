@@ -1,4 +1,5 @@
-﻿using GraphMLRW.Attributes;
+﻿using GraphML;
+using GraphMLRW.Attributes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,7 +7,7 @@ using System.Linq;
 namespace GraphMLRW.Converters
 {
     internal class EdgeConverter
-        : ItemsConverter<edgetype>
+        : ItemsConverter<EdgeType>
     {
         #region Private Fields
 
@@ -18,7 +19,7 @@ namespace GraphMLRW.Converters
         #region Public Constructors
 
         public EdgeConverter(Type type, KeyConverter keyConverter)
-            : base(type, keyConverter, keyfortype.edge)
+            : base(type, keyConverter, KeyForType.Edge)
         {
             sourceGetter = GetAttributeGetter<SourceIdAttribute>(type);
             targetGetter = GetAttributeGetter<TargetIdAttribute>(type);
@@ -28,7 +29,7 @@ namespace GraphMLRW.Converters
 
         #region Public Methods
 
-        public override edgetype GetContent(object input)
+        public override EdgeType GetContent(object input)
         {
             var source = sourceGetter.Invoke(input);
 
@@ -40,12 +41,12 @@ namespace GraphMLRW.Converters
             if (target == default)
                 throw new ApplicationException($"The edge {input} has no target.");
 
-            var content = new edgetype
+            var content = new EdgeType
             {
-                data = GetData(input).ToArray(),
-                id = idGetter.Invoke(input),
-                source = source,
-                target = target,
+                Data = GetData(input).ToArray(),
+                Id = idGetter.Invoke(input),
+                Source = source,
+                Target = target,
             };
 
             return content;
@@ -55,7 +56,7 @@ namespace GraphMLRW.Converters
 
         #region Private Methods
 
-        private IEnumerable<datatype> GetData(object input)
+        private IEnumerable<DataType> GetData(object input)
         {
             foreach (var dataGetter in dataGetters)
             {

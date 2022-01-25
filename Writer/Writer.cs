@@ -1,4 +1,5 @@
-﻿using GraphMLRW.Converters;
+﻿using GraphML;
+using GraphMLRW.Converters;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -33,7 +34,7 @@ namespace GraphMLRW
                 type: typeof(T),
                 keyConverter: keyConverter);
 
-            serializer = new XmlSerializer(typeof(graphmltype));
+            serializer = new XmlSerializer(typeof(GraphMLType));
         }
 
         #endregion Public Constructors
@@ -59,20 +60,20 @@ namespace GraphMLRW
 
         #region Private Methods
 
-        private graphmltype GetContent(T input)
+        private GraphMLType GetContent(T input)
         {
             BaseConverter.Initialize();
 
-            var content = new graphmltype
+            var content = new GraphMLType
             {
-                Items = GetItems(input).ToArray(),
-                key = keyConverter.Keys.ToArray(),
+                Graph = GetGraph(input).ToArray(),
+                Key = keyConverter.Keys.ToArray(),
             };
 
             return content;
         }
 
-        private IEnumerable<object> GetItems(T input)
+        private IEnumerable<GraphType> GetGraph(T input)
         {
             yield return graphConverter.GetContent(input);
         }

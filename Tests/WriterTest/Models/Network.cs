@@ -1,6 +1,4 @@
-﻿#pragma warning disable CA1819 // Eigenschaften dürfen keine Arrays zurückgeben
-
-using GraphMLRW.Attributes;
+﻿using GraphMLRW.Attributes;
 
 namespace GraphMLWriterTest.Models
 {
@@ -17,5 +15,3 @@ namespace GraphMLWriterTest.Models
         #endregion Public Properties
     }
 }
-
-#pragma warning restore CA1819 // Eigenschaften dürfen keine Arrays zurückgeben

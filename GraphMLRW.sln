@@ -12,6 +12,9 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Attributes", "Commons\Attributes\Attributes.csproj", "{E60D76E6-8ACD-4875-82FA-F8E088683B33}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Commons", "Commons", "{8A0AD743-33B3-46FE-9492-7F242631288C}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{8CA14C58-D1DD-4A96-ADA1-8118660B3CA2}"
 EndProject
