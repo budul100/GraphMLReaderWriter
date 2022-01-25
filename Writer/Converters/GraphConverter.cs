@@ -8,7 +8,7 @@ using System.Linq;
 namespace GraphMLRW.Converters
 {
     internal class GraphConverter
-        : ItemsConverter<GraphType>
+        : ContentConverter<GraphType>
     {
         #region Private Fields
 
@@ -48,6 +48,20 @@ namespace GraphMLRW.Converters
         #endregion Public Methods
 
         #region Private Methods
+
+        private static Func<Type, ContentConverter<EdgeType>> GetEdgeConverterGetter(KeyConverter keyConverter)
+        {
+            return (propertyType) => new EdgeConverter(
+                type: propertyType,
+                keyConverter: keyConverter);
+        }
+
+        private static Func<Type, ContentConverter<NodeType>> GetNodeConverterGetter(KeyConverter keyConverter)
+        {
+            return (propertyType) => new NodeConverter(
+                type: propertyType,
+                keyConverter: keyConverter);
+        }
 
         private IEnumerable<EdgeType> GetEdges(object input)
         {

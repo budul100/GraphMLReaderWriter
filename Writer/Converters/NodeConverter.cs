@@ -6,7 +6,7 @@ using System.Linq;
 namespace GraphMLRW.Converters
 {
     internal class NodeConverter
-        : ItemsConverter<NodeType>
+        : ContentConverter<NodeType>
     {
         #region Private Fields
 

@@ -1,5 +1,6 @@
 ﻿using GraphML;
 using GraphMLRW.Attributes;
+using GraphMLRW.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,12 +8,12 @@ using System.Linq;
 namespace GraphMLRW.Converters
 {
     internal class EdgeConverter
-        : ItemsConverter<EdgeType>
+        : ContentConverter<EdgeType>
     {
         #region Private Fields
 
-        private readonly Func<object, string> sourceGetter;
-        private readonly Func<object, string> targetGetter;
+        private readonly Func<object, string> sourceIdGetter;
+        private readonly Func<object, string> targetIdGetter;
 
         #endregion Private Fields
 
@@ -21,8 +22,19 @@ namespace GraphMLRW.Converters
         public EdgeConverter(Type type, KeyConverter keyConverter)
             : base(type, keyConverter, KeyForType.Edge)
         {
-            sourceGetter = GetAttributeGetter<SourceIdAttribute>(type);
-            targetGetter = GetAttributeGetter<TargetIdAttribute>(type);
+            sourceIdGetter = type.GetNodeIdGetter<SourceAttribute>();
+
+            if (sourceIdGetter == default)
+            {
+                throw new TypeLoadException($"There is no property marked with {nameof(SourceAttribute)} in {type} type.");
+            }
+
+            targetIdGetter = type.GetNodeIdGetter<TargetAttribute>();
+
+            if (targetIdGetter == default)
+            {
+                throw new TypeLoadException($"There is no property marked with {nameof(TargetAttribute)} in {type} type.");
+            }
         }
 
         #endregion Public Constructors
@@ -31,15 +43,19 @@ namespace GraphMLRW.Converters
 
         public override EdgeType GetContent(object input)
         {
-            var source = sourceGetter.Invoke(input);
+            var source = sourceIdGetter.Invoke(input);
 
             if (source == default)
+            {
                 throw new ApplicationException($"The edge {input} has no source.");
+            }
 
-            var target = targetGetter.Invoke(input);
+            var target = targetIdGetter.Invoke(input);
 
             if (target == default)
+            {
                 throw new ApplicationException($"The edge {input} has no target.");
+            }
 
             var content = new EdgeType
             {

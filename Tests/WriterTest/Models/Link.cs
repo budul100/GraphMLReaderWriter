@@ -16,18 +16,14 @@ namespace GraphMLWriterTest.Models
 
         #region Public Properties
 
+        [SourceAttribute]
         public Point From { get; set; }
-
-        [SourceIdAttribute]
-        public string FromId => From?.Abbreviation;
 
         [IdAttribute]
         public string Id { get; set; }
 
+        [TargetAttribute]
         public Point To { get; set; }
-
-        [TargetIdAttribute]
-        public string ToId => To.Abbreviation;
 
         #endregion Public Properties
     }

@@ -1,12 +1,31 @@
 using GraphMLRW;
 using GraphMLWriterTest.Models;
 using NUnit.Framework;
+using SchemaValidator;
 using System.IO;
+using WriterTest.Extensions;
 
 namespace GraphMLWriterTest
 {
     public class Tests
     {
+        #region Private Fields
+
+        private const string relativeSchemaPath = @"Commons\GraphML\_XSD\graphml_complete.xsd";
+        private readonly Validator outputValidator;
+
+        #endregion Private Fields
+
+        #region Public Constructors
+
+        public Tests()
+        {
+            var schemaPath = relativeSchemaPath.GetPath();
+            outputValidator = new Validator(schemaPath);
+        }
+
+        #endregion Public Constructors
+
         #region Public Methods
 
         [Test]
@@ -23,6 +42,8 @@ namespace GraphMLWriterTest
                 path: path);
 
             Assert.IsTrue(File.Exists(path));
+
+            //outputValidator.Validate(path);
         }
 
         #endregion Public Methods
