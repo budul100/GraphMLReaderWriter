@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0;netstandard2.1</TargetFrameworks>
     <AssemblyName>GraphMLReaderWriter</AssemblyName>
-    <AssemblyVersion>1.0.0</AssemblyVersion>
+    <AssemblyVersion>1.0.1</AssemblyVersion>
     <FileVersion>$(AssemblyVersion)</FileVersion>
     <Version>$(AssemblyVersion)</Version>
     <Authors>budul</Authors>
@@ -33,15 +33,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Remove="..\.editorconfig" />
+    <None Include="..\.editorconfig" />
+    <None Include="..\README.md" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="UniversalTypeConverter" Version="2.0.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\Commons\Models\Models.csproj" />
   </ItemGroup>
 
 </Project>

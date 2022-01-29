@@ -99,7 +99,6 @@ namespace GraphML
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool AttrTypeSpecified { get; set; }
         
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.Xml.Serialization.XmlAttributeAttribute("id")]
         public string Id { get; set; }
     }

@@ -16,11 +16,11 @@ namespace GraphML
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute("port.type", Namespace="http://graphml.graphdrawing.org/xmlns")]
+    [System.Xml.Serialization.XmlTypeAttribute("node.type", Namespace="http://graphml.graphdrawing.org/xmlns")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlRootAttribute("port", Namespace="http://graphml.graphdrawing.org/xmlns")]
-    public partial class PortType : IPortExtraAttrib
+    [System.Xml.Serialization.XmlRootAttribute("node", Namespace="http://graphml.graphdrawing.org/xmlns")]
+    public partial class NodeType : INodeExtraAttrib
     {
         
         [System.Xml.Serialization.XmlElementAttribute("desc")]
@@ -52,7 +52,7 @@ namespace GraphML
             }
         }
         
-        public PortType()
+        public NodeType()
         {
             this.data = System.Array.Empty<DataType>();
             this.port = System.Array.Empty<PortType>();
@@ -84,6 +84,12 @@ namespace GraphML
             }
         }
         
+        [System.Xml.Serialization.XmlElementAttribute("graph")]
+        public GraphType Graph { get; set; }
+        
+        [System.Xml.Serialization.XmlElementAttribute("locator")]
+        public LocatorType Locator { get; set; }
+        
         [System.Xml.Serialization.XmlAttributeAttribute("attr.name")]
         public string AttrName { get; set; }
         
@@ -93,8 +99,7 @@ namespace GraphML
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool AttrTypeSpecified { get; set; }
         
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.Xml.Serialization.XmlAttributeAttribute("name")]
-        public string Name { get; set; }
+        [System.Xml.Serialization.XmlAttributeAttribute("id")]
+        public string Id { get; set; }
     }
 }

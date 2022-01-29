@@ -13,11 +13,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\GraphMLReaderWriter\GraphMLReaderWriter.csproj" />
+    <ProjectReference Include="..\GraphMLReaderWriter\GraphMLReaderWriter.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Remove="..\..\.editorconfig" />
+    <None Include="..\.editorconfig" />
   </ItemGroup>
 
 </Project>

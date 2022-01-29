@@ -78,11 +78,9 @@ namespace GraphML
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool DirectedSpecified { get; set; }
         
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.Xml.Serialization.XmlAttributeAttribute("source")]
         public string Source { get; set; }
         
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.Xml.Serialization.XmlAttributeAttribute("target")]
         public string Target { get; set; }
         

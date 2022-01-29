@@ -16,15 +16,12 @@ namespace GraphML
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute("endpoint.type", Namespace="http://graphml.graphdrawing.org/xmlns")]
+    [System.Xml.Serialization.XmlTypeAttribute("locator.type", Namespace="http://graphml.graphdrawing.org/xmlns")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlRootAttribute("endpoint", Namespace="http://graphml.graphdrawing.org/xmlns")]
-    public partial class EndpointType : IEndpointExtraAttrib
+    [System.Xml.Serialization.XmlRootAttribute("locator", Namespace="http://graphml.graphdrawing.org/xmlns")]
+    public partial class LocatorType : ILocatorExtraAttrib
     {
-        
-        [System.Xml.Serialization.XmlElementAttribute("desc")]
-        public string Desc { get; set; }
         
         [System.Xml.Serialization.XmlAttributeAttribute("attr.name")]
         public string AttrName { get; set; }
@@ -35,31 +32,13 @@ namespace GraphML
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool AttrTypeSpecified { get; set; }
         
-        [System.Xml.Serialization.XmlAttributeAttribute("id")]
-        public string Id { get; set; }
+        [System.Xml.Serialization.XmlAttributeAttribute("href", Namespace="http://www.w3.org/1999/xlink", Form=System.Xml.Schema.XmlSchemaForm.Qualified)]
+        public string Href { get; set; }
         
-        [System.Xml.Serialization.XmlAttributeAttribute("port")]
-        public string Port { get; set; }
-        
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.Xml.Serialization.XmlAttributeAttribute("node")]
-        public string Node { get; set; }
+        [System.Xml.Serialization.XmlAttributeAttribute("type", Namespace="http://www.w3.org/1999/xlink", Form=System.Xml.Schema.XmlSchemaForm.Qualified)]
+        public XLink.Type Type { get; set; }
         
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        private EndpointTypeType type = GraphML.EndpointTypeType.Undir;
-        
-        [System.ComponentModel.DefaultValueAttribute(GraphML.EndpointTypeType.Undir)]
-        [System.Xml.Serialization.XmlAttributeAttribute("type")]
-        public EndpointTypeType Type
-        {
-            get
-            {
-                return this.type;
-            }
-            set
-            {
-                this.type = value;
-            }
-        }
+        public bool TypeSpecified { get; set; }
     }
 }

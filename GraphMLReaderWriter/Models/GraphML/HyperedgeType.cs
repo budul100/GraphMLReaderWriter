@@ -16,11 +16,11 @@ namespace GraphML
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute("graph.type", Namespace="http://graphml.graphdrawing.org/xmlns")]
+    [System.Xml.Serialization.XmlTypeAttribute("hyperedge.type", Namespace="http://graphml.graphdrawing.org/xmlns")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlRootAttribute("graph", Namespace="http://graphml.graphdrawing.org/xmlns")]
-    public partial class GraphType : IGraphExtraAttrib
+    [System.Xml.Serialization.XmlRootAttribute("hyperedge", Namespace="http://graphml.graphdrawing.org/xmlns")]
+    public partial class HyperedgeType : IHyperedgeExtraAttrib
     {
         
         [System.Xml.Serialization.XmlElementAttribute("desc")]
@@ -52,94 +52,40 @@ namespace GraphML
             }
         }
         
-        public GraphType()
+        public HyperedgeType()
         {
             this.data = System.Array.Empty<DataType>();
-            this.node = System.Array.Empty<NodeType>();
-            this.edge = System.Array.Empty<EdgeType>();
-            this.hyperedge = System.Array.Empty<HyperedgeType>();
+            this.endpoint = System.Array.Empty<EndpointType>();
         }
         
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        private NodeType[] node;
+        private EndpointType[] endpoint;
         
-        [System.Xml.Serialization.XmlElementAttribute("node")]
-        public NodeType[] Node
+        [System.Xml.Serialization.XmlElementAttribute("endpoint")]
+        public EndpointType[] Endpoint
         {
             get
             {
-                return this.node;
+                return this.endpoint;
             }
             set
             {
-                this.node = value;
+                this.endpoint = value;
             }
         }
         
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool NodeSpecified
+        public bool EndpointSpecified
         {
             get
             {
-                return ((this.Node != null) 
-                            && (this.Node.Length != 0));
+                return ((this.Endpoint != null) 
+                            && (this.Endpoint.Length != 0));
             }
         }
         
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        private EdgeType[] edge;
-        
-        [System.Xml.Serialization.XmlElementAttribute("edge")]
-        public EdgeType[] Edge
-        {
-            get
-            {
-                return this.edge;
-            }
-            set
-            {
-                this.edge = value;
-            }
-        }
-        
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool EdgeSpecified
-        {
-            get
-            {
-                return ((this.Edge != null) 
-                            && (this.Edge.Length != 0));
-            }
-        }
-        
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        private HyperedgeType[] hyperedge;
-        
-        [System.Xml.Serialization.XmlElementAttribute("hyperedge")]
-        public HyperedgeType[] Hyperedge
-        {
-            get
-            {
-                return this.hyperedge;
-            }
-            set
-            {
-                this.hyperedge = value;
-            }
-        }
-        
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool HyperedgeSpecified
-        {
-            get
-            {
-                return ((this.Hyperedge != null) 
-                            && (this.Hyperedge.Length != 0));
-            }
-        }
-        
-        [System.Xml.Serialization.XmlElementAttribute("locator")]
-        public LocatorType Locator { get; set; }
+        [System.Xml.Serialization.XmlElementAttribute("graph")]
+        public GraphType Graph { get; set; }
         
         [System.Xml.Serialization.XmlAttributeAttribute("attr.name")]
         public string AttrName { get; set; }
@@ -152,9 +98,5 @@ namespace GraphML
         
         [System.Xml.Serialization.XmlAttributeAttribute("id")]
         public string Id { get; set; }
-        
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.Xml.Serialization.XmlAttributeAttribute("edgedefault")]
-        public GraphEdgedefaultType Edgedefault { get; set; }
     }
 }

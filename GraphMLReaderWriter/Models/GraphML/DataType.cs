@@ -23,7 +23,6 @@ namespace GraphML
     public partial class DataType : DataExtensionType, IDataExtraAttrib
     {
         
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.Xml.Serialization.XmlAttributeAttribute("key")]
         public string Key { get; set; }
         

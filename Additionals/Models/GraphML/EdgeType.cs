@@ -16,56 +16,49 @@ namespace GraphML
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute("key.type", Namespace="http://graphml.graphdrawing.org/xmlns")]
+    [System.Xml.Serialization.XmlTypeAttribute("edge.type", Namespace="http://graphml.graphdrawing.org/xmlns")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlRootAttribute("key", Namespace="http://graphml.graphdrawing.org/xmlns")]
-    public partial class KeyType : IKeyAttributesAttrib
+    [System.Xml.Serialization.XmlRootAttribute("edge", Namespace="http://graphml.graphdrawing.org/xmlns")]
+    public partial class EdgeType : IEdgeExtraAttrib
     {
         
         [System.Xml.Serialization.XmlElementAttribute("desc")]
         public string Desc { get; set; }
         
-        [System.Xml.Serialization.XmlElementAttribute("default")]
-        public DefaultType Default { get; set; }
-        
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.Xml.Serialization.XmlAttributeAttribute("id")]
-        public string Id { get; set; }
-        
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        private bool dynamic = false;
+        private DataType[] data;
         
-        [System.ComponentModel.DefaultValueAttribute(false)]
-        [System.Xml.Serialization.XmlAttributeAttribute("dynamic")]
-        public bool Dynamic
+        [System.Xml.Serialization.XmlElementAttribute("data")]
+        public DataType[] Data
         {
             get
             {
-                return this.dynamic;
+                return this.data;
             }
             set
             {
-                this.dynamic = value;
+                this.data = value;
             }
         }
         
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        private KeyForType @for = GraphML.KeyForType.All;
-        
-        [System.ComponentModel.DefaultValueAttribute(GraphML.KeyForType.All)]
-        [System.Xml.Serialization.XmlAttributeAttribute("for")]
-        public KeyForType For
+        public bool DataSpecified
         {
             get
             {
-                return this.@for;
-            }
-            set
-            {
-                this.@for = value;
+                return ((this.Data != null) 
+                            && (this.Data.Length != 0));
             }
         }
+        
+        public EdgeType()
+        {
+            this.data = System.Array.Empty<DataType>();
+        }
+        
+        [System.Xml.Serialization.XmlElementAttribute("graph")]
+        public GraphType Graph { get; set; }
         
         [System.Xml.Serialization.XmlAttributeAttribute("attr.name")]
         public string AttrName { get; set; }
@@ -75,5 +68,26 @@ namespace GraphML
         
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool AttrTypeSpecified { get; set; }
+        
+        [System.Xml.Serialization.XmlAttributeAttribute("id")]
+        public string Id { get; set; }
+        
+        [System.Xml.Serialization.XmlAttributeAttribute("directed")]
+        public bool Directed { get; set; }
+        
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool DirectedSpecified { get; set; }
+        
+        [System.Xml.Serialization.XmlAttributeAttribute("source")]
+        public string Source { get; set; }
+        
+        [System.Xml.Serialization.XmlAttributeAttribute("target")]
+        public string Target { get; set; }
+        
+        [System.Xml.Serialization.XmlAttributeAttribute("sourceport")]
+        public string Sourceport { get; set; }
+        
+        [System.Xml.Serialization.XmlAttributeAttribute("targetport")]
+        public string Targetport { get; set; }
     }
 }

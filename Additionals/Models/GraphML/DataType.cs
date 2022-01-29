@@ -16,12 +16,35 @@ namespace GraphML
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute("locator.type", Namespace="http://graphml.graphdrawing.org/xmlns")]
+    [System.Xml.Serialization.XmlTypeAttribute("data.type", Namespace="http://graphml.graphdrawing.org/xmlns")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlRootAttribute("locator", Namespace="http://graphml.graphdrawing.org/xmlns")]
-    public partial class LocatorType : ILocatorExtraAttrib
+    [System.Xml.Serialization.XmlRootAttribute("data", Namespace="http://graphml.graphdrawing.org/xmlns")]
+    public partial class DataType : DataExtensionType, IDataExtraAttrib
     {
+        
+        [System.Xml.Serialization.XmlAttributeAttribute("key")]
+        public string Key { get; set; }
+        
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        private long time = 0;
+        
+        [System.ComponentModel.DefaultValueAttribute(0)]
+        [System.Xml.Serialization.XmlAttributeAttribute("time")]
+        public long Time
+        {
+            get
+            {
+                return this.time;
+            }
+            set
+            {
+                this.time = value;
+            }
+        }
+        
+        [System.Xml.Serialization.XmlAttributeAttribute("id")]
+        public string Id { get; set; }
         
         [System.Xml.Serialization.XmlAttributeAttribute("attr.name")]
         public string AttrName { get; set; }
@@ -31,15 +54,5 @@ namespace GraphML
         
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool AttrTypeSpecified { get; set; }
-        
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.Xml.Serialization.XmlAttributeAttribute("href", Namespace="http://www.w3.org/1999/xlink", Form=System.Xml.Schema.XmlSchemaForm.Qualified)]
-        public string Href { get; set; }
-        
-        [System.Xml.Serialization.XmlAttributeAttribute("type", Namespace="http://www.w3.org/1999/xlink", Form=System.Xml.Schema.XmlSchemaForm.Qualified)]
-        public XLink.Type Type { get; set; }
-        
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool TypeSpecified { get; set; }
     }
 }

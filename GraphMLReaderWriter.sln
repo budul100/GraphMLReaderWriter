@@ -3,15 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29215.179
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Commons", "Commons", "{8A0AD743-33B3-46FE-9492-7F242631288C}"
-	ProjectSection(SolutionItems) = preProject
-		.editorconfig = .editorconfig
-		README.md = README.md
-	EndProjectSection
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Models", "Commons\Models\Models.csproj", "{E0F9099A-69CC-40C1-82BA-1B0485DCB588}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tests", "Commons\Tests\Tests.csproj", "{E0EC4ED9-86DC-4C8A-AF96-714FC5DC2C96}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GraphMLReaderWriterTests", "GraphMLReaderWriterTests\GraphMLReaderWriterTests.csproj", "{E0EC4ED9-86DC-4C8A-AF96-714FC5DC2C96}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GraphMLReaderWriter", "GraphMLReaderWriter\GraphMLReaderWriter.csproj", "{5B7A35CB-CB5B-4F57-B868-1C24D3CEF4E7}"
 EndProject
@@ -21,10 +13,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{E0F9099A-69CC-40C1-82BA-1B0485DCB588}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E0F9099A-69CC-40C1-82BA-1B0485DCB588}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E0F9099A-69CC-40C1-82BA-1B0485DCB588}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E0F9099A-69CC-40C1-82BA-1B0485DCB588}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E0EC4ED9-86DC-4C8A-AF96-714FC5DC2C96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E0EC4ED9-86DC-4C8A-AF96-714FC5DC2C96}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E0EC4ED9-86DC-4C8A-AF96-714FC5DC2C96}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -36,10 +24,6 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{E0F9099A-69CC-40C1-82BA-1B0485DCB588} = {8A0AD743-33B3-46FE-9492-7F242631288C}
-		{E0EC4ED9-86DC-4C8A-AF96-714FC5DC2C96} = {8A0AD743-33B3-46FE-9492-7F242631288C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {338EC99D-FD94-4532-9161-25D447E23F30}
