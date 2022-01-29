@@ -11,7 +11,7 @@
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <RepositoryUrl>https://github.com/budul100/GraphMLReaderWriter</RepositoryUrl>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageTags>GraphML writer, GraphML serializer</PackageTags>
+    <PackageTags>GraphML,Writer,Reader,Serialization,Deserialization</PackageTags>
     <Description>Serialization objects into graphML files</Description>
   </PropertyGroup>
 
