@@ -115,6 +115,7 @@ namespace GraphMLWriter.Converters
                     For = forType,
                     AttrName = name,
                     AttrType = keyType,
+                    AttrTypeSpecified = true,
                     Id = $"Key-{keyIndex++}",
                 };
 

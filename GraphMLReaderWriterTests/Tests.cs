@@ -3,12 +3,27 @@ using GraphMLWriter;
 using GraphMLWriterTest.Models;
 using NUnit.Framework;
 using System.IO;
+using System.Linq;
 
 namespace GraphMLWriterTest
 {
     public class Tests
     {
         #region Public Methods
+
+        [Test]
+        public void ExportAttributesAvailable()
+        {
+            var path = Path.GetTempFileName();
+            var input = GetNetwork();
+
+            var writer = new Writer<Network>();
+            var result = writer.Save(
+                input: input,
+                path: path);
+
+            Assert.True(result.Key.All(k => k.AttrTypeSpecified));
+        }
 
         [Test]
         public void ExportImportRoundtrip()

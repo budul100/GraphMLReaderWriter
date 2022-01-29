@@ -41,9 +41,9 @@ namespace GraphMLWriter
 
         #region Public Methods
 
-        public void Save(T input, string path)
+        public GraphMLType Save(T input, string path)
         {
-            var content = GetContent(input);
+            var result = GetContent(input);
 
             using (var writer = new StreamWriter(
                 path: path,
@@ -52,8 +52,10 @@ namespace GraphMLWriter
             {
                 serializer.Serialize(
                     textWriter: writer,
-                    o: content);
+                    o: result);
             }
+
+            return result;
         }
 
         #endregion Public Methods
