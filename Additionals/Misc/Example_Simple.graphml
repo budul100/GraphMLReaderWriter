@@ -16,7 +16,7 @@
           <data key="Key-0">B</data>
         </node>
         <node id="C">
-          <data key="Key-2">False</data>
+          <data key="Key-2">True</data>
           <data key="Key-0">C</data>
         </node>
       </graph>

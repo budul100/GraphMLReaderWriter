@@ -11,7 +11,7 @@ namespace GraphMLWriterTest
         #region Public Methods
 
         [Test]
-        public void Roundtrip()
+        public void ExportImportRoundtrip()
         {
             var path = Path.GetTempFileName();
             var input = GetNetwork();
@@ -22,6 +22,26 @@ namespace GraphMLWriterTest
                 path: path);
 
             Assert.IsTrue(File.Exists(path));
+
+            var reader = new Reader<Network>();
+            var output = reader.Load(path);
+
+            Assert.True(output.Locations.Length == 2);
+            Assert.True(output.Locations[1].Points[1].IsImportant);
+
+            Assert.True(output.Links.Length == 3);
+            Assert.True(output.Links[0].From == output.Locations[0]);
+            Assert.True(output.Links[0].To == output.Locations[1].Points[0]);
+            Assert.True(output.Links[1].From == output.Locations[0]);
+            Assert.True(output.Links[1].To == output.Locations[1].Points[1]);
+            Assert.True(output.Links[2].From == output.Locations[1].Points[1]);
+            Assert.True(output.Links[2].To == output.Locations[1].Points[0]);
+        }
+
+        [Test]
+        public void ImportyEd()
+        {
+            var path = @"..\..\..\Samples\Example_yEd.graphml";
 
             var reader = new Reader<Network>();
             var output = reader.Load(path);
