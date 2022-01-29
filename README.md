@@ -1,5 +1,8 @@
-# GraphMLWriter
+# GraphMLReaderWriter
 
-Serialization objects into graphML files
+Class libraray for 
 
-The respective NuGet package can be found on https://www.nuget.org/packages/budul.GraphMLWriter.
+* Serialization of objects into graphML files and 
+* Deserialization graphML files back into objects.
+
+The respective NuGet package can be found on https://github.com/budul100/GraphMLReaderWriter.
