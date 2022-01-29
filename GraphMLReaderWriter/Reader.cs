@@ -17,7 +17,7 @@ namespace GraphMLReader
         private readonly EdgesSetterFactory edgesSetterFactory;
         private readonly Encoding encoding;
         private readonly KeySetterFactory keySetterFactory;
-        private readonly NodesGetterFactory<T> nodesGetterFactory;
+        private readonly NodesSetterFactory<T> nodesSetterFactory;
 
         #endregion Private Fields
 
@@ -37,7 +37,7 @@ namespace GraphMLReader
                 output: output);
 
             keySetterFactory = new KeySetterFactory();
-            nodesGetterFactory = new NodesGetterFactory<T>(
+            nodesSetterFactory = new NodesSetterFactory<T>(
                 keySetterFactory: keySetterFactory,
                 nodesGetter: nodesGetter);
             edgesSetterFactory = new EdgesSetterFactory(
@@ -64,11 +64,11 @@ namespace GraphMLReader
         {
             var result = default(IDictionary<string, object>);
 
-            var nodesGetter = nodesGetterFactory.Get(type);
+            var nodesSetter = nodesSetterFactory.Get(type);
 
-            if (nodesGetter != default)
+            if (nodesSetter != default)
             {
-                result = nodesGetter.Invoke(
+                result = nodesSetter.Invoke(
                     arg1: graph,
                     arg2: output);
 

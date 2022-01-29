@@ -21,6 +21,9 @@ namespace GraphMLWriterTest.Models
         [Key(nameof(IsImportant))]
         public bool IsImportant { get; set; }
 
+        [Key(nameof(IsNotImportant))]
+        public bool IsNotImportant => !IsImportant;
+
         public override Point[] Points => default;
 
         #endregion Public Properties

@@ -56,7 +56,8 @@ namespace GraphMLReader.Factories
 
         private IEnumerable<Action<object, object>> GetSetters(Type type, KeyForType keyForType)
         {
-            var attributeProperties = type.GetProperties<KeyAttribute>();
+            var attributeProperties = type?.GetProperties<KeyAttribute>()?
+                .Where(p => p.GetSetMethod() != default).ToArray();
 
             if (attributeProperties?.Any() ?? false)
             {

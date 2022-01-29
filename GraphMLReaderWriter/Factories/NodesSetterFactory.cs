@@ -9,7 +9,7 @@ using System.Reflection;
 
 namespace GraphMLReader.Factories
 {
-    internal class NodesGetterFactory<T>
+    internal class NodesSetterFactory<T>
         where T : class
     {
         #region Private Fields
@@ -24,7 +24,7 @@ namespace GraphMLReader.Factories
 
         #region Public Constructors
 
-        public NodesGetterFactory(KeySetterFactory keySetterFactory,
+        public NodesSetterFactory(KeySetterFactory keySetterFactory,
             Func<GraphType, Type, object, IDictionary<string, object>> nodesGetter)
         {
             this.keySetterFactory = keySetterFactory;
@@ -41,7 +41,7 @@ namespace GraphMLReader.Factories
 
             var nodesProperty = type.GetProperty<NodesAttribute>();
 
-            if (nodesProperty != default)
+            if (nodesProperty?.GetSetMethod() != default)
             {
                 var propertyType = nodesProperty.PropertyType;
 

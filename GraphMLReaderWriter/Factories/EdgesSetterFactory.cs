@@ -16,7 +16,7 @@ namespace GraphMLReader.Factories
         private readonly KeySetterFactory keySetterFactory;
 
         private readonly IDictionary<Type, Action<GraphType, IDictionary<string, object>, object>> setters =
-                    new Dictionary<Type, Action<GraphType, IDictionary<string, object>, object>>();
+            new Dictionary<Type, Action<GraphType, IDictionary<string, object>, object>>();
 
         #endregion Private Fields
 
@@ -37,7 +37,7 @@ namespace GraphMLReader.Factories
 
             var edgesProperty = type.GetProperty<EdgesAttribute>();
 
-            if (edgesProperty != default)
+            if (edgesProperty?.GetSetMethod() != default)
             {
                 var propertyType = edgesProperty.PropertyType;
 
