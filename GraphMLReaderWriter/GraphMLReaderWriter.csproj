@@ -12,7 +12,7 @@
     <RepositoryUrl>https://github.com/budul100/GraphMLReaderWriter</RepositoryUrl>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageTags>GraphML,Writer,Reader,Serialization,Deserialization</PackageTags>
-    <Description>Serialization objects into graphML files</Description>
+    <Description>Serialization of objects into graphML files and Deserialization graphML files back into objects.</Description>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard2.0|AnyCPU'">
