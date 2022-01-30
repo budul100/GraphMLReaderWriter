@@ -56,7 +56,7 @@ namespace GraphMLWriterTest
         [Test]
         public void ImportyEd()
         {
-            var path = @"..\..\..\Samples\Example_yEd.graphml";
+            const string path = @"..\..\..\Samples\Example_yEd.graphml";
 
             var reader = new Reader<Network>();
             var output = reader.Load(path);
