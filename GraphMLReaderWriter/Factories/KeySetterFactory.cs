@@ -63,7 +63,8 @@ namespace GraphMLReader.Factories
             {
                 foreach (var attributeProperty in attributeProperties)
                 {
-                    var name = attributeProperty.GetAttribute<KeyAttribute>()?.Name;
+                    var name = attributeProperty.GetAttribute<KeyAttribute>()?.Name
+                        ?? attributeProperty.Name;
                     var key = keys.SingleOrDefault(k => k.AttrName == name
                         && k.For == keyForType);
 

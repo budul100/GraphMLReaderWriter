@@ -23,8 +23,11 @@ namespace GraphMLWriterTest.Models
         #region Public Properties
 
         [Id]
-        [Key(nameof(Abbreviation))]
+        [Key]
         public string Abbreviation { get; set; }
+
+        [Key]
+        public string LongName { get; set; }
 
         [Nodes()]
         public virtual Point[] Points { get; set; }

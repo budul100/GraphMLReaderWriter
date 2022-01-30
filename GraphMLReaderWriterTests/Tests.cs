@@ -63,6 +63,7 @@ namespace GraphMLWriterTest
 
             Assert.True(output.Locations.Length == 2);
             Assert.True(output.Locations[1].Points[1].IsImportant);
+            Assert.True(output.Locations.All(l => l.Abbreviation.Length > 0));
 
             Assert.True(output.Links.Length == 3);
             Assert.True(output.Links[0].From == output.Locations[0]);
