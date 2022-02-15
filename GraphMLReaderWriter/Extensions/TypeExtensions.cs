@@ -28,11 +28,13 @@ namespace GraphMLReaderWriter.Extensions
             var property = type.GetProperty<T>(
                 isMandatory: isMandatory);
 
-            return (input) => property?.GetValue(input)?.ToString();
+            return (input) => input != default
+                ? property?.GetValue(input)?.ToString()
+                : default;
         }
 
         public static Func<object, IEnumerable<U>> GetItemsGetter<T, U>(this Type type, Func<Type, ContentConverter<U>> converterGetter)
-                            where T : Attribute
+            where T : Attribute
         {
             var property = type.GetProperty<T>();
 
