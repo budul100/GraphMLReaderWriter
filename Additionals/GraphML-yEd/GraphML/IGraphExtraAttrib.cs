@@ -14,7 +14,7 @@ namespace GraphML
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
-    public partial interface IGraphExtraAttrib : IGraphParseinfoAttrib
+    public partial interface IGraphExtraAttrib : GraphML.IGraphExtraAttrib, IGraphParseinfoAttrib
     {
     }
 }

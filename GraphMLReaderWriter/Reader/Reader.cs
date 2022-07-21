@@ -31,8 +31,8 @@ namespace GraphMLReader
         {
             this.encoding = encoding;
 
-            IDictionary<string, object> nodesGetter(GraphType graph, Type type, object output) => GetNodes(
-                graph: graph,
+            IDictionary<string, object> nodesGetter(GraphType[] graph, Type type, object output) => GetNodes(
+                graphs: graph,
                 type: type,
                 output: output);
 
@@ -60,7 +60,7 @@ namespace GraphMLReader
 
         #region Internal Methods
 
-        internal IDictionary<string, object> GetNodes(GraphType graph, Type type, object output)
+        internal IDictionary<string, object> GetNodes(GraphType[] graphs, Type type, object output)
         {
             var result = default(IDictionary<string, object>);
 
@@ -69,7 +69,7 @@ namespace GraphMLReader
             if (nodesSetter != default)
             {
                 result = nodesSetter.Invoke(
-                    arg1: graph,
+                    arg1: graphs,
                     arg2: output);
 
                 if (result?.Any() ?? false)
@@ -79,7 +79,7 @@ namespace GraphMLReader
                     if (edgesSetter != default)
                     {
                         edgesSetter.Invoke(
-                            arg1: graph,
+                            arg1: graphs,
                             arg2: result,
                             arg3: output);
                     }
@@ -93,12 +93,11 @@ namespace GraphMLReader
 
         #region Private Methods
 
-        private T GetContent(GraphMLType graphML)
+        private T GetContent(GraphmlType graphML)
         {
             var output = default(T);
 
-            var graph = graphML.Graph
-                .SingleOrDefault();
+            var graph = graphML.Graph;
 
             if (graph != default)
             {
@@ -111,7 +110,7 @@ namespace GraphMLReader
                     keyForType: KeyForType.Graph);
 
                 GetNodes(
-                    graph: graph,
+                    graphs: graph,
                     type: typeof(T),
                     output: output);
 
@@ -129,7 +128,7 @@ namespace GraphMLReader
             return output;
         }
 
-        private GraphMLType GetGraphML(string path)
+        private GraphmlType GetGraphML(string path)
         {
             if (!File.Exists(path))
             {
@@ -138,14 +137,14 @@ namespace GraphMLReader
                     fileName: path);
             }
 
-            var result = default(GraphMLType);
+            var result = default(GraphmlType);
 
             using (var xmlReader = new StreamReader(
                 path: path,
                 encoding: encoding))
             {
-                var serializer = new XmlSerializer(typeof(GraphMLType));
-                result = serializer.Deserialize(xmlReader) as GraphMLType;
+                var serializer = new XmlSerializer(typeof(GraphmlType));
+                result = serializer.Deserialize(xmlReader) as GraphmlType;
             }
 
             return result;

@@ -55,11 +55,13 @@ namespace GraphMLWriter.Factories
                 input: input,
                 property: property).ToArray();
 
-            return new DataType
+            var result = new DataType
             {
                 Key = key.Id,
                 Text = text,
             };
+
+            return result;
         }
 
         private static KeyTypeType GetKeyType(Type type)

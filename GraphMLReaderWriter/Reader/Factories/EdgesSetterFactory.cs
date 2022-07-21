@@ -16,8 +16,8 @@ namespace GraphMLReader.Factories
 
         private readonly DataSetterFactory dataSetterFactory;
 
-        private readonly IDictionary<Type, Action<GraphType, IDictionary<string, object>, object>> setters =
-            new Dictionary<Type, Action<GraphType, IDictionary<string, object>, object>>();
+        private readonly IDictionary<Type, Action<GraphType[], IDictionary<string, object>, object>> setters =
+            new Dictionary<Type, Action<GraphType[], IDictionary<string, object>, object>>();
 
         #endregion Private Fields
 
@@ -32,9 +32,9 @@ namespace GraphMLReader.Factories
 
         #region Public Methods
 
-        public Action<GraphType, IDictionary<string, object>, object> Get(Type type)
+        public Action<GraphType[], IDictionary<string, object>, object> Get(Type type)
         {
-            var result = default(Action<GraphType, IDictionary<string, object>, object>);
+            var result = default(Action<GraphType[], IDictionary<string, object>, object>);
 
             var edgesProperty = type.GetProperty<EdgesAttribute>();
 
@@ -53,8 +53,8 @@ namespace GraphMLReader.Factories
                     var targetProperty = edgesType.GetProperty<TargetAttribute>(
                         isMandatory: true);
 
-                    void setter(GraphType graph, IDictionary<string, object> nodes, object output) => SetEdges(
-                        graph: graph,
+                    void setter(GraphType[] graphs, IDictionary<string, object> nodes, object output) => SetEdges(
+                        graphs: graphs,
                         nodes: nodes,
                         edgesProperty: edgesProperty,
                         sourceProperty: sourceProperty,
@@ -78,48 +78,54 @@ namespace GraphMLReader.Factories
 
         #region Private Methods
 
-        private void SetEdges(GraphType graph, IDictionary<string, object> nodes, PropertyInfo edgesProperty,
+        private void SetEdges(GraphType[] graphs, IDictionary<string, object> nodes, PropertyInfo edgesProperty,
             PropertyInfo sourceProperty, PropertyInfo targetProperty, Type edgesType, IList edgesList, object output)
         {
-            if ((graph.Edge?.Any() ?? false)
-                && (nodes?.Any() ?? false))
+            if (graphs?.Any() ?? false)
             {
-                var dataSetters = dataSetterFactory.Get(
-                    type: edgesType,
-                    keyForType: KeyForType.Edge);
-
-                foreach (var edge in graph.Edge)
+                foreach (var graph in graphs)
                 {
-                    if (nodes.ContainsKey(edge.Source)
-                        && nodes.ContainsKey(edge.Target))
+                    if ((graph.Edge?.Any() ?? false)
+                        && (nodes?.Any() ?? false))
                     {
-                        var content = Activator.CreateInstance(edgesType);
+                        var dataSetters = dataSetterFactory.Get(
+                            type: edgesType,
+                            keyForType: KeyForType.Edge);
 
-                        sourceProperty.SetValue(
-                            obj: content,
-                            value: nodes[edge.Source]);
-
-                        targetProperty.SetValue(
-                            obj: content,
-                            value: nodes[edge.Target]);
-
-                        if (dataSetters?.Any() ?? false)
+                        foreach (var edge in graph.Edge)
                         {
-                            foreach (var dataSetter in dataSetters)
+                            if (nodes.ContainsKey(edge.Source)
+                                && nodes.ContainsKey(edge.Target))
                             {
-                                dataSetter.Invoke(
-                                    arg1: edge,
-                                    arg2: content);
+                                var content = Activator.CreateInstance(edgesType);
+
+                                sourceProperty.SetValue(
+                                    obj: content,
+                                    value: nodes[edge.Source]);
+
+                                targetProperty.SetValue(
+                                    obj: content,
+                                    value: nodes[edge.Target]);
+
+                                if (dataSetters?.Any() ?? false)
+                                {
+                                    foreach (var dataSetter in dataSetters)
+                                    {
+                                        dataSetter.Invoke(
+                                            arg1: edge,
+                                            arg2: content);
+                                    }
+                                }
+
+                                edgesList.Add(content);
                             }
                         }
 
-                        edgesList.Add(content);
+                        edgesProperty.SetCollection(
+                            obj: output,
+                            items: edgesList);
                     }
                 }
-
-                edgesProperty.SetCollection(
-                    obj: output,
-                    items: edgesList);
             }
         }
 

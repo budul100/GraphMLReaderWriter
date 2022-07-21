@@ -34,14 +34,14 @@ namespace GraphMLWriter
                 type: typeof(T),
                 dataFactory: dataFactory);
 
-            serializer = new XmlSerializer(typeof(GraphMLType));
+            serializer = new XmlSerializer(typeof(GraphmlType));
         }
 
         #endregion Public Constructors
 
         #region Public Methods
 
-        public GraphMLType Save(T input, string path)
+        public GraphmlType Save(T input, string path)
         {
             var result = GetContent(input);
 
@@ -62,11 +62,11 @@ namespace GraphMLWriter
 
         #region Private Methods
 
-        private GraphMLType GetContent(T input)
+        private GraphmlType GetContent(T input)
         {
             BaseFactory.Initialize();
 
-            var content = new GraphMLType
+            var content = new GraphmlType
             {
                 Graph = GetGraph(input).ToArray(),
                 Key = dataFactory.Keys.ToArray(),

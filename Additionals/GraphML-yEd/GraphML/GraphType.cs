@@ -19,7 +19,7 @@ namespace GraphML
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlRootAttribute("graph", Namespace="http://graphml.graphdrawing.org/xmlns")]
-    public partial class GraphType : GraphML.IGraphExtraAttrib
+    public partial class GraphType : IGraphExtraAttrib, GraphML.IGraphExtraAttrib
     {
         
         [System.Xml.Serialization.XmlElementAttribute("desc")]

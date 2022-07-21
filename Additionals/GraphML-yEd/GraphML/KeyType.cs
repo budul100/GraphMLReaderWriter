@@ -19,7 +19,7 @@ namespace GraphML
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlRootAttribute("key", Namespace="http://graphml.graphdrawing.org/xmlns")]
-    public partial class KeyType : GraphML.IKeyExtraAttrib
+    public partial class KeyType : IKeyExtraAttrib, GraphML.IKeyExtraAttrib
     {
         
         [System.Xml.Serialization.XmlElementAttribute("desc")]

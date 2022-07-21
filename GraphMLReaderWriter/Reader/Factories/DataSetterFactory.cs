@@ -40,14 +40,14 @@ namespace GraphMLReader.Factories
                         key: type,
                         value: dataSetters);
 
-                    var nodeLabelSetters = GetSetters<NodeLabelAttribute>(
-                        type: type,
-                        keyGetter: _ => GetKeyNodeLabel(keyForType),
-                        textGetterGetter: k => keyForType.GetTextGetterData(k)).ToArray();
+                    //var nodeLabelSetters = GetSetters<NodeLabelAttribute>(
+                    //    type: type,
+                    //    keyGetter: _ => GetKeyNodeLabel(keyForType),
+                    //    textGetterGetter: k => keyForType.GetTextGetterData(k)).ToArray();
 
-                    setters.Add(
-                        key: type,
-                        value: dataSetters);
+                    //setters.Add(
+                    //    key: type,
+                    //    value: dataSetters);
                 }
 
                 result = setters[type];
@@ -56,7 +56,7 @@ namespace GraphMLReader.Factories
             return result;
         }
 
-        public void Initialize(GraphMLType graphML)
+        public void Initialize(GraphmlType graphML)
         {
             keys = graphML.Key;
         }
@@ -78,8 +78,8 @@ namespace GraphMLReader.Factories
 
         private KeyType GetKeyNodeLabel(KeyForType keyForType)
         {
-            var result = keys.SingleOrDefault(k => k.For == keyForType);
-            // && k.y);
+            var result = keys.SingleOrDefault(k => k.For == keyForType
+                && k.YfilesType == "nodegraphics");
 
             return result;
         }

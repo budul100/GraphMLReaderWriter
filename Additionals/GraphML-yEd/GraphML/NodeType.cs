@@ -19,7 +19,7 @@ namespace GraphML
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlRootAttribute("node", Namespace="http://graphml.graphdrawing.org/xmlns")]
-    public partial class NodeType : GraphML.INodeExtraAttrib
+    public partial class NodeType : INodeExtraAttrib, GraphML.INodeExtraAttrib
     {
         
         [System.Xml.Serialization.XmlElementAttribute("desc")]

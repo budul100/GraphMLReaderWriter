@@ -14,7 +14,7 @@ namespace GraphML
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
-    public partial interface INodeExtraAttrib
+    public partial interface INodeExtraAttrib : GraphML.INodeExtraAttrib
     {
         
         YfilesFoldertypeType YfilesFoldertype

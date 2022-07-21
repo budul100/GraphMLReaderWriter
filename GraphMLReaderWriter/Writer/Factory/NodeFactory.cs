@@ -34,7 +34,7 @@ namespace GraphMLWriter.Factories
             {
                 Id = idGetter.Invoke(input),
                 Data = GetDatas(input).ToArray(),
-                Graph = GetGraph(input),
+                Graph = GetGraph(input).ToArray(),
             };
 
             return content;
@@ -57,7 +57,7 @@ namespace GraphMLWriter.Factories
             }
         }
 
-        private GraphType GetGraph(object input)
+        private IEnumerable<GraphType> GetGraph(object input)
         {
             var result = default(GraphType);
 
@@ -69,7 +69,7 @@ namespace GraphMLWriter.Factories
                 result = graph;
             }
 
-            return result;
+            yield return result;
         }
 
         #endregion Private Methods

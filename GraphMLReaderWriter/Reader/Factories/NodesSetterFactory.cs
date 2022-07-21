@@ -17,17 +17,17 @@ namespace GraphMLReader.Factories
 
         private readonly DataSetterFactory dataSetterFactory;
 
-        private readonly IDictionary<Type, Func<GraphType, object, IDictionary<string, object>>> getters =
-            new Dictionary<Type, Func<GraphType, object, IDictionary<string, object>>>();
+        private readonly IDictionary<Type, Func<GraphType[], object, IDictionary<string, object>>> getters =
+            new Dictionary<Type, Func<GraphType[], object, IDictionary<string, object>>>();
 
-        private readonly Func<GraphType, Type, object, IDictionary<string, object>> nodesGetter;
+        private readonly Func<GraphType[], Type, object, IDictionary<string, object>> nodesGetter;
 
         #endregion Private Fields
 
         #region Public Constructors
 
         public NodesSetterFactory(DataSetterFactory dataSetterFactory,
-            Func<GraphType, Type, object, IDictionary<string, object>> nodesGetter)
+            Func<GraphType[], Type, object, IDictionary<string, object>> nodesGetter)
         {
             this.dataSetterFactory = dataSetterFactory;
             this.nodesGetter = nodesGetter;
@@ -37,9 +37,9 @@ namespace GraphMLReader.Factories
 
         #region Public Methods
 
-        public Func<GraphType, object, IDictionary<string, object>> Get(Type type)
+        public Func<GraphType[], object, IDictionary<string, object>> Get(Type type)
         {
-            var result = default(Func<GraphType, object, IDictionary<string, object>>);
+            var result = default(Func<GraphType[], object, IDictionary<string, object>>);
 
             var nodesProperty = type.GetProperty<NodesAttribute>();
 
@@ -53,8 +53,8 @@ namespace GraphMLReader.Factories
                         mustBeInstantiable: true);
                     var nodesList = propertyType.GetAsList();
 
-                    IDictionary<string, object> getter(GraphType graph, object output) => GetNodes(
-                        graph: graph,
+                    IDictionary<string, object> getter(GraphType[] graphs, object output) => GetNodes(
+                        graphs: graphs,
                         nodesProperty: nodesProperty,
                         nodesType: nodesType,
                         nodesList: nodesList,
@@ -75,59 +75,65 @@ namespace GraphMLReader.Factories
 
         #region Private Methods
 
-        private IDictionary<string, object> GetNodes(GraphType graph, PropertyInfo nodesProperty, Type nodesType,
+        private IDictionary<string, object> GetNodes(GraphType[] graphs, PropertyInfo nodesProperty, Type nodesType,
             IList nodesList, object output)
         {
             var result = new Dictionary<string, object>();
 
-            if (graph.Node?.Any() ?? false)
+            if (graphs?.Any() ?? false)
             {
-                var dataSetters = dataSetterFactory.Get(
-                    type: nodesType,
-                    keyForType: KeyForType.Node);
-
-                foreach (var node in graph.Node)
+                foreach (var graph in graphs)
                 {
-                    var content = Activator.CreateInstance(nodesType);
-
-                    if (node.Graph != default)
+                    if (graph.Node?.Any() ?? false)
                     {
-                        var childNodes = nodesGetter.Invoke(
-                            arg1: node.Graph,
-                            arg2: nodesType,
-                            arg3: content);
+                        var dataSetters = dataSetterFactory.Get(
+                            type: nodesType,
+                            keyForType: KeyForType.Node);
 
-                        if (childNodes?.Any() ?? false)
+                        foreach (var node in graph.Node)
                         {
-                            foreach (var childNode in childNodes)
+                            var content = Activator.CreateInstance(nodesType);
+
+                            if (node.Graph != default)
                             {
-                                result.Add(
-                                    key: childNode.Key,
-                                    value: childNode.Value);
+                                var childNodes = nodesGetter.Invoke(
+                                    arg1: node.Graph,
+                                    arg2: nodesType,
+                                    arg3: content);
+
+                                if (childNodes?.Any() ?? false)
+                                {
+                                    foreach (var childNode in childNodes)
+                                    {
+                                        result.Add(
+                                            key: childNode.Key,
+                                            value: childNode.Value);
+                                    }
+                                }
                             }
+
+                            if (dataSetters?.Any() ?? false)
+                            {
+                                foreach (var dataSetter in dataSetters)
+                                {
+                                    dataSetter.Invoke(
+                                        arg1: node,
+                                        arg2: content);
+                                }
+                            }
+
+                            nodesList.Add(content);
+
+                            result.Add(
+                                key: node.Id,
+                                value: content);
                         }
+
+                        nodesProperty.SetCollection(
+                            obj: output,
+                            items: nodesList);
                     }
-
-                    if (dataSetters?.Any() ?? false)
-                    {
-                        foreach (var dataSetter in dataSetters)
-                        {
-                            dataSetter.Invoke(
-                                arg1: node,
-                                arg2: content);
-                        }
-                    }
-
-                    nodesList.Add(content);
-
-                    result.Add(
-                        key: node.Id,
-                        value: content);
                 }
-
-                nodesProperty.SetCollection(
-                    obj: output,
-                    items: nodesList);
             }
 
             return result;
