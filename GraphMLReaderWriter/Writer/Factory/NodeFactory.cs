@@ -3,25 +3,25 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace GraphMLWriter.Converters
+namespace GraphMLWriter.Factories
 {
-    internal class NodeConverter
-        : ContentConverter<NodeType>
+    internal class NodeFactory
+        : ContentFactory<NodeType>
     {
         #region Private Fields
 
-        private readonly GraphConverter graphConverter;
+        private readonly GraphFactory graphFactory;
 
         #endregion Private Fields
 
         #region Public Constructors
 
-        public NodeConverter(Type type, DataConverter dataConverter)
-            : base(type: type, dataConverter: dataConverter, forType: KeyForType.Node)
+        public NodeFactory(Type type, DataFactory dataFactory)
+            : base(type: type, dataFactory: dataFactory, forType: KeyForType.Node)
         {
-            graphConverter = new GraphConverter(
+            graphFactory = new GraphFactory(
                 type: type,
-                dataConverter: dataConverter);
+                dataFactory: dataFactory);
         }
 
         #endregion Public Constructors
@@ -61,7 +61,7 @@ namespace GraphMLWriter.Converters
         {
             var result = default(GraphType);
 
-            var graph = graphConverter.GetContent(input);
+            var graph = graphFactory.GetContent(input);
 
             if ((graph?.Node?.Any() ?? false)
                 || (graph?.Edge?.Any() ?? false))

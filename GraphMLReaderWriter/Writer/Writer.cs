@@ -1,5 +1,5 @@
 ﻿using GraphML;
-using GraphMLWriter.Converters;
+using GraphMLWriter.Factories;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -12,9 +12,9 @@ namespace GraphMLWriter
     {
         #region Private Fields
 
-        private readonly DataConverter dataConverter;
+        private readonly DataFactory dataFactory;
         private readonly Encoding encoding;
-        private readonly GraphConverter graphConverter;
+        private readonly GraphFactory graphFactory;
         private readonly XmlSerializer serializer;
 
         #endregion Private Fields
@@ -29,10 +29,10 @@ namespace GraphMLWriter
         {
             this.encoding = encoding;
 
-            dataConverter = new DataConverter();
-            graphConverter = new GraphConverter(
+            dataFactory = new DataFactory();
+            graphFactory = new GraphFactory(
                 type: typeof(T),
-                dataConverter: dataConverter);
+                dataFactory: dataFactory);
 
             serializer = new XmlSerializer(typeof(GraphMLType));
         }
@@ -64,12 +64,12 @@ namespace GraphMLWriter
 
         private GraphMLType GetContent(T input)
         {
-            BaseConverter.Initialize();
+            BaseFactory.Initialize();
 
             var content = new GraphMLType
             {
                 Graph = GetGraph(input).ToArray(),
-                Key = dataConverter.Keys.ToArray(),
+                Key = dataFactory.Keys.ToArray(),
             };
 
             return content;
@@ -77,7 +77,7 @@ namespace GraphMLWriter
 
         private IEnumerable<GraphType> GetGraph(T input)
         {
-            yield return graphConverter.GetContent(input);
+            yield return graphFactory.GetContent(input);
         }
 
         #endregion Private Methods

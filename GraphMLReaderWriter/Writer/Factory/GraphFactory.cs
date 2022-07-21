@@ -5,10 +5,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace GraphMLWriter.Converters
+namespace GraphMLWriter.Factories
 {
-    internal class GraphConverter
-        : ContentConverter<GraphType>
+    internal class GraphFactory
+        : ContentFactory<GraphType>
     {
         #region Private Fields
 
@@ -19,14 +19,14 @@ namespace GraphMLWriter.Converters
 
         #region Public Constructors
 
-        public GraphConverter(Type type, DataConverter dataConverter)
-            : base(type: type, dataConverter: dataConverter, forType: KeyForType.Graph)
+        public GraphFactory(Type type, DataFactory dataFactory)
+            : base(type: type, dataFactory: dataFactory, forType: KeyForType.Graph)
         {
-            var nodesConverterGetter = GetNodeConverterGetter(dataConverter);
-            nodesGetter = type.GetItemsGetter<NodesAttribute, NodeType>(nodesConverterGetter);
+            var nodesFactoryGetter = GetNodeFactoryGetter(dataFactory);
+            nodesGetter = type.GetItemsGetter<NodesAttribute, NodeType>(nodesFactoryGetter);
 
-            var edgesConverterGetter = GetEdgeConverterGetter(dataConverter);
-            edgesGetter = type.GetItemsGetter<EdgesAttribute, EdgeType>(edgesConverterGetter);
+            var edgesFactoryGetter = GetEdgeFactoryGetter(dataFactory);
+            edgesGetter = type.GetItemsGetter<EdgesAttribute, EdgeType>(edgesFactoryGetter);
         }
 
         #endregion Public Constructors
@@ -49,18 +49,18 @@ namespace GraphMLWriter.Converters
 
         #region Private Methods
 
-        private static Func<Type, ContentConverter<EdgeType>> GetEdgeConverterGetter(DataConverter dataConverter)
+        private static Func<Type, ContentFactory<EdgeType>> GetEdgeFactoryGetter(DataFactory dataFactory)
         {
-            return (propertyType) => new EdgeConverter(
+            return (propertyType) => new EdgeFactory(
                 type: propertyType,
-                dataConverter: dataConverter);
+                dataFactory: dataFactory);
         }
 
-        private static Func<Type, ContentConverter<NodeType>> GetNodeConverterGetter(DataConverter dataConverter)
+        private static Func<Type, ContentFactory<NodeType>> GetNodeFactoryGetter(DataFactory dataFactory)
         {
-            return (propertyType) => new NodeConverter(
+            return (propertyType) => new NodeFactory(
                 type: propertyType,
-                dataConverter: dataConverter);
+                dataFactory: dataFactory);
         }
 
         private IEnumerable<EdgeType> GetEdges(object input)

@@ -1,5 +1,5 @@
 ﻿using GraphMLReaderWriter.Attributes;
-using GraphMLWriter.Converters;
+using GraphMLWriter.Factories;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -33,7 +33,7 @@ namespace GraphMLReaderWriter.Extensions
                 : default;
         }
 
-        public static Func<object, IEnumerable<U>> GetItemsGetter<T, U>(this Type type, Func<Type, ContentConverter<U>> converterGetter)
+        public static Func<object, IEnumerable<U>> GetItemsGetter<T, U>(this Type type, Func<Type, ContentFactory<U>> factoryGetter)
             where T : Attribute
         {
             var property = type.GetProperty<T>();
@@ -42,13 +42,13 @@ namespace GraphMLReaderWriter.Extensions
 
             if (itemType != default)
             {
-                var converter = converterGetter?.Invoke(itemType);
+                var factory = factoryGetter?.Invoke(itemType);
 
-                if (converter != default)
+                if (factory != default)
                 {
                     return (input) => input.GetContents(
                         property: property,
-                        converter: converter);
+                        factory: factory);
                 }
             }
 
@@ -117,7 +117,7 @@ namespace GraphMLReaderWriter.Extensions
 
         #region Private Methods
 
-        private static IEnumerable<T> GetContents<T>(this object input, PropertyInfo property, ContentConverter<T> converter)
+        private static IEnumerable<T> GetContents<T>(this object input, PropertyInfo property, ContentFactory<T> factory)
         {
             var contents = (Array)property.GetValue(input);
 
@@ -125,7 +125,7 @@ namespace GraphMLReaderWriter.Extensions
             {
                 foreach (var content in contents)
                 {
-                    yield return converter.GetContent(content);
+                    yield return factory.GetContent(content);
                 }
             }
         }

@@ -3,9 +3,9 @@ using GraphMLReaderWriter.Extensions;
 using System;
 using System.Collections.Generic;
 
-namespace GraphMLWriter.Converters
+namespace GraphMLWriter.Factories
 {
-    internal abstract class BaseConverter
+    internal abstract class BaseFactory
     {
         #region Protected Fields
 

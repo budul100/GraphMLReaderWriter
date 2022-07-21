@@ -5,10 +5,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace GraphMLWriter.Converters
+namespace GraphMLWriter.Factories
 {
-    internal class EdgeConverter
-        : ContentConverter<EdgeType>
+    internal class EdgeFactory
+        : ContentFactory<EdgeType>
     {
         #region Private Fields
 
@@ -19,8 +19,8 @@ namespace GraphMLWriter.Converters
 
         #region Public Constructors
 
-        public EdgeConverter(Type type, DataConverter dataConverter)
-            : base(type: type, dataConverter: dataConverter, forType: KeyForType.Edge)
+        public EdgeFactory(Type type, DataFactory dataFactory)
+            : base(type: type, dataFactory: dataFactory, forType: KeyForType.Edge)
         {
             sourceIdGetter = type.GetNodeIdGetter<SourceAttribute>();
             targetIdGetter = type.GetNodeIdGetter<TargetAttribute>();

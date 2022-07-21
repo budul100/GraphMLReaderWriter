@@ -3,10 +3,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace GraphMLWriter.Converters
+namespace GraphMLWriter.Factories
 {
-    internal abstract class ContentConverter<T>
-        : BaseConverter
+    internal abstract class ContentFactory<T>
+        : BaseFactory
     {
         #region Protected Fields
 
@@ -17,11 +17,11 @@ namespace GraphMLWriter.Converters
 
         #region Protected Constructors
 
-        protected ContentConverter(Type type, DataConverter dataConverter, KeyForType forType)
+        protected ContentFactory(Type type, DataFactory dataFactory, KeyForType forType)
         {
             idGetter = GetIdGetter(type);
 
-            dataGetters = dataConverter.GetDataGetters(
+            dataGetters = dataFactory.GetDataGetters(
                 type: type,
                 forType: forType).ToArray();
         }
