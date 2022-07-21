@@ -18,10 +18,10 @@ namespace GraphMLWriterTest.Models
 
         #region Public Properties
 
-        [Key(nameof(IsImportant))]
+        [Data(nameof(IsImportant))]
         public bool IsImportant { get; set; }
 
-        [Key(nameof(IsNotImportant))]
+        [Data(nameof(IsNotImportant))]
         public bool IsNotImportant => !IsImportant;
 
         public override Point[] Points => default;

@@ -14,20 +14,21 @@ namespace GraphMLReader.Factories
     {
         #region Private Fields
 
-        private readonly IDictionary<Type, Func<GraphType, object, IDictionary<string, object>>> getters =
-            new Dictionary<Type, Func<GraphType, object, IDictionary<string, object>>>();
+        private readonly DataSetterFactory dataSetterFactory;
 
-        private readonly KeySetterFactory keySetterFactory;
+        private readonly IDictionary<Type, Func<GraphType, object, IDictionary<string, object>>> getters =
+                    new Dictionary<Type, Func<GraphType, object, IDictionary<string, object>>>();
+
         private readonly Func<GraphType, Type, object, IDictionary<string, object>> nodesGetter;
 
         #endregion Private Fields
 
         #region Public Constructors
 
-        public NodesSetterFactory(KeySetterFactory keySetterFactory,
+        public NodesSetterFactory(DataSetterFactory dataSetterFactory,
             Func<GraphType, Type, object, IDictionary<string, object>> nodesGetter)
         {
-            this.keySetterFactory = keySetterFactory;
+            this.dataSetterFactory = dataSetterFactory;
             this.nodesGetter = nodesGetter;
         }
 
@@ -80,7 +81,7 @@ namespace GraphMLReader.Factories
 
             if (graph.Node?.Any() ?? false)
             {
-                var keySetters = keySetterFactory.Get(
+                var dataSetters = dataSetterFactory.Get(
                     type: nodesType,
                     keyForType: KeyForType.Node);
 
@@ -90,14 +91,14 @@ namespace GraphMLReader.Factories
 
                     if (node.Graph != default)
                     {
-                        var contentNodes = nodesGetter.Invoke(
+                        var childNodes = nodesGetter.Invoke(
                             arg1: node.Graph,
                             arg2: nodesType,
                             arg3: content);
 
-                        if (contentNodes?.Any() ?? false)
+                        if (childNodes?.Any() ?? false)
                         {
-                            foreach (var childNode in contentNodes)
+                            foreach (var childNode in childNodes)
                             {
                                 result.Add(
                                     key: childNode.Key,
@@ -106,11 +107,11 @@ namespace GraphMLReader.Factories
                         }
                     }
 
-                    if (keySetters?.Any() ?? false)
+                    if (dataSetters?.Any() ?? false)
                     {
-                        foreach (var keySetter in keySetters)
+                        foreach (var dataSetter in dataSetters)
                         {
-                            keySetter.Invoke(
+                            dataSetter.Invoke(
                                 arg1: node,
                                 arg2: content);
                         }

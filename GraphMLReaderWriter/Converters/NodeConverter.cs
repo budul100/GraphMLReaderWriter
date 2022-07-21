@@ -16,12 +16,12 @@ namespace GraphMLWriter.Converters
 
         #region Public Constructors
 
-        public NodeConverter(Type type, KeyConverter keyConverter)
-            : base(type, keyConverter, KeyForType.Node)
+        public NodeConverter(Type type, DataConverter dataConverter)
+            : base(type: type, dataConverter: dataConverter, forType: KeyForType.Node)
         {
             graphConverter = new GraphConverter(
                 type: type,
-                keyConverter: keyConverter);
+                dataConverter: dataConverter);
         }
 
         #endregion Public Constructors

@@ -14,9 +14,9 @@ namespace GraphMLReader
     {
         #region Private Fields
 
+        private readonly DataSetterFactory dataSetterFactory;
         private readonly EdgesSetterFactory edgesSetterFactory;
         private readonly Encoding encoding;
-        private readonly KeySetterFactory keySetterFactory;
         private readonly NodesSetterFactory<T> nodesSetterFactory;
 
         #endregion Private Fields
@@ -36,12 +36,12 @@ namespace GraphMLReader
                 type: type,
                 output: output);
 
-            keySetterFactory = new KeySetterFactory();
+            dataSetterFactory = new DataSetterFactory();
             nodesSetterFactory = new NodesSetterFactory<T>(
-                keySetterFactory: keySetterFactory,
+                dataSetterFactory: dataSetterFactory,
                 nodesGetter: nodesGetter);
             edgesSetterFactory = new EdgesSetterFactory(
-                keySetterFactory: keySetterFactory);
+                dataSetterFactory: dataSetterFactory);
         }
 
         #endregion Public Constructors
@@ -102,11 +102,11 @@ namespace GraphMLReader
 
             if (graph != default)
             {
-                keySetterFactory.Initialize(graphML);
+                dataSetterFactory.Initialize(graphML);
 
                 output = Activator.CreateInstance<T>();
 
-                var keySetters = keySetterFactory.Get(
+                var dataSetters = dataSetterFactory.Get(
                     type: typeof(T),
                     keyForType: KeyForType.Graph);
 
@@ -115,11 +115,11 @@ namespace GraphMLReader
                     type: typeof(T),
                     output: output);
 
-                if (keySetters?.Any() ?? false)
+                if (dataSetters?.Any() ?? false)
                 {
-                    foreach (var keySetter in keySetters)
+                    foreach (var dataSetter in dataSetters)
                     {
-                        keySetter.Invoke(
+                        dataSetter.Invoke(
                             arg1: graph,
                             arg2: output);
                     }

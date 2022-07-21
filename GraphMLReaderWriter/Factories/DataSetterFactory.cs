@@ -9,7 +9,7 @@ using TB.ComponentModel;
 
 namespace GraphMLReader.Factories
 {
-    internal class KeySetterFactory
+    internal class DataSetterFactory
     {
         #region Private Fields
 
@@ -56,14 +56,14 @@ namespace GraphMLReader.Factories
 
         private IEnumerable<Action<object, object>> GetSetters(Type type, KeyForType keyForType)
         {
-            var attributeProperties = type?.GetProperties<KeyAttribute>()?
+            var attributeProperties = type?.GetProperties<DataAttribute>()?
                 .Where(p => p.GetSetMethod() != default).ToArray();
 
             if (attributeProperties?.Any() ?? false)
             {
                 foreach (var attributeProperty in attributeProperties)
                 {
-                    var name = attributeProperty.GetAttribute<KeyAttribute>()?.Name
+                    var name = attributeProperty.GetAttribute<DataAttribute>()?.Name
                         ?? attributeProperty.Name;
                     var key = keys.SingleOrDefault(k => k.AttrName == name
                         && k.For == keyForType);

@@ -3,15 +3,15 @@
 namespace GraphMLReaderWriter.Attributes
 {
     [AttributeUsage(AttributeTargets.Property, AllowMultiple = false, Inherited = false)]
-    public sealed class KeyAttribute
+    public sealed class DataAttribute
         : Attribute
     {
         #region Public Constructors
 
-        public KeyAttribute()
+        public DataAttribute()
         { }
 
-        public KeyAttribute(string name)
+        public DataAttribute(string name)
         {
             Name = name;
         }

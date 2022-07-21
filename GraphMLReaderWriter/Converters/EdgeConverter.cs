@@ -19,8 +19,8 @@ namespace GraphMLWriter.Converters
 
         #region Public Constructors
 
-        public EdgeConverter(Type type, KeyConverter keyConverter)
-            : base(type, keyConverter, KeyForType.Edge)
+        public EdgeConverter(Type type, DataConverter dataConverter)
+            : base(type: type, dataConverter: dataConverter, forType: KeyForType.Edge)
         {
             sourceIdGetter = type.GetNodeIdGetter<SourceAttribute>();
             targetIdGetter = type.GetNodeIdGetter<TargetAttribute>();

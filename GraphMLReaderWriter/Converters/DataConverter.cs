@@ -7,7 +7,7 @@ using System.Reflection;
 
 namespace GraphMLWriter.Converters
 {
-    internal class KeyConverter
+    internal class DataConverter
     {
         #region Private Fields
 
@@ -26,11 +26,11 @@ namespace GraphMLWriter.Converters
         public IEnumerable<Func<object, DataType>> GetDataGetters(Type type, KeyForType forType = KeyForType.All)
         {
             var properties = type.GetProperties()
-                .Where(p => p.GetCustomAttribute(typeof(KeyAttribute)) != default).ToArray();
+                .Where(p => p.GetCustomAttribute(typeof(DataAttribute)) != default).ToArray();
 
             foreach (var property in properties)
             {
-                var name = (property.GetCustomAttribute(typeof(KeyAttribute)) as KeyAttribute)?.Name
+                var name = (property.GetCustomAttribute(typeof(DataAttribute)) as DataAttribute)?.Name
                     ?? property.Name;
 
                 var key = GetKey(
@@ -104,13 +104,13 @@ namespace GraphMLWriter.Converters
         {
             var keyType = GetKeyType(type);
 
-            var key = Keys?.SingleOrDefault(k => k.AttrName == name
+            var result = Keys?.SingleOrDefault(k => k.AttrName == name
                 && k.For == forType
                 && k.AttrType == keyType);
 
-            if (key == default)
+            if (result == default)
             {
-                key = new KeyType
+                result = new KeyType
                 {
                     For = forType,
                     AttrName = name,
@@ -119,10 +119,10 @@ namespace GraphMLWriter.Converters
                     Id = $"Key-{keyIndex++}",
                 };
 
-                Keys.Add(key);
+                Keys.Add(result);
             }
 
-            return key;
+            return result;
         }
 
         #endregion Private Methods

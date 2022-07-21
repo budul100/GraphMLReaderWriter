@@ -13,7 +13,7 @@ namespace GraphMLReader.Factories
     {
         #region Private Fields
 
-        private readonly KeySetterFactory keySetterFactory;
+        private readonly DataSetterFactory dataSetterFactory;
 
         private readonly IDictionary<Type, Action<GraphType, IDictionary<string, object>, object>> setters =
             new Dictionary<Type, Action<GraphType, IDictionary<string, object>, object>>();
@@ -22,9 +22,9 @@ namespace GraphMLReader.Factories
 
         #region Public Constructors
 
-        public EdgesSetterFactory(KeySetterFactory keySetterFactory)
+        public EdgesSetterFactory(DataSetterFactory dataSetterFactory)
         {
-            this.keySetterFactory = keySetterFactory;
+            this.dataSetterFactory = dataSetterFactory;
         }
 
         #endregion Public Constructors
@@ -83,7 +83,7 @@ namespace GraphMLReader.Factories
             if ((graph.Edge?.Any() ?? false)
                 && (nodes?.Any() ?? false))
             {
-                var keySetters = keySetterFactory.Get(
+                var dataSetters = dataSetterFactory.Get(
                     type: edgesType,
                     keyForType: KeyForType.Edge);
 
@@ -102,11 +102,11 @@ namespace GraphMLReader.Factories
                             obj: content,
                             value: nodes[edge.Target]);
 
-                        if (keySetters?.Any() ?? false)
+                        if (dataSetters?.Any() ?? false)
                         {
-                            foreach (var keySetter in keySetters)
+                            foreach (var dataSetter in dataSetters)
                             {
-                                keySetter.Invoke(
+                                dataSetter.Invoke(
                                     arg1: edge,
                                     arg2: content);
                             }

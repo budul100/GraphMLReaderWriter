@@ -19,13 +19,13 @@ namespace GraphMLWriter.Converters
 
         #region Public Constructors
 
-        public GraphConverter(Type type, KeyConverter keyConverter)
-            : base(type, keyConverter, KeyForType.Graph)
+        public GraphConverter(Type type, DataConverter dataConverter)
+            : base(type: type, dataConverter: dataConverter, forType: KeyForType.Graph)
         {
-            var nodesConverterGetter = GetNodeConverterGetter(keyConverter);
+            var nodesConverterGetter = GetNodeConverterGetter(dataConverter);
             nodesGetter = type.GetItemsGetter<NodesAttribute, NodeType>(nodesConverterGetter);
 
-            var edgesConverterGetter = GetEdgeConverterGetter(keyConverter);
+            var edgesConverterGetter = GetEdgeConverterGetter(dataConverter);
             edgesGetter = type.GetItemsGetter<EdgesAttribute, EdgeType>(edgesConverterGetter);
         }
 
@@ -49,18 +49,18 @@ namespace GraphMLWriter.Converters
 
         #region Private Methods
 
-        private static Func<Type, ContentConverter<EdgeType>> GetEdgeConverterGetter(KeyConverter keyConverter)
+        private static Func<Type, ContentConverter<EdgeType>> GetEdgeConverterGetter(DataConverter dataConverter)
         {
             return (propertyType) => new EdgeConverter(
                 type: propertyType,
-                keyConverter: keyConverter);
+                dataConverter: dataConverter);
         }
 
-        private static Func<Type, ContentConverter<NodeType>> GetNodeConverterGetter(KeyConverter keyConverter)
+        private static Func<Type, ContentConverter<NodeType>> GetNodeConverterGetter(DataConverter dataConverter)
         {
             return (propertyType) => new NodeConverter(
                 type: propertyType,
-                keyConverter: keyConverter);
+                dataConverter: dataConverter);
         }
 
         private IEnumerable<EdgeType> GetEdges(object input)

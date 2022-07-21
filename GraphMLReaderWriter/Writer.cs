@@ -12,9 +12,9 @@ namespace GraphMLWriter
     {
         #region Private Fields
 
+        private readonly DataConverter dataConverter;
         private readonly Encoding encoding;
         private readonly GraphConverter graphConverter;
-        private readonly KeyConverter keyConverter;
         private readonly XmlSerializer serializer;
 
         #endregion Private Fields
@@ -29,10 +29,10 @@ namespace GraphMLWriter
         {
             this.encoding = encoding;
 
-            keyConverter = new KeyConverter();
+            dataConverter = new DataConverter();
             graphConverter = new GraphConverter(
                 type: typeof(T),
-                keyConverter: keyConverter);
+                dataConverter: dataConverter);
 
             serializer = new XmlSerializer(typeof(GraphMLType));
         }
@@ -69,7 +69,7 @@ namespace GraphMLWriter
             var content = new GraphMLType
             {
                 Graph = GetGraph(input).ToArray(),
-                Key = keyConverter.Keys.ToArray(),
+                Key = dataConverter.Keys.ToArray(),
             };
 
             return content;

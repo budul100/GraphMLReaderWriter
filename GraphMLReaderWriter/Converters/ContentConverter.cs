@@ -17,11 +17,11 @@ namespace GraphMLWriter.Converters
 
         #region Protected Constructors
 
-        protected ContentConverter(Type type, KeyConverter keyConverter, KeyForType forType)
+        protected ContentConverter(Type type, DataConverter dataConverter, KeyForType forType)
         {
             idGetter = GetIdGetter(type);
 
-            dataGetters = keyConverter.GetDataGetters(
+            dataGetters = dataConverter.GetDataGetters(
                 type: type,
                 forType: forType).ToArray();
         }
