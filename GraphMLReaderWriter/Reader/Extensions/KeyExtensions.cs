@@ -8,26 +8,21 @@ namespace GraphMLReader.Extensions
     {
         #region Public Methods
 
-        public static Func<object, string> GetDataTextGetter(this KeyForType keyForType, KeyType key)
+        public static Func<object, string> GetTextGetterData(this KeyForType keyForType, KeyType key)
         {
-            var textGetter = default(Func<object, string>);
-
             switch (keyForType)
             {
                 case KeyForType.Graph:
-                    textGetter = (graph) => (graph as GraphType).GetDataText(key);
-                    break;
+                    return (graph) => (graph as GraphType).GetDataText(key);
 
                 case KeyForType.Node:
-                    textGetter = (node) => (node as NodeType).GetDataText(key);
-                    break;
+                    return (node) => (node as NodeType).GetDataText(key);
 
                 case KeyForType.Edge:
-                    textGetter = (edge) => (edge as EdgeType).GetDataText(key);
-                    break;
+                    return (edge) => (edge as EdgeType).GetDataText(key);
             }
 
-            return textGetter;
+            return default;
         }
 
         #endregion Public Methods

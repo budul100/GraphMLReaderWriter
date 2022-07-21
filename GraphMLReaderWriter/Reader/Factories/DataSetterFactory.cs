@@ -31,10 +31,19 @@ namespace GraphMLReader.Factories
             {
                 if (!setters.ContainsKey(type))
                 {
-                    var dataSetters = GetDataSetters<DataAttribute>(
+                    var dataSetters = GetSetters<DataAttribute>(
                         type: type,
-                        keyForType: keyForType,
-                        textGetterGetter: k => keyForType.GetDataTextGetter(k)).ToArray();
+                        keyGetter: a => GetKeyData(keyForType, a),
+                        textGetterGetter: k => keyForType.GetTextGetterData(k)).ToArray();
+
+                    setters.Add(
+                        key: type,
+                        value: dataSetters);
+
+                    var nodeLabelSetters = GetSetters<NodeLabelAttribute>(
+                        type: type,
+                        keyGetter: _ => GetKeyNodeLabel(keyForType),
+                        textGetterGetter: k => keyForType.GetTextGetterData(k)).ToArray();
 
                     setters.Add(
                         key: type,
@@ -56,7 +65,26 @@ namespace GraphMLReader.Factories
 
         #region Private Methods
 
-        private IEnumerable<Action<object, object>> GetDataSetters<T>(Type type, KeyForType keyForType,
+        private KeyType GetKeyData(KeyForType keyForType, PropertyInfo attributeProperty)
+        {
+            var name = attributeProperty.GetAttribute<DataAttribute>()?.Name
+                ?? attributeProperty.Name;
+
+            var result = keys.SingleOrDefault(k => k.For == keyForType
+                && k.AttrName == name);
+
+            return result;
+        }
+
+        private KeyType GetKeyNodeLabel(KeyForType keyForType)
+        {
+            var result = keys.SingleOrDefault(k => k.For == keyForType);
+            // && k.y);
+
+            return result;
+        }
+
+        private IEnumerable<Action<object, object>> GetSetters<T>(Type type, Func<PropertyInfo, KeyType> keyGetter,
             Func<KeyType, Func<object, string>> textGetterGetter)
             where T : KeyAttribute
         {
@@ -67,10 +95,7 @@ namespace GraphMLReader.Factories
             {
                 foreach (var attributeProperty in attributeProperties)
                 {
-                    var name = attributeProperty.GetAttribute<T>()?.Name
-                        ?? attributeProperty.Name;
-                    var key = keys.SingleOrDefault(k => k.AttrName == name
-                        && k.For == keyForType);
+                    var key = keyGetter?.Invoke(attributeProperty);
 
                     if (key != default)
                     {
@@ -78,7 +103,7 @@ namespace GraphMLReader.Factories
 
                         if (!setters.ContainsKey(attributeType))
                         {
-                            var textGetter = textGetterGetter.Invoke(key);
+                            var textGetter = textGetterGetter?.Invoke(key);
 
                             if (textGetter != default)
                             {
