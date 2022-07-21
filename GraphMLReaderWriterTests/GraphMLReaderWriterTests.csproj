@@ -1,23 +1,23 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
-
-    <IsPackable>false</IsPackable>
+	<TargetFramework>net6.0</TargetFramework>
+	  <IsTestProject>true</IsTestProject>
+	<IsPackable>false</IsPackable>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="nunit" Version="3.13.2" />
-    <PackageReference Include="NUnit3TestAdapter" Version="4.2.1" />
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.0.0" />
+	<PackageReference Include="nunit" Version="3.13.2" />
+	<PackageReference Include="NUnit3TestAdapter" Version="4.2.1" />
+	<PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.0.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\GraphMLReaderWriter\GraphMLReaderWriter.csproj" />
+	<ProjectReference Include="..\GraphMLReaderWriter\GraphMLReaderWriter.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="..\.editorconfig" />
+	<None Include="..\.editorconfig" />
   </ItemGroup>
 
 </Project>
