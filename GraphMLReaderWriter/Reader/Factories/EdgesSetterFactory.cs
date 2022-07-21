@@ -1,4 +1,5 @@
 ﻿using GraphML;
+using GraphMLReader.Extensions;
 using GraphMLReaderWriter.Attributes;
 using GraphMLReaderWriter.Extensions;
 using System;

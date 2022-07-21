@@ -1,4 +1,5 @@
 ﻿using GraphML;
+using GraphMLReader.Extensions;
 using GraphMLReaderWriter.Attributes;
 using GraphMLReaderWriter.Extensions;
 using System;
@@ -17,7 +18,7 @@ namespace GraphMLReader.Factories
         private readonly DataSetterFactory dataSetterFactory;
 
         private readonly IDictionary<Type, Func<GraphType, object, IDictionary<string, object>>> getters =
-                    new Dictionary<Type, Func<GraphType, object, IDictionary<string, object>>>();
+            new Dictionary<Type, Func<GraphType, object, IDictionary<string, object>>>();
 
         private readonly Func<GraphType, Type, object, IDictionary<string, object>> nodesGetter;
 

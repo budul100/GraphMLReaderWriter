@@ -1,4 +1,5 @@
 ﻿using GraphML;
+using GraphMLReader.Extensions;
 using GraphMLReaderWriter.Attributes;
 using GraphMLReaderWriter.Extensions;
 using System;
@@ -30,13 +31,14 @@ namespace GraphMLReader.Factories
             {
                 if (!setters.ContainsKey(type))
                 {
-                    var currents = GetSetters(
+                    var dataSetters = GetDataSetters<DataAttribute>(
                         type: type,
-                        keyForType: keyForType).ToArray();
+                        keyForType: keyForType,
+                        textGetterGetter: k => keyForType.GetDataTextGetter(k)).ToArray();
 
                     setters.Add(
                         key: type,
-                        value: currents);
+                        value: dataSetters);
                 }
 
                 result = setters[type];
@@ -54,16 +56,18 @@ namespace GraphMLReader.Factories
 
         #region Private Methods
 
-        private IEnumerable<Action<object, object>> GetSetters(Type type, KeyForType keyForType)
+        private IEnumerable<Action<object, object>> GetDataSetters<T>(Type type, KeyForType keyForType,
+            Func<KeyType, Func<object, string>> textGetterGetter)
+            where T : KeyAttribute
         {
-            var attributeProperties = type?.GetProperties<DataAttribute>()?
+            var attributeProperties = type?.GetProperties<T>()?
                 .Where(p => p.GetSetMethod() != default).ToArray();
 
             if (attributeProperties?.Any() ?? false)
             {
                 foreach (var attributeProperty in attributeProperties)
                 {
-                    var name = attributeProperty.GetAttribute<DataAttribute>()?.Name
+                    var name = attributeProperty.GetAttribute<T>()?.Name
                         ?? attributeProperty.Name;
                     var key = keys.SingleOrDefault(k => k.AttrName == name
                         && k.For == keyForType);
@@ -74,22 +78,7 @@ namespace GraphMLReader.Factories
 
                         if (!setters.ContainsKey(attributeType))
                         {
-                            var textGetter = default(Func<object, string>);
-
-                            switch (keyForType)
-                            {
-                                case KeyForType.Graph:
-                                    textGetter = (graph) => (graph as GraphType).GetAttribute(key);
-                                    break;
-
-                                case KeyForType.Node:
-                                    textGetter = (node) => (node as NodeType).GetAttribute(key);
-                                    break;
-
-                                case KeyForType.Edge:
-                                    textGetter = (edge) => (edge as EdgeType).GetAttribute(key);
-                                    break;
-                            }
+                            var textGetter = textGetterGetter.Invoke(key);
 
                             if (textGetter != default)
                             {

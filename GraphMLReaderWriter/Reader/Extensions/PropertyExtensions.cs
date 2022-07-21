@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
 
-namespace GraphMLReaderWriter.Extensions
+namespace GraphMLReader.Extensions
 {
     public static class PropertyExtensions
     {

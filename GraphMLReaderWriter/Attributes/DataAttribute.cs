@@ -1,10 +1,7 @@
-﻿using System;
-
-namespace GraphMLReaderWriter.Attributes
+﻿namespace GraphMLReaderWriter.Attributes
 {
-    [AttributeUsage(AttributeTargets.Property, AllowMultiple = false, Inherited = false)]
     public sealed class DataAttribute
-        : Attribute
+        : KeyAttribute
     {
         #region Public Constructors
 
@@ -12,16 +9,9 @@ namespace GraphMLReaderWriter.Attributes
         { }
 
         public DataAttribute(string name)
-        {
-            Name = name;
-        }
+            : base(name)
+        { }
 
         #endregion Public Constructors
-
-        #region Public Properties
-
-        public string Name { get; }
-
-        #endregion Public Properties
     }
 }
