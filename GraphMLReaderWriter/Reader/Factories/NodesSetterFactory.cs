@@ -99,6 +99,8 @@ namespace GraphMLReader.Factories
                         {
                             var content = Activator.CreateInstance(nodesType);
 
+                            // TO DO: If node.Graph != default, then the Node is a group => new attribute
+
                             if (node.Graph != default)
                             {
                                 var childNodes = nodesGetter.Invoke(

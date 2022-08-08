@@ -1,7 +1,7 @@
 ﻿namespace GraphMLWriterTest.Models
 {
     public class Area
-        : Location
+        : Place
     {
         #region Public Constructors
 

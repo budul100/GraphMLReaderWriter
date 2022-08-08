@@ -3,7 +3,7 @@
 namespace GraphMLWriterTest.Models
 {
     public class Point
-        : Location
+        : Place
     {
         #region Public Constructors
 

@@ -10,7 +10,7 @@ namespace GraphMLWriterTest.Models
         public Link[] Links { get; set; }
 
         [Nodes()]
-        public Location[] Locations { get; set; }
+        public Place[] Places { get; set; }
 
         #endregion Public Properties
     }

@@ -41,16 +41,16 @@ namespace GraphMLWriterTest
             var reader = new Reader<Network>();
             var output = reader.Load(path);
 
-            Assert.True(output.Locations.Length == 2);
-            Assert.True(output.Locations[1].Points[1].IsImportant);
+            Assert.True(output.Places.Length == 2);
+            Assert.True(output.Places[1].Points[1].IsImportant);
 
             Assert.True(output.Links.Length == 3);
-            Assert.True(output.Links[0].From == output.Locations[0]);
-            Assert.True(output.Links[0].To == output.Locations[1].Points[0]);
-            Assert.True(output.Links[1].From == output.Locations[0]);
-            Assert.True(output.Links[1].To == output.Locations[1].Points[1]);
-            Assert.True(output.Links[2].From == output.Locations[1].Points[1]);
-            Assert.True(output.Links[2].To == output.Locations[1].Points[0]);
+            Assert.True(output.Links[0].From == output.Places[0]);
+            Assert.True(output.Links[0].To == output.Places[1].Points[0]);
+            Assert.True(output.Links[1].From == output.Places[0]);
+            Assert.True(output.Links[1].To == output.Places[1].Points[1]);
+            Assert.True(output.Links[2].From == output.Places[1].Points[1]);
+            Assert.True(output.Links[2].To == output.Places[1].Points[0]);
         }
 
         [Test]
@@ -61,17 +61,17 @@ namespace GraphMLWriterTest
             var reader = new Reader<Network>();
             var output = reader.Load(path);
 
-            Assert.True(output.Locations.Length == 2);
-            Assert.True(output.Locations[1].Points[1].IsImportant);
-            Assert.True(output.Locations.All(l => l.Abbreviation.Length > 0));
+            Assert.True(output.Places.Length == 2);
+            Assert.True(output.Places[1].Points[1].IsImportant);
+            Assert.True(output.Places.All(l => l.Abbreviation.Length > 0));
 
             Assert.True(output.Links.Length == 3);
-            Assert.True(output.Links[0].From == output.Locations[0]);
-            Assert.True(output.Links[0].To == output.Locations[1].Points[0]);
-            Assert.True(output.Links[1].From == output.Locations[0]);
-            Assert.True(output.Links[1].To == output.Locations[1].Points[1]);
-            Assert.True(output.Links[2].From == output.Locations[1].Points[1]);
-            Assert.True(output.Links[2].To == output.Locations[1].Points[0]);
+            Assert.True(output.Links[0].From == output.Places[0]);
+            Assert.True(output.Links[0].To == output.Places[1].Points[0]);
+            Assert.True(output.Links[1].From == output.Places[0]);
+            Assert.True(output.Links[1].To == output.Places[1].Points[1]);
+            Assert.True(output.Links[2].From == output.Places[1].Points[1]);
+            Assert.True(output.Links[2].To == output.Places[1].Points[0]);
         }
 
         #endregion Public Methods
@@ -96,7 +96,7 @@ namespace GraphMLWriterTest
                 Points = new Point[] { pointB, pointC }
             };
 
-            var locations = new Location[] { pointA, area };
+            var locations = new Place[] { pointA, area };
 
             var linkAB = new Link(pointA, pointB);
             var linkAC = new Link(pointA, pointC);
@@ -107,7 +107,7 @@ namespace GraphMLWriterTest
             return new Network
             {
                 Links = links,
-                Locations = locations,
+                Places = locations,
             };
         }
 

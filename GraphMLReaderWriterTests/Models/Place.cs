@@ -2,18 +2,18 @@
 
 namespace GraphMLWriterTest.Models
 {
-    public class Location
+    public class Place
     {
         #region Public Constructors
 
-        public Location()
+        public Place()
         { }
 
         #endregion Public Constructors
 
         #region Protected Constructors
 
-        protected Location(string name)
+        protected Place(string name)
         {
             Abbreviation = name;
         }
