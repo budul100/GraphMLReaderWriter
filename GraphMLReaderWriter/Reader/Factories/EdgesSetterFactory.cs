@@ -14,7 +14,7 @@ namespace GraphMLReader.Factories
     {
         #region Private Fields
 
-        private readonly DataSetterFactory dataSetterFactory;
+        private readonly DataTextSetterFactory dataSetterFactory;
 
         private readonly IDictionary<Type, Action<GraphType[], IDictionary<string, object>, object>> setters =
             new Dictionary<Type, Action<GraphType[], IDictionary<string, object>, object>>();
@@ -23,7 +23,7 @@ namespace GraphMLReader.Factories
 
         #region Public Constructors
 
-        public EdgesSetterFactory(DataSetterFactory dataSetterFactory)
+        public EdgesSetterFactory(DataTextSetterFactory dataSetterFactory)
         {
             this.dataSetterFactory = dataSetterFactory;
         }

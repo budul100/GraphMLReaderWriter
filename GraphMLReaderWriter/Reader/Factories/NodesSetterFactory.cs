@@ -15,7 +15,8 @@ namespace GraphMLReader.Factories
     {
         #region Private Fields
 
-        private readonly DataSetterFactory dataSetterFactory;
+        private readonly DataLabelSetterFactory dataLabelSetterFactory;
+        private readonly DataTextSetterFactory dataTextSetterFactory;
 
         private readonly IDictionary<Type, Func<GraphType[], object, IDictionary<string, object>>> getters =
             new Dictionary<Type, Func<GraphType[], object, IDictionary<string, object>>>();
@@ -26,10 +27,11 @@ namespace GraphMLReader.Factories
 
         #region Public Constructors
 
-        public NodesSetterFactory(DataSetterFactory dataSetterFactory,
+        public NodesSetterFactory(DataTextSetterFactory dataTextSetterFactory, DataLabelSetterFactory dataLabelSetterFactory,
             Func<GraphType[], Type, object, IDictionary<string, object>> nodesGetter)
         {
-            this.dataSetterFactory = dataSetterFactory;
+            this.dataTextSetterFactory = dataTextSetterFactory;
+            this.dataLabelSetterFactory = dataLabelSetterFactory;
             this.nodesGetter = nodesGetter;
         }
 
@@ -86,9 +88,12 @@ namespace GraphMLReader.Factories
                 {
                     if (graph.Node?.Any() ?? false)
                     {
-                        var dataSetters = dataSetterFactory.Get(
+                        var dataTextSetters = dataTextSetterFactory.Get(
                             type: nodesType,
                             keyForType: KeyForType.Node);
+
+                        var dataLabelSetters = dataLabelSetterFactory.Get(
+                            type: nodesType);
 
                         foreach (var node in graph.Node)
                         {
@@ -112,11 +117,21 @@ namespace GraphMLReader.Factories
                                 }
                             }
 
-                            if (dataSetters?.Any() ?? false)
+                            if (dataTextSetters?.Any() ?? false)
                             {
-                                foreach (var dataSetter in dataSetters)
+                                foreach (var dataSetter in dataTextSetters)
                                 {
                                     dataSetter.Invoke(
+                                        arg1: node,
+                                        arg2: content);
+                                }
+                            }
+
+                            if (dataLabelSetters?.Any() ?? false)
+                            {
+                                foreach (var dataLabelSetter in dataLabelSetters)
+                                {
+                                    dataLabelSetter.Invoke(
                                         arg1: node,
                                         arg2: content);
                                 }

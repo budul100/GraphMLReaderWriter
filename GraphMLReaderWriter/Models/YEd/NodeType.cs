@@ -58,7 +58,7 @@ namespace YEd
             get
             {
                 return ((this.NodeLabel != null) 
-                            && (this.NodeLabel.Length != 0));
+                    && (this.NodeLabel.Length != 0));
             }
         }
         

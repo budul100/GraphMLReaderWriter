@@ -14,7 +14,8 @@ namespace GraphMLReader
     {
         #region Private Fields
 
-        private readonly DataSetterFactory dataSetterFactory;
+        private readonly DataLabelSetterFactory dataLabelSetterFactory;
+        private readonly DataTextSetterFactory dataTextSetterFactory;
         private readonly EdgesSetterFactory edgesSetterFactory;
         private readonly Encoding encoding;
         private readonly NodesSetterFactory<T> nodesSetterFactory;
@@ -36,12 +37,16 @@ namespace GraphMLReader
                 type: type,
                 output: output);
 
-            dataSetterFactory = new DataSetterFactory();
+            dataTextSetterFactory = new DataTextSetterFactory();
+            dataLabelSetterFactory = new DataLabelSetterFactory();
+
             nodesSetterFactory = new NodesSetterFactory<T>(
-                dataSetterFactory: dataSetterFactory,
+                dataTextSetterFactory: dataTextSetterFactory,
+                dataLabelSetterFactory: dataLabelSetterFactory,
                 nodesGetter: nodesGetter);
+
             edgesSetterFactory = new EdgesSetterFactory(
-                dataSetterFactory: dataSetterFactory);
+                dataSetterFactory: dataTextSetterFactory);
         }
 
         #endregion Public Constructors
@@ -101,11 +106,12 @@ namespace GraphMLReader
 
             if (graph != default)
             {
-                dataSetterFactory.Initialize(graphML);
+                dataTextSetterFactory.Initialize(graphML);
+                dataLabelSetterFactory.Initialize(graphML);
 
                 output = Activator.CreateInstance<T>();
 
-                var dataSetters = dataSetterFactory.Get(
+                var dataSetters = dataTextSetterFactory.Get(
                     type: typeof(T),
                     keyForType: KeyForType.Graph);
 
@@ -139,12 +145,12 @@ namespace GraphMLReader
 
             var result = default(GraphmlType);
 
-            using (var xmlReader = new StreamReader(
+            using (var reader = new StreamReader(
                 path: path,
                 encoding: encoding))
             {
                 var serializer = new XmlSerializer(typeof(GraphmlType));
-                result = serializer.Deserialize(xmlReader) as GraphmlType;
+                result = serializer.Deserialize(reader) as GraphmlType;
             }
 
             return result;

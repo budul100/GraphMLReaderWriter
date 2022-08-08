@@ -21,7 +21,6 @@ namespace GraphML
     [System.Xml.Serialization.XmlRootAttribute("node", Namespace="http://graphml.graphdrawing.org/xmlns")]
     public partial class NodeType : INodeExtraAttrib
     {
-        
         [System.Xml.Serialization.XmlElementAttribute("desc")]
         public string Desc { get; set; }
         

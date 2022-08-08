@@ -1,5 +1,4 @@
 ﻿using GraphML;
-using GraphMLReader.Extensions;
 using GraphMLReaderWriter.Attributes;
 using GraphMLReaderWriter.Extensions;
 using System;
@@ -10,51 +9,18 @@ using TB.ComponentModel;
 
 namespace GraphMLReader.Factories
 {
-    internal class DataSetterFactory
+    internal abstract class DataBaseSetterFactory
     {
-        #region Private Fields
+        #region Protected Fields
 
-        private readonly IDictionary<Type, IEnumerable<Action<object, object>>> setters =
+        protected readonly IDictionary<Type, IEnumerable<Action<object, object>>> setters =
             new Dictionary<Type, IEnumerable<Action<object, object>>>();
 
-        private IEnumerable<KeyType> keys;
+        protected IEnumerable<KeyType> keys;
 
-        #endregion Private Fields
+        #endregion Protected Fields
 
         #region Public Methods
-
-        public IEnumerable<Action<object, object>> Get(Type type, KeyForType keyForType)
-        {
-            var result = default(IEnumerable<Action<object, object>>);
-
-            if (keys?.Any() ?? false)
-            {
-                if (!setters.ContainsKey(type))
-                {
-                    var dataSetters = GetSetters<DataAttribute>(
-                        type: type,
-                        keyGetter: a => GetKeyData(keyForType, a),
-                        textGetterGetter: k => keyForType.GetTextGetterData(k)).ToArray();
-
-                    setters.Add(
-                        key: type,
-                        value: dataSetters);
-
-                    //var nodeLabelSetters = GetSetters<NodeLabelAttribute>(
-                    //    type: type,
-                    //    keyGetter: _ => GetKeyNodeLabel(keyForType),
-                    //    textGetterGetter: k => keyForType.GetTextGetterData(k)).ToArray();
-
-                    //setters.Add(
-                    //    key: type,
-                    //    value: dataSetters);
-                }
-
-                result = setters[type];
-            }
-
-            return result;
-        }
 
         public void Initialize(GraphmlType graphML)
         {
@@ -63,28 +29,9 @@ namespace GraphMLReader.Factories
 
         #endregion Public Methods
 
-        #region Private Methods
+        #region Protected Methods
 
-        private KeyType GetKeyData(KeyForType keyForType, PropertyInfo attributeProperty)
-        {
-            var name = attributeProperty.GetAttribute<DataAttribute>()?.Name
-                ?? attributeProperty.Name;
-
-            var result = keys.SingleOrDefault(k => k.For == keyForType
-                && k.AttrName == name);
-
-            return result;
-        }
-
-        private KeyType GetKeyNodeLabel(KeyForType keyForType)
-        {
-            var result = keys.SingleOrDefault(k => k.For == keyForType
-                && k.YfilesType == "nodegraphics");
-
-            return result;
-        }
-
-        private IEnumerable<Action<object, object>> GetSetters<T>(Type type, Func<PropertyInfo, KeyType> keyGetter,
+        protected IEnumerable<Action<object, object>> GetSetters<T>(Type type, Func<PropertyInfo, KeyType> keyGetter,
             Func<KeyType, Func<object, string>> textGetterGetter)
             where T : KeyAttribute
         {
@@ -121,6 +68,10 @@ namespace GraphMLReader.Factories
                 }
             }
         }
+
+        #endregion Protected Methods
+
+        #region Private Methods
 
         private void SetAttribute(object element, PropertyInfo attributeProperty, Type attributeType,
             Func<object, string> textGetter, object output)

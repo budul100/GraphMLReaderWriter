@@ -26,7 +26,7 @@ namespace GraphMLWriterTest.Models
         [Data]
         public string Abbreviation { get; set; }
 
-        [Data]
+        [NodeLabel]
         public string LongName { get; set; }
 
         [Nodes()]

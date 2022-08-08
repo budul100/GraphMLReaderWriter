@@ -11,8 +11,6 @@
 // XmlSchemaClassGenerator.Console -o . -n http://graphml.graphdrawing.org/xmlns=GraphML -n http://www.w3.org/1999/xlink=XLink -n http://www.yworks.com/xml/graphml=YEd --nu --sf --csm=Public --ct=System.Array --dc .\_XSD\ygraphml.xsd
 namespace YEd
 {
-    
-    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("XmlSchemaClassGenerator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute("ProxyShapeNodeTypeRealizers", Namespace="http://www.yworks.com/xml/graphml", AnonymousType=true)]
@@ -20,7 +18,9 @@ namespace YEd
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ProxyShapeNodeTypeRealizers
     {
-        
+        [System.Xml.Serialization.XmlElementAttribute("GroupNode", Namespace = "http://www.yworks.com/xml/graphml")]
+        public GroupNodeType GroupNode { get; set; }
+
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         private System.Xml.XmlElement[] any;
         
