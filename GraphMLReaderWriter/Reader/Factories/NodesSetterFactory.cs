@@ -88,6 +88,9 @@ namespace GraphMLReader.Factories
                 {
                     if (graph.Node?.Any() ?? false)
                     {
+                        // TO DO: If graph.Node[].Graph != default, then the Node is a group => new attribute [Groups]
+                        // => There must be a nodesType and a groupsType
+
                         var dataTextSetters = dataTextSetterFactory.Get(
                             type: nodesType,
                             keyForType: KeyForType.Node);
@@ -98,9 +101,6 @@ namespace GraphMLReader.Factories
                         foreach (var node in graph.Node)
                         {
                             var content = Activator.CreateInstance(nodesType);
-
-                            // TO DO: If node.Graph != default, then the Node is a group => new attribute [Groups]
-                            // => There must be a nodesGetter and a groupsGetter
 
                             if (node.Graph != default)
                             {
