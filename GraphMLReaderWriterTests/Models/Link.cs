@@ -19,10 +19,10 @@ namespace GraphMLWriterTest.Models
 
         #region Public Properties
 
-        [SourceAttribute]
+        [Source]
         public Place From { get; set; }
 
-        [TargetAttribute]
+        [Target]
         public Place To { get; set; }
 
         #endregion Public Properties

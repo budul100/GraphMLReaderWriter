@@ -29,7 +29,7 @@ namespace GraphMLWriterTest.Models
         [NodeLabel]
         public string LongName { get; set; }
 
-        [Nodes()]
+        [Nodes]
         public virtual Point[] Points { get; set; }
 
         #endregion Public Properties

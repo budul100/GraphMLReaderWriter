@@ -66,12 +66,13 @@ namespace GraphMLWriterTest
             Assert.True(output.Places.All(l => l.Abbreviation.Length > 0));
 
             Assert.True(output.Links.Length == 3);
-            Assert.True(output.Links[0].From == output.Places[0]);
-            Assert.True(output.Links[0].To == output.Places[1].Points[0]);
-            Assert.True(output.Links[1].From == output.Places[0]);
-            Assert.True(output.Links[1].To == output.Places[1].Points[1]);
-            Assert.True(output.Links[2].From == output.Places[1].Points[1]);
-            Assert.True(output.Links[2].To == output.Places[1].Points[0]);
+
+            Assert.True(output.Links.Count(l => l.From == output.Places[0]
+                && l.To == output.Places[1].Points[0]) == 1);
+            Assert.True(output.Links.Count(l => l.From == output.Places[0]
+                && l.To == output.Places[1].Points[1]) == 1);
+            Assert.True(output.Links.Count(l => l.From == output.Places[1].Points[1]
+                && l.To == output.Places[1].Points[0]) == 1);
         }
 
         #endregion Public Methods

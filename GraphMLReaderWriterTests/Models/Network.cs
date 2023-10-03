@@ -6,10 +6,10 @@ namespace GraphMLWriterTest.Models
     {
         #region Public Properties
 
-        [Edges()]
+        [Edges]
         public Link[] Links { get; set; }
 
-        [Nodes()]
+        [Nodes]
         public Place[] Places { get; set; }
 
         #endregion Public Properties
